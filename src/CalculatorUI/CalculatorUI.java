@@ -13,12 +13,13 @@ public class CalculatorUI {
     private JButton button3;
     private JButton button6;
     private JButton button9;
-    private JButton button10;
-    private JButton button11;
-    private JButton button12;
-    private JButton button13;
-    private JButton button14;
-    private JButton button15;
-    private JButton button16;
-    private JButton button17;
+    private JButton buttonPlus;
+    private JButton buttonDivide;
+    private JButton buttonPower;
+    private JButton buttonSubtract;
+    private JButton buttonMultiply;
+    private JButton buttonRoot;
+    private JButton buttonDot;
+    private JButton buttonEquals;
+    private JLabel labelOutput;
 }
