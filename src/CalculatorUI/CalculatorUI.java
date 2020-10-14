@@ -22,13 +22,12 @@ public class CalculatorUI {
     private JButton buttonDot;
     private JButton buttonEquals;
     private JLabel labelOutput;
-    private JButton a1Button;
+    private JButton button1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CalculatorUI");
         frame.setContentPane(new CalculatorUI().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBounds(0, 0, 500, 500);
         frame.pack();
         frame.setVisible(true);
     }
@@ -273,10 +272,10 @@ public class CalculatorUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(labelOutput, gbc);
-        a1Button = new JButton();
-        a1Button.setBackground(new Color(-7567360));
-        a1Button.setForeground(new Color(-12829636));
-        a1Button.setText("1");
+        button1 = new JButton();
+        button1.setBackground(new Color(-7567360));
+        button1.setForeground(new Color(-12829636));
+        button1.setText("1");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -284,7 +283,7 @@ public class CalculatorUI {
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
-        panelMain.add(a1Button, gbc);
+        panelMain.add(button1, gbc);
     }
 
     /**
