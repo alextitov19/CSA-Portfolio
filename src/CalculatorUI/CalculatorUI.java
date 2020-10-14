@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class CalculatorUI {
     private JPanel panelMain;
-    private JButton button1;
     private JButton button4;
     private JButton button7;
     private JButton button2;
@@ -23,6 +22,7 @@ public class CalculatorUI {
     private JButton buttonDot;
     private JButton buttonEquals;
     private JLabel labelOutput;
+    private JButton a1Button;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CalculatorUI");
@@ -54,25 +54,12 @@ public class CalculatorUI {
         panelMain.setBackground(new Color(-12829636));
         panelMain.setEnabled(true);
         panelMain.setForeground(new Color(-7566848));
-        button1 = new JButton();
-        button1.setBackground(new Color(-12829636));
-        button1.setForeground(new Color(-12829636));
-        button1.setPreferredSize(new Dimension(78, 30));
-        button1.setText("1");
-        button1.putClientProperty("hideActionText", Boolean.FALSE);
-        GridBagConstraints gbc;
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        panelMain.add(button1, gbc);
         button4 = new JButton();
+        button4.setBackground(new Color(-7567360));
         button4.setForeground(new Color(-12829636));
         button4.setText("4");
         button4.putClientProperty("hideActionText", Boolean.FALSE);
+        GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -82,6 +69,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button4, gbc);
         button7 = new JButton();
+        button7.setBackground(new Color(-7567360));
         button7.setForeground(new Color(-12829636));
         button7.setText("7");
         button7.putClientProperty("hideActionText", Boolean.FALSE);
@@ -94,6 +82,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button7, gbc);
         button2 = new JButton();
+        button2.setBackground(new Color(-7567360));
         button2.setForeground(new Color(-12829636));
         button2.setText("2");
         button2.putClientProperty("hideActionText", Boolean.FALSE);
@@ -106,6 +95,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button2, gbc);
         button5 = new JButton();
+        button5.setBackground(new Color(-7567360));
         button5.setForeground(new Color(-12829636));
         button5.setText("5");
         button5.putClientProperty("hideActionText", Boolean.FALSE);
@@ -118,6 +108,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button5, gbc);
         button8 = new JButton();
+        button8.setBackground(new Color(-7567360));
         button8.setForeground(new Color(-12829636));
         button8.setText("8");
         button8.putClientProperty("hideActionText", Boolean.FALSE);
@@ -130,6 +121,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button8, gbc);
         button3 = new JButton();
+        button3.setBackground(new Color(-7567360));
         button3.setForeground(new Color(-12829636));
         button3.setText("3");
         button3.putClientProperty("hideActionText", Boolean.FALSE);
@@ -142,6 +134,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button3, gbc);
         button6 = new JButton();
+        button6.setBackground(new Color(-7567360));
         button6.setForeground(new Color(-12829636));
         button6.setText("6");
         button6.putClientProperty("hideActionText", Boolean.FALSE);
@@ -154,6 +147,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button6, gbc);
         button9 = new JButton();
+        button9.setBackground(new Color(-7567360));
         button9.setForeground(new Color(-12829636));
         button9.setText("9");
         button9.putClientProperty("hideActionText", Boolean.FALSE);
@@ -166,6 +160,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button9, gbc);
         buttonPlus = new JButton();
+        buttonPlus.setBackground(new Color(-7567360));
         buttonPlus.setForeground(new Color(-12829636));
         buttonPlus.setText("+");
         gbc = new GridBagConstraints();
@@ -177,6 +172,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonPlus, gbc);
         buttonDivide = new JButton();
+        buttonDivide.setBackground(new Color(-7567360));
         buttonDivide.setForeground(new Color(-12829636));
         buttonDivide.setText("%");
         gbc = new GridBagConstraints();
@@ -188,6 +184,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonDivide, gbc);
         buttonPower = new JButton();
+        buttonPower.setBackground(new Color(-7567360));
         buttonPower.setForeground(new Color(-12829636));
         buttonPower.setText("x^y");
         gbc = new GridBagConstraints();
@@ -199,6 +196,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonPower, gbc);
         buttonSubtract = new JButton();
+        buttonSubtract.setBackground(new Color(-7567360));
         buttonSubtract.setForeground(new Color(-12829636));
         buttonSubtract.setText("-");
         gbc = new GridBagConstraints();
@@ -210,6 +208,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonSubtract, gbc);
         buttonMultiply = new JButton();
+        buttonMultiply.setBackground(new Color(-7567360));
         buttonMultiply.setForeground(new Color(-12829636));
         buttonMultiply.setText("x");
         gbc = new GridBagConstraints();
@@ -221,6 +220,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonMultiply, gbc);
         buttonRoot = new JButton();
+        buttonRoot.setBackground(new Color(-7567360));
         buttonRoot.setForeground(new Color(-12829636));
         buttonRoot.setText("root");
         gbc = new GridBagConstraints();
@@ -232,6 +232,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonRoot, gbc);
         buttonDot = new JButton();
+        buttonDot.setBackground(new Color(-7567360));
         buttonDot.setForeground(new Color(-12829636));
         buttonDot.setText(".");
         gbc = new GridBagConstraints();
@@ -243,6 +244,7 @@ public class CalculatorUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonDot, gbc);
         buttonEquals = new JButton();
+        buttonEquals.setBackground(new Color(-7567360));
         buttonEquals.setForeground(new Color(-12829636));
         buttonEquals.setText("=");
         gbc = new GridBagConstraints();
@@ -271,6 +273,18 @@ public class CalculatorUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(labelOutput, gbc);
+        a1Button = new JButton();
+        a1Button.setBackground(new Color(-7567360));
+        a1Button.setForeground(new Color(-12829636));
+        a1Button.setText("1");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        panelMain.add(a1Button, gbc);
     }
 
     /**

@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="CalculatorUI.CalculatorUI">
   <grid id="27dc6" binding="panelMain" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="572" height="400"/>
+      <xy x="20" y="20" width="543" height="225"/>
     </constraints>
     <properties>
       <background color="-12829636"/>
@@ -11,29 +11,13 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="bb8f5" class="javax.swing.JButton" binding="button1">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="78" height="141"/>
-          </grid>
-          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
-        </constraints>
-        <properties>
-          <background color="-12829636"/>
-          <foreground color="-12829636"/>
-          <preferredSize width="78" height="30"/>
-          <text value="1"/>
-        </properties>
-        <clientProperties>
-          <hideActionText class="java.lang.Boolean" value="false"/>
-        </clientProperties>
-      </component>
       <component id="d390f" class="javax.swing.JButton" binding="button4">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="4"/>
         </properties>
@@ -47,6 +31,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="7"/>
         </properties>
@@ -62,6 +47,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="2"/>
         </properties>
@@ -75,6 +61,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="5"/>
         </properties>
@@ -88,6 +75,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="8"/>
         </properties>
@@ -103,6 +91,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="3"/>
         </properties>
@@ -118,6 +107,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="6"/>
         </properties>
@@ -133,6 +123,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="9"/>
         </properties>
@@ -148,6 +139,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="+"/>
         </properties>
@@ -160,6 +152,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="%"/>
         </properties>
@@ -172,6 +165,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="x^y"/>
         </properties>
@@ -182,6 +176,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="-"/>
         </properties>
@@ -192,6 +187,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="x"/>
         </properties>
@@ -202,6 +198,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="root"/>
         </properties>
@@ -212,6 +209,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="."/>
         </properties>
@@ -222,6 +220,7 @@
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
+          <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="="/>
         </properties>
@@ -238,6 +237,17 @@
           <horizontalAlignment value="11"/>
           <text value="0.0"/>
           <verticalAlignment value="3"/>
+        </properties>
+      </component>
+      <component id="4ef2" class="javax.swing.JButton" binding="a1Button" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <background color="-7567360"/>
+          <foreground color="-12829636"/>
+          <text value="1"/>
         </properties>
       </component>
     </children>
