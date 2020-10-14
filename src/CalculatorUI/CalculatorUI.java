@@ -2,6 +2,8 @@ package CalculatorUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class CalculatorUI {
     private JPanel panelMain;
@@ -23,6 +25,18 @@ public class CalculatorUI {
     private JButton buttonEquals;
     private JLabel labelOutput;
     private JButton button1;
+
+    public CalculatorUI() {
+        button1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button1.getText();
+                labelOutput.setText(text);
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CalculatorUI");
