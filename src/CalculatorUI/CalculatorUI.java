@@ -26,7 +26,26 @@ public class CalculatorUI {
     private JLabel labelOutput;
     private JButton button1;
 
+    private final int ADD = 0;
+    private final int SUB = 0;
+    private final int MUL = 0;
+    private final int DIV = 0;
+
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("CalculatorUI");
+        frame.setContentPane(new CalculatorUI().panelMain);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+
+    }
+
+
     public CalculatorUI() {
+
+        labelOutput.setText("");
+
         button1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -127,13 +146,7 @@ public class CalculatorUI {
         });
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("CalculatorUI");
-        frame.setContentPane(new CalculatorUI().panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
+
 
 
     {
