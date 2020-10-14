@@ -36,6 +36,95 @@ public class CalculatorUI {
                 labelOutput.setText(text);
             }
         });
+
+        button2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button2.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button3.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button3.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button4.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button4.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button5.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button5.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button6.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button6.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button7.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button7.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button8.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button8.getText();
+                labelOutput.setText(text);
+            }
+        });
+
+        button9.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += button9.getText();
+                labelOutput.setText(text);
+            }
+        });
+        buttonDot.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                String text = labelOutput.getText();
+                text += buttonDot.getText();
+                labelOutput.setText(text);
+            }
+        });
     }
 
     public static void main(String[] args) {
