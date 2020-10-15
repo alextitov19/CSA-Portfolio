@@ -30,11 +30,13 @@ public class CalculatorUI {
     private final int SUB = 1;
     private final int MUL = 2;
     private final int DIV = 3;
+    private final int POW = 4;
+    private final int ROO = 5;
+
     private int currentOp;
 
     private double firstInput;
     private double secondInput;
-
 
 
     public static void main(String[] args) {
@@ -188,6 +190,25 @@ public class CalculatorUI {
                 labelOutput.setText("");
             }
         });
+
+        buttonPower.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetOperation(labelOutput, POW);
+                labelOutput.setText("");
+            }
+        });
+
+        buttonRoot.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetOperation(labelOutput, ROO);
+                labelOutput.setText("");
+            }
+        });
+
         buttonEquals.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -195,6 +216,7 @@ public class CalculatorUI {
                 SetAnswer(labelOutput);
             }
         });
+
     }
 
     //calculate result of math operation and set labelOutput text to result
@@ -216,10 +238,16 @@ public class CalculatorUI {
                 case DIV:
                     result = firstInput / secondInput;
                     break;
+                case POW:
+                    result = Math.pow(firstInput, secondInput);
+                    break;
+                case ROO:
+                    result = Math.pow(firstInput, 1 / secondInput);
+                    break;
                 default:
                     System.out.printf("currentOp value = %d\n", currentOp);
                     try {
-                        throw new Exception("currentOp is equal to a value that is not 0-4");
+                        throw new Exception("currentOp is equal to a value that is not 0-5");
                     } catch (Exception exception) {
                         System.out.print(exception.getMessage());
                         System.exit(1);
