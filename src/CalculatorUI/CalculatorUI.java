@@ -243,6 +243,13 @@ public class CalculatorUI {
             }
         });
 
+        buttonClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Reset();
+            }
+        });
+
     }
 
     //calculate result of math operation and set labelOutput text to result
@@ -328,7 +335,7 @@ public class CalculatorUI {
     }
 
     //reset/clear calculator
-    //to be called by buttonClear which is not added yet
+    //called by buttonClear
     private void Reset() {
         SetMathOpButtonStatus(true);
         firstInput = secondInput = 0.0;
@@ -364,7 +371,7 @@ public class CalculatorUI {
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -377,7 +384,7 @@ public class CalculatorUI {
         button5.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -390,7 +397,7 @@ public class CalculatorUI {
         button6.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -419,7 +426,7 @@ public class CalculatorUI {
         button1.setText("1");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -432,7 +439,7 @@ public class CalculatorUI {
         button7.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -445,7 +452,7 @@ public class CalculatorUI {
         button2.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -458,7 +465,7 @@ public class CalculatorUI {
         button3.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -471,7 +478,7 @@ public class CalculatorUI {
         button8.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -484,7 +491,7 @@ public class CalculatorUI {
         button9.putClientProperty("hideActionText", Boolean.FALSE);
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -496,7 +503,7 @@ public class CalculatorUI {
         button0.setText("0");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 4;
+        gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button0, gbc);
@@ -506,7 +513,7 @@ public class CalculatorUI {
         buttonNegative.setText("(-)");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 4;
+        gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonNegative, gbc);
@@ -516,7 +523,7 @@ public class CalculatorUI {
         buttonDot.setText(".");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 4;
+        gbc.gridy = 5;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -527,9 +534,9 @@ public class CalculatorUI {
         buttonEquals.setForeground(new Color(-12829636));
         buttonEquals.setText("=");
         gbc = new GridBagConstraints();
-        gbc.gridx = 5;
-        gbc.gridy = 4;
-        gbc.gridwidth = 2;
+        gbc.gridx = 4;
+        gbc.gridy = 5;
+        gbc.gridwidth = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -541,7 +548,7 @@ public class CalculatorUI {
         buttonAdd.setText("+");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -553,7 +560,7 @@ public class CalculatorUI {
         buttonSubtract.setText("-");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -565,7 +572,7 @@ public class CalculatorUI {
         buttonRoot.setText("root");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -577,7 +584,7 @@ public class CalculatorUI {
         buttonPower.setText("x^y");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -589,7 +596,7 @@ public class CalculatorUI {
         buttonDivide.setText("%");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -601,7 +608,7 @@ public class CalculatorUI {
         buttonMultiply.setText("x");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -613,7 +620,7 @@ public class CalculatorUI {
         buttonBackspace.setText("<-");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonBackspace, gbc);
@@ -623,11 +630,26 @@ public class CalculatorUI {
         buttonClear.setText("Clear");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.gridwidth = 2;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonClear, gbc);
+        final JPanel spacer1 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 3;
+        gbc.gridy = 2;
+        gbc.gridheight = 4;
+        gbc.fill = GridBagConstraints.BOTH;
+        panelMain.add(spacer1, gbc);
+        final JPanel spacer2 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 7;
+        gbc.weightx = 0.1;
+        gbc.fill = GridBagConstraints.BOTH;
+        panelMain.add(spacer2, gbc);
     }
 
     /**
