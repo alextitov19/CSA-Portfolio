@@ -57,100 +57,90 @@ public class CalculatorUI {
 
 
         //add listeners to all buttons
-        button1.addMouseListener(new MouseAdapter() {
+        button1.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button1.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button2.addMouseListener(new MouseAdapter() {
+        button2.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button2.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button3.addMouseListener(new MouseAdapter() {
+        button3.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button3.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button4.addMouseListener(new MouseAdapter() {
+        button4.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button4.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button5.addMouseListener(new MouseAdapter() {
+        button5.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button5.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button6.addMouseListener(new MouseAdapter() {
+        button6.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button6.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button7.addMouseListener(new MouseAdapter() {
+        button7.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button7.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button8.addMouseListener(new MouseAdapter() {
+        button8.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button8.getText();
                 labelOutput.setText(text);
             }
         });
 
-        button9.addMouseListener(new MouseAdapter() {
+        button9.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += button9.getText();
                 labelOutput.setText(text);
             }
         });
 
-        buttonDot.addMouseListener(new MouseAdapter() {
+        buttonDot.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
                 text += buttonDot.getText();
                 labelOutput.setText(text);
