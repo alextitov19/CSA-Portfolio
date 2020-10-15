@@ -49,12 +49,7 @@ public class CalculatorUI {
 
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("CalculatorUI");
-        CalculatorUI calculator = new CalculatorUI();
-        frame.setContentPane(calculator.panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+    //    RunCalculatorUI();
     }
 
 
@@ -166,9 +161,11 @@ public class CalculatorUI {
         buttonNegative.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Double text = Double.parseDouble(labelOutput.getText());
-                text *= -1;
-                labelOutput.setText(Double.toString(text));
+                if (labelOutput.getText() != "") {
+                    Double text = Double.parseDouble(labelOutput.getText());
+                    text *= -1;
+                    labelOutput.setText(Double.toString(text));
+                }
             }
         });
 
@@ -341,6 +338,14 @@ public class CalculatorUI {
         firstInput = secondInput = 0.0;
         currentOp = 0;
         labelOutput.setText("");
+    }
+
+    public static void RunCalculatorUI() {
+        JFrame frame = new JFrame("CalculatorUI");
+        frame.setContentPane(new CalculatorUI().panelMain);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     {
