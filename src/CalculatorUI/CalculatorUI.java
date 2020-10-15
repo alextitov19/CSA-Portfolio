@@ -1,3 +1,6 @@
+//Copyright Aleksandr Titov 10/15/2020
+//Aleksand Titov has ownership and credit for this file
+
 package CalculatorUI;
 
 import javax.swing.*;
