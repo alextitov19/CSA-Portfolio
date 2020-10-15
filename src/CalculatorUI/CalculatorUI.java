@@ -169,7 +169,6 @@ public class CalculatorUI {
                 Double text = Double.parseDouble(labelOutput.getText());
                 text *= -1;
                 labelOutput.setText(Double.toString(text));
-                buttonNegative.setEnabled(false);
             }
         });
 
@@ -229,6 +228,22 @@ public class CalculatorUI {
                 SetAnswer(labelOutput);
             }
         });
+
+        buttonBackspace.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = labelOutput.getText();
+                if (s.length() > 0) {
+                    char[] arr = s.toCharArray();
+                    char[] newArr = new char[s.length() - 1];
+                    for (int i = 0; i < newArr.length; i++) {
+                        newArr[i] = arr[i];
+                    }
+                    labelOutput.setText(newArr.toString());
+                }
+            }
+        });
+
     }
 
     //calculate result of math operation and set labelOutput text to result
