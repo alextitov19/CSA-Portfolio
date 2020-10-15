@@ -15,7 +15,7 @@ public class CalculatorUI {
     private JButton button3;
     private JButton button6;
     private JButton button9;
-    private JButton buttonPlus;
+    private JButton buttonAdd;
     private JButton buttonDivide;
     private JButton buttonPower;
     private JButton buttonSubtract;
@@ -27,25 +27,33 @@ public class CalculatorUI {
     private JButton button1;
 
     private final int ADD = 0;
-    private final int SUB = 0;
-    private final int MUL = 0;
-    private final int DIV = 0;
+    private final int SUB = 1;
+    private final int MUL = 2;
+    private final int DIV = 3;
+    private int currentOp;
+
+    private double firstInput;
+    private double secondInput;
+
+    private boolean isFirstInputEmpty = true;
 
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("CalculatorUI");
-        frame.setContentPane(new CalculatorUI().panelMain);
+        CalculatorUI calculator = new CalculatorUI();
+        frame.setContentPane(calculator.panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
     }
 
 
     public CalculatorUI() {
 
-        labelOutput.setText("");
+        labelOutput.setText(""); //clear output label
 
+
+        //add listeners to all buttons
         button1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -135,6 +143,7 @@ public class CalculatorUI {
                 labelOutput.setText(text);
             }
         });
+
         buttonDot.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -144,9 +153,78 @@ public class CalculatorUI {
                 labelOutput.setText(text);
             }
         });
+
+        buttonAdd.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetOperation(labelOutput, ADD);
+                labelOutput.setText("");
+            }
+        });
+
+        buttonSubtract.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetOperation(labelOutput, SUB);
+                labelOutput.setText("");
+            }
+        });
+
+        buttonMultiply.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetOperation(labelOutput, MUL);
+                labelOutput.setText("");
+            }
+        });
+
+        buttonDivide.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetOperation(labelOutput, DIV);
+                labelOutput.setText("");
+            }
+        });
     }
 
 
+    private void SetOperation(JLabel label, int operation) {
+        if (CheckLabel(label) == true) {
+            if (isFirstInputEmpty == true) {
+                firstInput = GetDouble(label);
+                isFirstInputEmpty = false;
+            } else {
+                secondInput = GetDouble(label);
+            }
+            System.out.printf("First input : %f\n", firstInput);
+            System.out.printf("Second input : %f\n", secondInput);
+        }
+    }
+
+    private double GetDouble(JLabel label) {
+        String s = label.getText();
+        if (s.charAt(0) == '.') {
+            s = "0" + s;
+        }
+        if (s.charAt(s.length() - 1) == '.') {
+            s = s + "0";
+        }
+        return Double.parseDouble(s);
+    }
+
+    //checks a label to see if it has a number
+    private boolean CheckLabel(JLabel label) {
+        if (label.getText().isBlank() == false) {
+            if (label.getText() != ".") {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     {
@@ -274,10 +352,10 @@ public class CalculatorUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button9, gbc);
-        buttonPlus = new JButton();
-        buttonPlus.setBackground(new Color(-7567360));
-        buttonPlus.setForeground(new Color(-12829636));
-        buttonPlus.setText("+");
+        buttonAdd = new JButton();
+        buttonAdd.setBackground(new Color(-7567360));
+        buttonAdd.setForeground(new Color(-12829636));
+        buttonAdd.setText("+");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
         gbc.gridy = 1;
@@ -285,7 +363,7 @@ public class CalculatorUI {
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
-        panelMain.add(buttonPlus, gbc);
+        panelMain.add(buttonAdd, gbc);
         buttonDivide = new JButton();
         buttonDivide.setBackground(new Color(-7567360));
         buttonDivide.setForeground(new Color(-12829636));
