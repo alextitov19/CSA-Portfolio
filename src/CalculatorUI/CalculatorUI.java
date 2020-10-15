@@ -36,6 +36,7 @@ public class CalculatorUI {
     private double secondInput;
 
     private boolean isFirstInputEmpty = true;
+    private boolean isSecondInputEmpty = true;
 
 
     public static void main(String[] args) {
@@ -191,20 +192,23 @@ public class CalculatorUI {
         });
     }
 
-
+    //record input and operation
     private void SetOperation(JLabel label, int operation) {
         if (CheckLabel(label) == true) {
             if (isFirstInputEmpty == true) {
                 firstInput = GetDouble(label);
                 isFirstInputEmpty = false;
-            } else {
+            } else if (isSecondInputEmpty == true) {
                 secondInput = GetDouble(label);
+                isSecondInputEmpty = false;
             }
             System.out.printf("First input : %f\n", firstInput);
             System.out.printf("Second input : %f\n", secondInput);
         }
     }
 
+    //convert label text to double
+    //run only after running CheckLabel()
     private double GetDouble(JLabel label) {
         String s = label.getText();
         if (s.charAt(0) == '.') {
@@ -224,6 +228,10 @@ public class CalculatorUI {
             }
         }
         return false;
+    }
+
+    private void DisableButton() {
+
     }
 
 
