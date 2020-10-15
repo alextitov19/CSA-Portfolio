@@ -35,8 +35,6 @@ public class CalculatorUI {
     private double firstInput;
     private double secondInput;
 
-    private boolean isFirstInputEmpty = true;
-    private boolean isSecondInputEmpty = true;
 
 
     public static void main(String[] args) {
@@ -190,20 +188,54 @@ public class CalculatorUI {
                 labelOutput.setText("");
             }
         });
+        buttonEquals.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetAnswer(labelOutput);
+            }
+        });
+    }
+
+    //calculate result of math operation and set labelOutput text to result
+    //ran by buttonEquals
+    private void SetAnswer(JLabel label) {
+        if (CheckLabel(label) == true) {
+            double result = 0;
+            secondInput = GetDouble(label);
+            switch (currentOp) {
+                case ADD:
+                    result = firstInput + secondInput;
+                    break;
+                case SUB:
+                    result = firstInput - secondInput;
+                    break;
+                case MUL:
+                    result = firstInput * secondInput;
+                    break;
+                case DIV:
+                    result = firstInput / secondInput;
+                    break;
+                default:
+                    System.out.printf("currentOp value = %d\n", currentOp);
+                    try {
+                        throw new Exception("currentOp is equal to a value that is not 0-4");
+                    } catch (Exception exception) {
+                        System.out.print(exception.getMessage());
+                        System.exit(1);
+                    }
+            }
+            labelOutput.setText(Double.toString(result));
+        }
     }
 
     //record input and operation
+    //ran by mathOp buttons
     private void SetOperation(JLabel label, int operation) {
         if (CheckLabel(label) == true) {
-            if (isFirstInputEmpty == true) {
-                firstInput = GetDouble(label);
-                isFirstInputEmpty = false;
-            } else if (isSecondInputEmpty == true) {
-                secondInput = GetDouble(label);
-                isSecondInputEmpty = false;
-            }
+            firstInput = GetDouble(label);
+            currentOp = operation;
             System.out.printf("First input : %f\n", firstInput);
-            System.out.printf("Second input : %f\n", secondInput);
         }
     }
 
@@ -230,7 +262,7 @@ public class CalculatorUI {
         return false;
     }
 
-    private void DisableButton() {
+    private void SetMathOpButtonStatus(boolean status) {
 
     }
 
