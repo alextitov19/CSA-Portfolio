@@ -234,12 +234,11 @@ public class CalculatorUI {
             public void actionPerformed(ActionEvent e) {
                 String s = labelOutput.getText();
                 if (s.length() > 0) {
-                    char[] arr = s.toCharArray();
-                    char[] newArr = new char[s.length() - 1];
-                    for (int i = 0; i < newArr.length; i++) {
-                        newArr[i] = arr[i];
+                    String fs = "";
+                    for (int i = 0; i < s.length() - 1; i++) {
+                        fs += s.charAt(i);
                     }
-                    labelOutput.setText(newArr.toString());
+                    labelOutput.setText(fs);
                 }
             }
         });
