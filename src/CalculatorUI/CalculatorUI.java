@@ -2,6 +2,8 @@ package CalculatorUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -155,68 +157,60 @@ public class CalculatorUI {
             }
         });
 
-        buttonAdd.addMouseListener(new MouseAdapter() {
+        buttonAdd.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, ADD);
                 labelOutput.setText("");
             }
         });
 
-        buttonSubtract.addMouseListener(new MouseAdapter() {
+        buttonSubtract.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, SUB);
                 labelOutput.setText("");
             }
         });
 
-        buttonMultiply.addMouseListener(new MouseAdapter() {
+        buttonMultiply.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, MUL);
                 labelOutput.setText("");
             }
         });
 
-        buttonDivide.addMouseListener(new MouseAdapter() {
+        buttonDivide.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, DIV);
                 labelOutput.setText("");
             }
         });
 
-        buttonPower.addMouseListener(new MouseAdapter() {
+        buttonPower.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, POW);
                 labelOutput.setText("");
             }
         });
 
-        buttonRoot.addMouseListener(new MouseAdapter() {
+        buttonRoot.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, ROO);
                 labelOutput.setText("");
             }
         });
 
-        buttonEquals.addMouseListener(new MouseAdapter() {
+        buttonEquals.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
                 SetAnswer(labelOutput);
             }
         });
-
     }
 
     //calculate result of math operation and set labelOutput text to result
@@ -263,6 +257,7 @@ public class CalculatorUI {
         if (CheckLabel(label) == true) {
             firstInput = GetDouble(label);
             currentOp = operation;
+            SetMathOpButtonStatus(false);
             System.out.printf("First input : %f\n", firstInput);
         }
     }
@@ -290,8 +285,14 @@ public class CalculatorUI {
         return false;
     }
 
+    //enable or disable the status of mathOp buttons
     private void SetMathOpButtonStatus(boolean status) {
-
+        buttonAdd.setEnabled(status);
+        buttonSubtract.setEnabled(status);
+        buttonMultiply.setEnabled(status);
+        buttonDivide.setEnabled(status);
+        buttonRoot.setEnabled(status);
+        buttonPower.setEnabled(status);
     }
 
 
