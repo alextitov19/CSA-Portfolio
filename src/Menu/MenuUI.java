@@ -1,6 +1,7 @@
 package Menu;
 
 import CalculatorUI.CalculatorUI;
+import CalculatorUI2.CalculatorUI2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 public class MenuUI {
     private JButton calculatorButton;
     private JPanel panelMain;
+    private JButton calculator2Button;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("ManuUI");
@@ -24,6 +26,12 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CalculatorUI.RunCalculatorUI();
+            }
+        });
+        calculator2Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CalculatorUI2.RunCalculatorUI2();
             }
         });
     }
@@ -59,12 +67,28 @@ public class MenuUI {
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer2, gbc);
         calculatorButton = new JButton();
-        calculatorButton.setText("Calculator");
+        calculatorButton.setText("Calculator (Alex)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(calculatorButton, gbc);
+        calculator2Button = new JButton();
+        calculator2Button.setText("Calculator 2 (Sean)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.gridwidth = 2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(calculator2Button, gbc);
+        final JPanel spacer3 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        gbc.weightx = 0.5;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer3, gbc);
     }
 
     /**
@@ -73,4 +97,5 @@ public class MenuUI {
     public JComponent $$$getRootComponent$$$() {
         return panelMain;
     }
+
 }

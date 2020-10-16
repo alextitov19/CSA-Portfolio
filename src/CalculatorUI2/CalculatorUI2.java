@@ -1,5 +1,7 @@
 package CalculatorUI2;
 
+import CalculatorUI.CalculatorUI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -44,12 +46,7 @@ public class CalculatorUI2 {
     private boolean decimalPlaced;
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("CalculatorUI");
-        CalculatorUI2 calculator = new CalculatorUI2();
-        frame.setContentPane(calculator.panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+    //    RunCalculatorUI2();
     }
 
 
@@ -363,6 +360,15 @@ public class CalculatorUI2 {
         prohibitConcat = true;
         buttonDot.setEnabled(false);
         labelOutput.setText("0.0");
+    }
+
+    //runs the calculator2
+    public static void RunCalculatorUI2() {
+        JFrame frame = new JFrame("CalculatorUI2");
+        frame.setContentPane(new CalculatorUI2().panelMain);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     {
