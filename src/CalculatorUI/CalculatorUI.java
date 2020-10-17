@@ -47,15 +47,20 @@ public class CalculatorUI {
     private double firstInput;
     private double secondInput;
 
+    private boolean prohibitConcat;
+    //when true, it prohibits concatenation of selected number to the label,
+    // by creating a new number instead
+
+    private boolean decimalInPlace; //whether a decimal point is already in the label
 
     public static void main(String[] args) {
-    //    RunCalculatorUI();
+        RunCalculatorUI();
     }
 
 
     public CalculatorUI() {
 
-        labelOutput.setText(""); //clear output label
+        Reset();
 
 
         //add listeners to all buttons
@@ -63,7 +68,14 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button0.getText();
+                //allows or prohibits concatenation depending on prohibitConcat
+                if (prohibitConcat) {
+                    text = button0.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false; //replaces if concat prohibited, then allows concat
+                } else {
+                    text += button0.getText();  //adds if concat allowed
+                }
                 labelOutput.setText(text);
             }
         });
@@ -72,7 +84,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button1.getText();
+                if (prohibitConcat) {
+                    text = button1.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button1.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -81,7 +99,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button2.getText();
+                if (prohibitConcat) {
+                    text = button2.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button2.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -90,7 +114,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button3.getText();
+                if (prohibitConcat) {
+                    text = button3.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button3.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -99,7 +129,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button4.getText();
+                if (prohibitConcat) {
+                    text = button4.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button4.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -108,7 +144,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button5.getText();
+                if (prohibitConcat) {
+                    text = button5.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button5.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -117,7 +159,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button6.getText();
+                if (prohibitConcat) {
+                    text = button6.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button6.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -126,7 +174,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button7.getText();
+                if (prohibitConcat) {
+                    text = button7.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button7.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -135,7 +189,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button8.getText();
+                if (prohibitConcat) {
+                    text = button8.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button8.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -144,7 +204,13 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String text = labelOutput.getText();
-                text += button9.getText();
+                if (prohibitConcat) {
+                    text = button9.getText();
+                    decimalInPlace = false;
+                    prohibitConcat = false;
+                } else {
+                    text += button9.getText();
+                }
                 labelOutput.setText(text);
             }
         });
@@ -152,9 +218,17 @@ public class CalculatorUI {
         buttonDot.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String text = labelOutput.getText();
-                text += buttonDot.getText();
-                labelOutput.setText(text);
+                if (!decimalInPlace) { // won't function if there is already a decimal point inn the label
+                    String text = labelOutput.getText();
+                    if (prohibitConcat) {
+                        text = "0" + buttonDot.getText(); //if user starts with "." "0." is added to label
+                        prohibitConcat = false;
+                    } else {
+                        text += buttonDot.getText();
+                    }
+                    decimalInPlace = true;
+                    labelOutput.setText(text);
+                }
             }
         });
 
@@ -175,7 +249,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, ADD);
-                labelOutput.setText("");
+                decimalInPlace = false;
+                prohibitConcat = true; //new number will be created after button presses so there can't be concat
             }
         });
 
@@ -183,7 +258,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, SUB);
-                labelOutput.setText("");
+                decimalInPlace = false;
+                prohibitConcat = true;
             }
         });
 
@@ -191,7 +267,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, MUL);
-                labelOutput.setText("");
+                decimalInPlace = false;
+                prohibitConcat = true;
             }
         });
 
@@ -199,7 +276,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, DIV);
-                labelOutput.setText("");
+                decimalInPlace = false;
+                prohibitConcat = true;
             }
         });
 
@@ -207,7 +285,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, POW);
-                labelOutput.setText("");
+                decimalInPlace = false;
+                prohibitConcat = true;
             }
         });
 
@@ -215,7 +294,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetOperation(labelOutput, ROO);
-                labelOutput.setText("");
+                decimalInPlace = false;
+                prohibitConcat = true;
             }
         });
 
@@ -223,6 +303,8 @@ public class CalculatorUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SetAnswer(labelOutput);
+                SetMathOpButtonStatus(true); //allows operations to be used again
+                prohibitConcat = true; //concat should be prohibited after operation complete
             }
         });
 
@@ -337,7 +419,9 @@ public class CalculatorUI {
         SetMathOpButtonStatus(true);
         firstInput = secondInput = 0.0;
         currentOp = 0;
-        labelOutput.setText("");
+        prohibitConcat = true;
+        decimalInPlace = false;
+        labelOutput.setText("0");
     }
 
     public static void RunCalculatorUI() {
