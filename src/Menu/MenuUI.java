@@ -11,7 +11,6 @@ import java.awt.event.ActionListener;
 public class MenuUI {
     private JButton calculatorButton;
     private JPanel panelMain;
-    private JButton calculator2Button;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("ManuUI");
@@ -26,12 +25,6 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CalculatorUI.RunCalculatorUI();
-            }
-        });
-        calculator2Button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CalculatorUI2.RunCalculatorUI2();
             }
         });
     }
@@ -73,14 +66,6 @@ public class MenuUI {
         gbc.gridy = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(calculatorButton, gbc);
-        calculator2Button = new JButton();
-        calculator2Button.setText("Calculator 2 (Sean)");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 3;
-        gbc.gridwidth = 2;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panelMain.add(calculator2Button, gbc);
         final JPanel spacer3 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
