@@ -8,9 +8,9 @@ public class CustomPaintComponent extends Component {
         // Retrieve the graphics context; this object is used to paint shapes
         Graphics2D g2d = (Graphics2D) g;
         GraphingCalculator gc = new GraphingCalculator();
-        int[] xs = gc.GetCoords();
-        for (int i = 0; i < xs.length; i++) {
-            g2d.drawOval(xs[i], 50, 5, 5);
+        int[][] coords = gc.GetCoords();
+        for (int i = 0; i < coords[0].length; i++) {
+            g2d.fillOval(coords[0][i], coords[1][i], 5, 5);
         }
 
     }
