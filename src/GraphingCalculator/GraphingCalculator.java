@@ -1,15 +1,13 @@
 package GraphingCalculator;
 
-import java.awt.Component;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Polygon;
+import java.awt.*;
 
 public class GraphingCalculator {
 
-    private int[][] coordinates = {{20, 40, 60, 80, 100},
-                                  {60, 22, 78, 203, 199}};
+    private int numberOfPoints = 20;
+
+    private int[][] coordinates = new int[2][numberOfPoints];
+
 
 
     public static void main(String[] args) {
@@ -24,6 +22,14 @@ public class GraphingCalculator {
 
         frame.setVisible(true);
 
+    }
+
+    //takes in a form of y=mx+b
+    public void CalculateLinear(int m, int b) {
+        for (int i = 0; i < numberOfPoints; i++) {
+            coordinates[0][i] = i;
+            coordinates[1][i] = (m * i) + b;
+        }
     }
 
     public int[][] GetCoords() {
