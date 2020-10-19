@@ -5,29 +5,15 @@ import java.awt.*;
 public class GraphingCalculator {
 
     private int numberOfPoints = 400;
-
     private int[][] coordinates = new int[2][numberOfPoints];
 
-
-
     public static void main(String[] args) {
-
-
-
-
         Frame frame = new Frame();
         frame.add(new CustomPaintComponent());
-
         int frameWidth = 1000;
-
         int frameHeight = 1000;
-
         frame.setSize(frameWidth, frameHeight);
-
         frame.setVisible(true);
-
-
-
     }
 
     //takes in a form of y=mx+b
