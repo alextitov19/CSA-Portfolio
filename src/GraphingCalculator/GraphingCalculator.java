@@ -8,7 +8,8 @@ import java.awt.Polygon;
 
 public class GraphingCalculator {
 
-    private int[] xs = {20, 40, 60, 80, 100};
+    private int[][] coordinates = {{20, 40, 60, 80, 100},
+                                  {60, 22, 78, 203, 199}};
 
 
     public static void main(String[] args) {
@@ -25,8 +26,8 @@ public class GraphingCalculator {
 
     }
 
-    public int[] GetCoords() {
-        return xs;
+    public int[][] GetCoords() {
+        return coordinates;
     }
 
 }
