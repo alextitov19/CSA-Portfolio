@@ -25,10 +25,6 @@ public class GraphingCalculator {
         coords = arr;
     }
 
-    public void SetVars(double[] arr) {
-
-    }
-
     public void RunGraphingCalculator() {
         Frame frame = new Frame();
         frame.add(new CustomPaintComponent());
