@@ -1,7 +1,9 @@
 package Menu;
 
 import CalculatorUI.CalculatorUI;
+import GraphingCalculator.GraphingCalculatorUI;
 import CalculatorUI2.CalculatorUI2;
+import GraphingCalculator.GraphingCalculator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +13,7 @@ import java.awt.event.ActionListener;
 public class MenuUI {
     private JButton calculatorButton;
     private JPanel panelMain;
+    private JButton graphingCalculatorAlexButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("ManuUI");
@@ -25,6 +28,12 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CalculatorUI.RunCalculatorUI();
+            }
+        });
+        graphingCalculatorAlexButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GraphingCalculatorUI.RunGraphingCalculatorUI();
             }
         });
     }
@@ -74,6 +83,13 @@ public class MenuUI {
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer3, gbc);
+        graphingCalculatorAlexButton = new JButton();
+        graphingCalculatorAlexButton.setText("Graphing Calculator (Alex)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(graphingCalculatorAlexButton, gbc);
     }
 
     /**
