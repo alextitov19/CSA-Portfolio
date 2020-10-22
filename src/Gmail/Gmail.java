@@ -15,10 +15,9 @@ public class Gmail {
 
     public static void main(String[] args) { }
 
-    public static void SendEmail(String to, String from, String pw) {
+    public static void SendEmail(String to, String from, String pw, String subject, String body) {
         // TODO Auto-generated method stub
-        System.out.println("Hello Alex!");
-        System.out.println("The program is starting up...");
+        System.out.println("The Gmail program is starting up...");
 
         String recipient = to;
         String sender = from;
@@ -53,12 +52,13 @@ public class Gmail {
             message.setFrom(new InternetAddress(sender));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
 
-            message.setSubject("Hello bighead!");
-            message.setText("This message was sent from a Java program!");
+            message.setSubject(subject);
+            message.setText(body);
 
             Transport.send(message);
             System.out.println("Message sent successfully!");
         } catch (MessagingException mex){
+            System.out.println("Message failed to send!");
             mex.printStackTrace();
         }
     }
