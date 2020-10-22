@@ -5,6 +5,8 @@ import java.awt.*;
 
 public class Games {
 
+    private JPanel panel1;
+
     public static void main(String[] args) {
         System.out.println(":/");
     }
@@ -24,7 +26,14 @@ public class Games {
      * @noinspection ALL
      */
     private void $$$setupUI$$$() {
-        final JPanel panel1 = new JPanel();
-        panel1.setLayout(new GridBagLayout());
+        panel1 = new JPanel();
+        panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
+        return panel1;
     }
 }
