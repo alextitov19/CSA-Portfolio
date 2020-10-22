@@ -22,8 +22,7 @@ public class Gmail {
         String recipient = to;
         String sender = from;
         String host = "smtp.gmail.com";
-
-
+        
         Properties properties = System.getProperties();
 
         // Setup mail server
@@ -32,19 +31,13 @@ public class Gmail {
         properties.put("mail.smtp.ssl.enable", "true");
         properties.put("mail.smtp.auth", "true");
 
-        // Get the Session object.// and pass username and password
+        // Get the Session object and pass username and password
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
-
                 return new PasswordAuthentication(sender, pw);
-
             }
-
         });
-
-//		properties.setProperty("mail.smtp.host", host);
-//		Session session = Session.getDefaultInstance(properties);
 
         try {
             MimeMessage message = new MimeMessage(session);
