@@ -1,5 +1,6 @@
 package GraphingCalculator;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class GraphingCalculator {
