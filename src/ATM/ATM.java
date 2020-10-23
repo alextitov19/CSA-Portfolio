@@ -17,20 +17,21 @@ public class ATM {
     private JPasswordField passfield;
     private JLabel update;
     private JLabel pass;
-    String uname;
-    String pword;
 
     public ATM() {
         login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String uname = userfield.getText();
-                String pword = passfield.getText();
+                String pword = String.valueOf(passfield.getPassword());
 
-                if (uname.equals("NeilSahai") && pword.equals("CSisCool!")) {
-                    update.setText("Login Successful!");
+                if (uname.equals("NeilSahai") && pword.equals("qwerty")) {
+                    JOptionPane.showMessageDialog(ATM, "Login Successful!");
+                    System.out.println(user);
                 } else {
                     update.setText("Login Unsuccessful, Please try again!");
+                    JOptionPane.showMessageDialog(ATM, "Login Unsuccessful!");
+                    System.out.println(pass);
                 }
 
             }
@@ -44,9 +45,9 @@ public class ATM {
         JLabel user = new JLabel("Username");
         JLabel pass = new JLabel("Password");
         JTextField userfield = new JTextField();
-        JLabel update = new JLabel("Login in with your Credentials!");
         JPasswordField passfield = new JPasswordField();
         JButton login = new JButton("Login!");
+        JLabel update = new JLabel("Login with your Credentials!");
 
         // setting the size and constraints for the login window
         frame.setSize(400, 400);
@@ -63,7 +64,7 @@ public class ATM {
         passfield.setBounds(125, 120, 150, 15);
         userfield.setBounds(125, 80, 150, 15);
         update.setBounds(115, 150, 200, 15);
-        login.setBounds(125, 190, 150, 15);
+        login.setBounds(125, 190, 150, 20);
 
         //adding the parts of my login function to the JPanel
         ATM.add(user);
@@ -73,6 +74,8 @@ public class ATM {
         ATM.add(passfield);
         ATM.add(userfield);
         ATM.add(login);
+
+
 
     }
 
