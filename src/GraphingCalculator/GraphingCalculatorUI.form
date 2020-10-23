@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GraphingCalculator.GraphingCalculatorUI">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="da9b0" class="javax.swing.JLabel" binding="mLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="11"/>
+          <text value="m  "/>
+        </properties>
+      </component>
+      <component id="d4f9c" class="javax.swing.JLabel" binding="aLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="11"/>
+          <text value="a  "/>
+        </properties>
+      </component>
+      <component id="4e24b" class="javax.swing.JLabel" binding="nLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="11"/>
+          <text value="n  "/>
+        </properties>
+      </component>
+      <component id="18654" class="javax.swing.JLabel" binding="bLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <horizontalAlignment value="11"/>
+          <text value="b  "/>
+        </properties>
+      </component>
+      <component id="8e074" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro" size="24" style="1"/>
+          <horizontalAlignment value="0"/>
+          <text value="y=m((x+a)^n)+b"/>
+        </properties>
+      </component>
+      <component id="9921d" class="javax.swing.JButton" binding="graphButton">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <text value="Graph!"/>
+        </properties>
+      </component>
+      <component id="d2e06" class="javax.swing.JTextArea" binding="mTextArea">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="97aeb" class="javax.swing.JTextArea" binding="aTextArea">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d031c" class="javax.swing.JTextArea" binding="bTextArea">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="609c9" class="javax.swing.JTextArea" binding="nTextArea">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag weightx="0.1" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
