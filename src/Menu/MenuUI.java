@@ -5,6 +5,7 @@ import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
 import CalculatorUI2.CalculatorUI2;
 import GraphingCalculator.GraphingCalculator;
+import Store.Store;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,9 +17,11 @@ public class MenuUI {
     private JPanel panelMain;
     private JButton graphingCalculatorAlexButton;
     private JButton gmailAlexButton;
+    private JButton storeEyaadButton;
+    private JButton storeButton;
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("ManuUI");
+        JFrame frame = new JFrame("MenuUI");
         frame.setContentPane(new MenuUI().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -42,6 +45,12 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 GmailUI.RunGmailUI();
+            }
+        });
+        storeEyaadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Store.RunStoreUI();
             }
         });
     }
@@ -111,6 +120,19 @@ public class MenuUI {
         gbc.gridy = 4;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer4, gbc);
+        storeEyaadButton = new JButton();
+        storeEyaadButton.setText("Store(Eyaad)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 7;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(storeEyaadButton, gbc);
+        final JPanel spacer5 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 6;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer5, gbc);
     }
 
     /**
@@ -119,5 +141,4 @@ public class MenuUI {
     public JComponent $$$getRootComponent$$$() {
         return panelMain;
     }
-
 }

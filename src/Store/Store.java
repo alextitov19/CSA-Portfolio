@@ -1,5 +1,7 @@
 package Store;
 
+import Gmail.GmailUI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,14 +14,20 @@ public class Store {
     private JButton ViewInventory;
     private JPanel store;
     private JLabel welcomeLabel;
+    private JLabel moneyLabel;
+    public static int money = 100;
 
-    public static void main(String[] args) {
+    //public static void main(String[] args) { }
+
+    public static void RunStoreUI() {
         // Declaring parts of the main screen
         JFrame frame = new JFrame();
         JButton ViewItems = new JButton("View Items");
         JButton ViewInventory = new JButton("View Inventory");
         JPanel store = new JPanel();
         JLabel welcomeLabel = new JLabel("Welcome to the store!");
+        JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
+        store.setLayout(null);
 
         // Dimensions and properties of Frame
         frame.setSize(600, 600);
@@ -27,17 +35,17 @@ public class Store {
         frame.setVisible(true);
         frame.add(store);
 
-        store.setLayout(null);
-
-
         //Setting locations of my buttons and Labels
-        ViewItems.setBounds(40, 400, 200, 125);
-        ViewInventory.setBounds(340, 400, 200, 125);
+        ViewItems.setBounds(40, 200, 200, 125);
+        ViewInventory.setBounds(340, 200, 200, 125);
         welcomeLabel.setBounds(40, 0, 200, 175);
+        moneyLabel.setBounds(40, 400, 200, 175);
 
         store.add(ViewItems);
         store.add(ViewInventory);
         store.add(welcomeLabel);
+        store.add(moneyLabel);
+
 
 
     }
