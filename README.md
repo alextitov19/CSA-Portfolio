@@ -2,6 +2,8 @@
 
 Compendium of various mini-labs for AP CSA.
 
+All of the labs are located in \CSA-Portfolio\src\. You can find the labs and run them here.
+
 Andrew Pu: (5/5)
 
 This week I worked on a rock, paper, scissors game as
