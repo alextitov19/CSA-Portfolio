@@ -1,3 +1,7 @@
+//Part of Andrew's Project
+//I was trying to create a main menu where you could select games and it would open a new JFrame
+//On the student led forum, I saw one of the groups use a card layout, so I'll probably use that instead
+
 package Games;
 
 import javax.swing.*;
