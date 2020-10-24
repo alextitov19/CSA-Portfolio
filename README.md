@@ -2,7 +2,9 @@
 
 Compendium of various mini-labs for AP CSA.
 
-Andrew Pu: This week I worked on a rock, paper, scissors game as
+Andrew Pu: (5/5)
+
+This week I worked on a rock, paper, scissors game as
 my mini project. I know that rock, paper, scissors is a pretty
 basic game to code, but I wanted to start off with something easy
 in order to get the hang of JFrames and GUI designing. I set up
@@ -19,7 +21,7 @@ JFrame. I tried to add animation, but the delay didn't seem to
 work; it just made my program lag a lot, so I decided to remove
 it. Overall, I think made a decent amount of code, but I could've
 added more features and maybe started another project this week.
-Since I didn't do as much as I wanted, I would give myself a 9/10
+I would give myself a 5/5.
 
 All the code is in \CSA-Portfolio\src\Games\RPS
 
