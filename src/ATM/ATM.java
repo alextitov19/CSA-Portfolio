@@ -25,7 +25,7 @@ public class ATM {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String uname = userfield.getText();
-                String pword = passfield.getText();
+                String pword = String.valueOf(passfield.getPassword());
 
                 if (uname.equals("NeilSahai") && pword.equals("CSisCool!")) {
                     update.setText("Login Successful!");
