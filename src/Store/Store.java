@@ -16,6 +16,7 @@ public class Store {
     protected JLabel welcomeLabel;
     protected JLabel moneyLabel;
     protected static int money = 100;
+    protected static int books = 0;
 
     public static void main(String[] args) { }
 
@@ -84,11 +85,16 @@ class Items extends Store {
     private JLabel test;
     private JPanel items;
     private JLabel moneyLabel;
+    private JLabel book;
+    private JButton buyBook;
+    private JButton goBack;
 
     public void RunItemsUI() {
+        //Initializing GUI
         JFrame frame = new JFrame();
         JPanel items = new JPanel();
         JLabel test = new JLabel("Buy Items:");
+        JLabel book = new JLabel();
         JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
         JButton buyBook = new JButton("Buy Book: $20");
         JButton goBack = new JButton("Go Back");
@@ -100,21 +106,28 @@ class Items extends Store {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(items);
+
+        book.setIcon(new ImageIcon(".\\.\\.\\Icons\\book.jpg"));
         //Setting locations of my buttons and Labels
         test.setBounds(40, 0, 200, 175);
         moneyLabel.setBounds(40, 450, 200, 175);
         buyBook.setBounds(40,200,220,125);
+        book.setBounds(300,200,175,135);
         goBack.setBounds(40,400,220,125);
 
+        //Adding
+        items.add(book);
         items.add(test);
         items.add(buyBook);
         items.add(moneyLabel);
         items.add(goBack);
 
+
         buyBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 money = money - 20;
+                books+=1;
                 moneyLabel.setText("You currently have " + money + " dollars");
             }
         });
@@ -130,3 +143,4 @@ class Items extends Store {
 
     }
 }
+
