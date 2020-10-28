@@ -1,5 +1,5 @@
 package Store;
-
+//Created by Eyaad Mir
 import Gmail.GmailUI;
 
 import javax.swing.*;
@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+import java.lang.*;
 public class Store {
     protected JButton ViewItems;
     protected JButton ViewInventory;
@@ -17,6 +17,7 @@ public class Store {
     protected JLabel moneyLabel;
     protected static int money = 100;
     protected static int books = 0;
+    protected static int cards = 0;
 
     public static void main(String[] args) { }
 
@@ -86,7 +87,9 @@ class Items extends Store {
     private JPanel items;
     private JLabel moneyLabel;
     private JLabel book;
+    private JLabel card;
     private JButton buyBook;
+    private JButton buyCards;
     private JButton goBack;
 
     public void RunItemsUI() {
@@ -95,8 +98,10 @@ class Items extends Store {
         JPanel items = new JPanel();
         JLabel test = new JLabel("Buy Items:");
         JLabel book = new JLabel();
+        JLabel card = new JLabel();
         JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
-        JButton buyBook = new JButton("Buy Book: $20");
+        JButton buyBook = new JButton("Buy Book: $10");
+        JButton buyCards = new JButton("Buy Cards: $5");
         JButton goBack = new JButton("Go Back");
 
         items.setLayout(null);
@@ -108,17 +113,22 @@ class Items extends Store {
         frame.add(items);
 
         book.setIcon(new ImageIcon(".\\.\\.\\Icons\\book.jpg"));
+        card.setIcon(new ImageIcon(".\\.\\.\\Icons\\cards.jpg"));
         //Setting locations of my buttons and Labels
         test.setBounds(40, 0, 200, 175);
-        moneyLabel.setBounds(40, 450, 200, 175);
-        buyBook.setBounds(40,200,220,125);
-        book.setBounds(300,200,175,135);
-        goBack.setBounds(40,400,220,125);
+        moneyLabel.setBounds(40, 450, 500, 175);
+        buyBook.setBounds(40,120,150,125);
+        buyCards.setBounds(40,270,150,125);
+        book.setBounds(300,120,175,135);
+        card.setBounds(300,270,175,117);
+        goBack.setBounds(20,400,120,100);
 
-        //Adding
+        //Adding parts to panel
         items.add(book);
+        items.add(card);
         items.add(test);
         items.add(buyBook);
+        items.add(buyCards);
         items.add(moneyLabel);
         items.add(goBack);
 
@@ -126,9 +136,43 @@ class Items extends Store {
         buyBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                money = money - 20;
-                books+=1;
-                moneyLabel.setText("You currently have " + money + " dollars");
+                //For when you don't have enough money
+                if (money < 10) {
+                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+                  //  try {
+                        // thread to sleep for 1000 milliseconds
+                    //    Thread.sleep(1000);
+                    //}  catch (InterruptedException ex) {
+                      //  Thread.currentThread().interrupt();
+                    //}
+                    //moneyLabel.setText("You currently have " + money + " dollars");
+                }
+                else {
+                    money = money - 10;
+                    books += 1;
+                    moneyLabel.setText("You currently have " + money + " dollars.");
+                }
+            }
+        });
+        buyCards.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //For when you don't have enough money
+                if (money < 5) {
+                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+                    //  try {
+                    // thread to sleep for 1000 milliseconds
+                    //    Thread.sleep(1000);
+                    //}  catch (InterruptedException ex) {
+                    //  Thread.currentThread().interrupt();
+                    //}
+                    //moneyLabel.setText("You currently have " + money + " dollars");
+                }
+                else {
+                    money = money - 5;
+                    cards += 1;
+                    moneyLabel.setText("You currently have " + money + " dollars.");
+                }
             }
         });
         goBack.addActionListener(new ActionListener() {
