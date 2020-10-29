@@ -33,7 +33,7 @@ public class ATM extends JFrame {
         });
     }
 
-    public ATM() {
+    public static void RunATMUI() {
         // creating the parts of my login screen
         JFrame frame = new JFrame();
         JPanel ATM = new JPanel();
@@ -56,10 +56,10 @@ public class ATM extends JFrame {
         //sets the location of the parts of my GUI
         user.setBounds(40, 20, 80, 125);
         pass.setBounds(40, 40, 80, 175);
-        passfield.setBounds(125, 120, 150, 15);
-        userfield.setBounds(125, 80, 150, 15);
-        update.setBounds(112, 150, 225, 15);
-        login.setBounds(125, 190, 150, 15);
+        passfield.setBounds(125, 120, 150, 20);
+        userfield.setBounds(125, 80, 150, 20);
+        update.setBounds(112, 150, 225, 20);
+        login.setBounds(125, 190, 150, 20);
 
         //adding the parts of my login function to the JPanel
         ATM.add(user);
@@ -75,7 +75,7 @@ public class ATM extends JFrame {
             String uname = userfield.getText();
             String pword = String.valueOf(passfield.getPassword());
 
-            if (uname.equals("NeilSahai") && pword.equals("CSisCool!")) {
+            if (uname.equals("CSA") && pword.equals("test")) {
                 update.setText("Login Successful!");
             } else {
                 update.setText("Login Unsuccessful, Please try again!");
