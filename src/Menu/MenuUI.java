@@ -1,9 +1,9 @@
 package Menu;
 
+import ATM.ATM;
 import CalculatorUI.CalculatorUI;
 import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
-import CalculatorUI2.CalculatorUI2;
 import GraphingCalculator.GraphingCalculator;
 import Store.Store;
 
@@ -18,6 +18,7 @@ public class MenuUI {
     private JButton graphingCalculatorAlexButton;
     private JButton gmailAlexButton;
     private JButton storeEyaadButton;
+    private JButton atmNeilButton;
     private JButton storeButton;
 
     public static void main(String[] args) {
@@ -51,6 +52,12 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Store.RunStoreUI();
+            }
+        });
+        atmNeilButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ATM.RunATMUI();
             }
         });
     }
@@ -133,6 +140,19 @@ public class MenuUI {
         gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer5, gbc);
+        atmNeilButton = new JButton();
+        atmNeilButton.setText("ATM (Neil)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 9;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(atmNeilButton, gbc);
+        final JPanel spacer6 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 8;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer6, gbc);
     }
 
     /**
@@ -141,4 +161,5 @@ public class MenuUI {
     public JComponent $$$getRootComponent$$$() {
         return panelMain;
     }
+
 }
