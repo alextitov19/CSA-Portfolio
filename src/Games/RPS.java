@@ -192,13 +192,19 @@ public class RPS {
         panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 3, new Insets(0, 0, 0, 0), -1, -1));
         rockButton = new JButton();
-        rockButton.setText("Button");
+        Font rockButtonFont = this.$$$getFont$$$("Arial", Font.BOLD, 36, rockButton.getFont());
+        if (rockButtonFont != null) rockButton.setFont(rockButtonFont);
+        rockButton.setText("   Rock   ");
         panel1.add(rockButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         paperButton = new JButton();
-        paperButton.setText("Button");
+        Font paperButtonFont = this.$$$getFont$$$("Arial", Font.BOLD, 36, paperButton.getFont());
+        if (paperButtonFont != null) paperButton.setFont(paperButtonFont);
+        paperButton.setText("  Paper  ");
         panel1.add(paperButton, new com.intellij.uiDesigner.core.GridConstraints(3, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         scissorsButton = new JButton();
-        scissorsButton.setText("Button");
+        Font scissorsButtonFont = this.$$$getFont$$$("Arial", Font.BOLD, 36, scissorsButton.getFont());
+        if (scissorsButtonFont != null) scissorsButton.setFont(scissorsButtonFont);
+        scissorsButton.setText("Scissors");
         panel1.add(scissorsButton, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         titleLabel = new JLabel();
         titleLabel.setText("");
@@ -221,7 +227,27 @@ public class RPS {
     /**
      * @noinspection ALL
      */
+    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+        if (currentFont == null) return null;
+        String resultName;
+        if (fontName == null) {
+            resultName = currentFont.getName();
+        } else {
+            Font testFont = new Font(fontName, Font.PLAIN, 10);
+            if (testFont.canDisplay('a') && testFont.canDisplay('1')) {
+                resultName = fontName;
+            } else {
+                resultName = currentFont.getName();
+            }
+        }
+        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+    }
+
+    /**
+     * @noinspection ALL
+     */
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
 }

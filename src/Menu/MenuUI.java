@@ -26,6 +26,7 @@ public class MenuUI {
         frame.setContentPane(new MenuUI().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         frame.setVisible(true);
     }
 
