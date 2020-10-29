@@ -16,7 +16,7 @@ public class QuestionGenerator { //generates a question, given a  question type,
         return 0;
     }
 
-    public String getQuestionText(){
+    public String getQuestionText(){ //returns the text of the question as it would appear in GUI
         switch (questionType){
             case 1:
                 return  "What is ! + @ ?".replace("!", String.valueOf(param1)).replace("@", String.valueOf(param2));
