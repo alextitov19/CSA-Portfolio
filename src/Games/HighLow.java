@@ -84,9 +84,9 @@ public class HighLow {
                     number1.setText(number2.getText());
                     number2.setText("?");
                     titleLabel.setIcon(null);
-                    titleLabel.setText("<html>Will the next number be<br>HIGHER or LOWER?");
+                    titleLabel.setText("<html><div style='text-align: center;'>\"Will the next number be<br>HIGHER or LOWER?");
                     scoreLabel.setText("Score: " + score);
-                    nextButton.setText("NEXT");
+                    nextButton.setText("    NEXT   ");
                 }
                 roundStarted = true;
             }
@@ -126,23 +126,33 @@ public class HighLow {
 
         //Adds the labels and buttons to the panel
         //newConstraints specifies position of each label and button
-        panel.add(number1, newConstraints(0,0,300,200,3));
+        panel.add(number1, newConstraints(0,0,200,200,3));
         panel.add(titleLabel, newConstraints(1,0,100,200,1));
-        panel.add(scoreLabel, newConstraints(1,1,100,200,1));
-        panel.add(highScoreLabel, newConstraints(1,2,100,200,1));
-        panel.add(number2, newConstraints(2,0,300,200,3));
+        panel.add(scoreLabel, newConstraints(1,1,50,200,1));
+        panel.add(highScoreLabel, newConstraints(1,2,50,200,1));
+        panel.add(number2, newConstraints(2,0,200,200,3));
         panel.add(downButton, newConstraints(0,3,100,200,1));
         panel.add(nextButton, newConstraints(1,3,100,200,1));
         panel.add(upButton, newConstraints(2,3,100,200,1));
 
+        Font numbers = new Font("Arial", Font.BOLD, 144);
+        number1.setFont(numbers);
+        number2.setFont(numbers);
+
+        Font big = new Font("Arial", Font.BOLD, 36);
+        titleLabel.setFont(big);
+        downButton.setFont(big);
+        nextButton.setFont(big);
+        upButton.setFont(big);
+
         number1.setText("?");
         titleLabel.setText("");
         titleLabel.setIcon(new ImageIcon(".\\.\\.\\Icons\\HighLowTitle.png"));
-        scoreLabel.setText("Press \"start\" when you are ready");
+        scoreLabel.setText("<html><div style='text-align: center;'>\"Press START to begin</html>");
         highScoreLabel.setText("High Score: 0");
         number2.setText("?");
         downButton.setText("LOWER");
-        nextButton.setText("START");
+        nextButton.setText("   START  ");
         upButton.setText("HIGHER");
     }
 
@@ -164,13 +174,12 @@ public class HighLow {
         constraint.ipadx = d;
         //number of cells vertically
         constraint.gridheight = g;
-
         return constraint;
     }
 
     public void winLose(int x, int y) {
         if (y > x) {
-            titleLabel.setText("<html>Correct!<br>+1 point<br>Press NEXT to continue</html>");
+            titleLabel.setText("<html><div style='text-align: center;'>\Correct!<br>+1 point<br>Press NEXT</html>");
             score++;
         } else if (y == x) {
             Random rand = new Random();
@@ -178,7 +187,7 @@ public class HighLow {
             number2.setText(Integer.toString(two));
             winLose(x,y);
         } else {
-            titleLabel.setText("<html>You Lost!<br>Press START to try again<html>");
+            titleLabel.setText("<html><div style='text-align: center;'>\"You Lost!<br>Press RESTART to try again<html>");
             nextButton.setText("RESTART");
             score = 0;
         }
