@@ -19,6 +19,7 @@ public class MenuUI {
     private JButton gmailAlexButton;
     private JButton storeEyaadButton;
     private JButton atmNeilButton;
+    private JButton rpsAndrewButton;
     private JButton storeButton;
 
     public static void main(String[] args) {
@@ -59,6 +60,12 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ATM.RunATMUI();
+            }
+        });
+        rpsAndrewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RPS.runRPS();
             }
         });
     }
