@@ -179,7 +179,7 @@ public class HighLow {
 
     public void winLose(int x, int y) {
         if (y > x) {
-            titleLabel.setText("<html><div style='text-align: center;'>\Correct!<br>+1 point<br>Press NEXT</html>");
+            titleLabel.setText("<html><div style='text-align: center;'>Correct!<br>+1 point<br>Press NEXT</html>");
             score++;
         } else if (y == x) {
             Random rand = new Random();
