@@ -6,8 +6,6 @@ import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
 import GraphingCalculator.GraphingCalculator;
 import Store.Store;
-import Games.RPS;
-import Quiz.QuizUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,8 +20,8 @@ public class MenuUI {
     private JButton storeEyaadButton;
     private JButton atmNeilButton;
     private JButton rpsAndrewButton;
-    private JButton quizSeanButton;
     private JButton storeButton;
+    private JButton quizSeanButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MenuUI");
@@ -68,13 +66,7 @@ public class MenuUI {
         rpsAndrewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //RPS();
-            }
-        });
-        quizSeanButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                QuizUI.RunQuizUI();
+                //RPS.runRPS();
             }
         });
     }
