@@ -21,10 +21,76 @@ public class HighLow {
     private JLabel highScoreLabel;
     private JLabel number2;
 
+    private boolean roundStarted = false;
+    private boolean gameStarted = false;
+    private int score = 0;
+    private int highScore = 0;
+
     //Constructor with action listeners (later)
     public HighLow() {
 
         GUI();
+
+        downButton.addActionListener(new ActionListener() {
+            @Override
+            //play(0) sets the user's choice to rock
+            public void actionPerformed(ActionEvent e) {
+                if(roundStarted) {
+                    roundStarted = false;
+                    int one = Integer.parseInt(number1.getText());
+                    Random rand = new Random();
+                    int two = rand.nextInt(9) + 1;
+                    number2.setText(Integer.toString(two));
+                    winLose(two,one);
+                    scoreLabel.setText("Score: " + score);
+                    if (score > highScore) {
+                        highScore = score;
+                    }
+                    highScoreLabel.setText("High Score: " + highScore);
+                }
+            }
+        });
+
+        upButton.addActionListener(new ActionListener() {
+            @Override
+            //play(0) sets the user's choice to rock
+            public void actionPerformed(ActionEvent e) {
+                if(roundStarted) {
+                    roundStarted = false;
+                    int one = Integer.parseInt(number1.getText());
+                    Random rand = new Random();
+                    int two = rand.nextInt(9) + 1;
+                    number2.setText(Integer.toString(two));
+                    winLose(one,two);
+                    scoreLabel.setText("Score: " + score);
+                    if (score > highScore) {
+                        highScore = score;
+                    }
+                    highScoreLabel.setText("High Score: " + highScore);
+                }
+            }
+        });
+
+        nextButton.addActionListener(new ActionListener() {
+            @Override
+            //play(0) sets the user's choice to rock
+            public void actionPerformed(ActionEvent e) {
+                if(!roundStarted) {
+                    if(score == 0){
+                        Random random = new Random();
+                        int x = random.nextInt(9) + 1;
+                        number2.setText(Integer.toString(x));
+                    }
+                    number1.setText(number2.getText());
+                    number2.setText("?");
+                    titleLabel.setIcon(null);
+                    titleLabel.setText("<html>Will the next number be<br>HIGHER or LOWER?");
+                    scoreLabel.setText("Score: " + score);
+                    nextButton.setText("NEXT");
+                }
+                roundStarted = true;
+            }
+        });
 
     }
 
@@ -69,16 +135,14 @@ public class HighLow {
         panel.add(nextButton, newConstraints(1,3,100,200,1));
         panel.add(upButton, newConstraints(2,3,100,200,1));
 
-        //setting text to visualize gui outlay
-        //testing toString for later use
-        int x = 1;
-        number1.setText(Integer.toString(x));
-        titleLabel.setText("title");
-        scoreLabel.setText("ha u have 0");
-        highScoreLabel.setText("still 0");
-        number2.setText("2");
+        number1.setText("?");
+        titleLabel.setText("");
+        titleLabel.setIcon(new ImageIcon(".\\.\\.\\Icons\\HighLowTitle.png"));
+        scoreLabel.setText("Press \"start\" when you are ready");
+        highScoreLabel.setText("High Score: 0");
+        number2.setText("?");
         downButton.setText("LOWER");
-        nextButton.setText("NEXT");
+        nextButton.setText("START");
         upButton.setText("HIGHER");
     }
 
@@ -102,6 +166,22 @@ public class HighLow {
         constraint.gridheight = g;
 
         return constraint;
+    }
+
+    public void winLose(int x, int y) {
+        if (y > x) {
+            titleLabel.setText("<html>Correct!<br>+1 point<br>Press NEXT to continue</html>");
+            score++;
+        } else if (y == x) {
+            Random rand = new Random();
+            int two = rand.nextInt(9) + 1;
+            number2.setText(Integer.toString(two));
+            winLose(x,y);
+        } else {
+            titleLabel.setText("<html>You Lost!<br>Press START to try again<html>");
+            nextButton.setText("RESTART");
+            score = 0;
+        }
     }
 
 }
