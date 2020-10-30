@@ -6,6 +6,8 @@ import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
 import GraphingCalculator.GraphingCalculator;
 import Store.Store;
+import Games.RPS;
+import Quiz.QuizUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,6 +22,7 @@ public class MenuUI {
     private JButton storeEyaadButton;
     private JButton atmNeilButton;
     private JButton rpsAndrewButton;
+    private JButton quizSeanButton;
     private JButton storeButton;
 
     public static void main(String[] args) {
@@ -65,7 +68,13 @@ public class MenuUI {
         rpsAndrewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RPS.runRPS();
+                //RPS();
+            }
+        });
+        quizSeanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                QuizUI.RunQuizUI();
             }
         });
     }
@@ -161,6 +170,32 @@ public class MenuUI {
         gbc.gridy = 8;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer6, gbc);
+        final JPanel spacer7 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 10;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer7, gbc);
+        rpsAndrewButton = new JButton();
+        rpsAndrewButton.setText("Rock Paper Scissors (Andrew)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 11;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(rpsAndrewButton, gbc);
+        final JPanel spacer8 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 12;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer8, gbc);
+        quizSeanButton = new JButton();
+        quizSeanButton.setText("Quiz (Sean)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 13;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(quizSeanButton, gbc);
     }
 
     /**
