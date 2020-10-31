@@ -20,8 +20,9 @@ As of now, we have created our individual mini labs that we will integrate toget
 ## Week 8 - Scrum Master Grades
 Contributor | Grade (Out of 5) | Reasoning (Code Snippets Labelled in Project)
 ----------- | --------------------- | ---------------------------------------------
-Neil Sahai | 5/5 | He worked on connecting his ATM to the [Main menu](https://github.com/alextitov19/CSA-Portfolio/blob/3e8eb7b29831f7b04d8b3398f58ac66254a12e15/src/Menu/MenuUI.java#L61) and he also added to the ATM.java file by creating the [main panel](https://github.com/alextitov19/CSA-Portfolio/blob/e144b5ac0077c6de00be99166d22e07244117647/src/ATM/ATM.java#L84) from where after you login, you deposit and withdraw money. He also added the logic to the [deposit and withdraw functions](https://github.com/alextitov19/CSA-Portfolio/blob/67655c410af48ecd705aa6327d9c2ffc20e38fba/src/ATM/ATM.java#L138) and made sure that the operations within the ATM are working with their intentded purposes. To use the ATM, the user logs in using the username CSA and the password test. Next week, he will be working with the group on integrating projects together with a global persistent variable money which will connect all of our code.
-Eyaad Mir | 5/5 | I connected my store to the [Main menu](https://github.com/alextitov19/CSA-Portfolio/blob/3e8eb7b29831f7b04d8b3398f58ac66254a12e15/src/Menu/MenuUI.java#L55)
+Neil Sahai | 5/5 | He worked on connecting his ATM to the [Main menu](https://github.com/alextitov19/CSA-Portfolio/blob/3e8eb7b29831f7b04d8b3398f58ac66254a12e15/src/Menu/MenuUI.java#L61) and he also added to the ATM.java file by creating the [main panel](https://github.com/alextitov19/CSA-Portfolio/blob/e144b5ac0077c6de00be99166d22e07244117647/src/ATM/ATM.java#L84) from where after you login, you deposit and withdraw money. He also added the logic to the [deposit and withdraw functions](https://github.com/alextitov19/CSA-Portfolio/blob/67655c410af48ecd705aa6327d9c2ffc20e38fba/src/ATM/ATM.java#L138) and made sure that the operations within the ATM are working with their intentded purposes. To use the ATM, the user logs in using the username CSA and the password test. He fully met all of the goals he set this week. Next week, he will be working with the group on integrating projects together with a global persistent variable "money" which will connect all of our code.
+Eyaad Mir | 5/5 | I connected my store to the [Main menu](https://github.com/alextitov19/CSA-Portfolio/blob/3e8eb7b29831f7b04d8b3398f58ac66254a12e15/src/Menu/MenuUI.java#L55) and also created the logic to allow the user to press a [button](https://github.com/alextitov19/CSA-Portfolio/blob/64fe613bc2df761fcfecbf283c45c7bc797625a8/src/Store/Store.java#L54) to get them to the items part of the store. I also had button logic for the user to buy [books](https://github.com/alextitov19/CSA-Portfolio/blob/fde249a635071d43a7e94ddf11dfc84c5d99fcba/src/Store/Store.java#L141) and [cards](https://github.com/alextitov19/CSA-Portfolio/blob/fde249a635071d43a7e94ddf11dfc84c5d99fcba/src/Store/Store.java#L164). Finally, I had the GUI specify how much [money](https://github.com/alextitov19/CSA-Portfolio/blob/fde249a635071d43a7e94ddf11dfc84c5d99fcba/src/Store/Store.java#L103) the user had and the [items](https://github.com/alextitov19/CSA-Portfolio/blob/fde249a635071d43a7e94ddf11dfc84c5d99fcba/src/Store/Store.java#L104) the user had. I met all of the goals I set for the week. Next week I plan to integrate my code to fit the project, as the book and cards were just placeholders to demonstrate the code.
+Andrew Pu | 5/5 | He manually created a higher/lower game where the user guesses if the next number will be higher or lower than the last. He first learned how to manually create a GUI (without a form file). He created the components (<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L14">line 14</a>; <a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L118">line 118</a>), specified their constraints (<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L160">line 160</a>), and added them to the panel (<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L129">line 129</a>). Then he added action listeners for the buttons and the logic for the game (<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L34">line 34</a>; <a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L180">line 180</a>). At the end of the week, he also learned how to set fonts (<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L138">line 138</a>).
 
 
 
@@ -35,44 +36,41 @@ Eyaad Mir | 5/5 | I connected my store to the [Main menu](https://github.com/ale
 
 
 
-
-
+# Week 7
 10/23/2020
 
 Compendium of various mini-labs for AP CSA.
 
 All of the labs are located in \CSA-Portfolio\src\. You can find the labs and run them here.
 
-<b>Andrew Pu: (4/5)</b>
+Andrew Pu: (5/5)
 
-Goal: This week I plan on creating a higher or lower game where the user
-predicts whether the next randomly generated number will be higher or lower
-than the previous number. I am going to try to create the GUI through code
-and without the physical form file.
+This week I worked on a rock, paper, scissors game as
+my mini project. I know that rock, paper, scissors is a pretty
+basic game to code, but I wanted to start off with something easy
+in order to get the hang of JFrames and GUI designing. I set up
+the GUI for the game and added action listeners for the buttons.
+I set the action listeners to take the user's choice and a
+randomly generated choice to determine whether the user won
+or not. To do this, I included switch statements to convert
+the user's selection to an actual choice and set the images
+(the user and the CPU each have a hand image that shows their
+choice). Based on whether the result is win, lose, or tie, I
+also change the text on the labels and also added a score
+counter. I also figured out that I could add images to labels in
+JFrame. I tried to add animation, but the delay didn't seem to
+work; it just made my program lag a lot, so I decided to remove
+it. Overall, I think made a decent amount of code, but I could've
+added more features and maybe started another project this week.
+I would give myself a 5/5.
 
-My code for this week is in CSA-Portfolio\src\Games\HighLow
+All the code is in \CSA-Portfolio\src\Games\RPS
 
-Completion: I manually created a higher/lower game where the user guesses
-if the next number will be higher or lower than the last. I first learned
-how to manually create a GUI (without a form file). I created the components
-(<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L14">line 14</a>;
-<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L118">line 118</a>),
-specified their constraints 
-(<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L160">line 160</a>),
-and added them to the panel
-(<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L129">line 129</a>).
-Then I added action listeners for the buttons and the logic for the game
-(<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L34">line 34</a>;
-<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L180">line 180</a>).
-At the end of the week, I also
-learned how to set fonts
-(<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L138">line 138</a>).
-
-Overall, I would give myself a 4/5 because I completed my goals, but I
-do them exceptionally well. I should've started my project earlier in the
-instead of procrastinating until Wednesday. I also think my project was
-pretty basic and I could have put in a lot more detail.
-
+Next week I am planning on setting up a game menu which switches
+to a certain game's panel when the button is clicked. I was going
+to just make another project that creates a new JFrame when the
+game is chosen, but during the forum I heard about card layouts,
+which I thought might be more effective for my project.
 
 Alex Titov: (5/5)
 
