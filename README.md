@@ -5,7 +5,7 @@ By Alex Titov, Andrew Pu, Sean Rollins, Eyaad Mir, and Neil Sahai
 
 This portfolio is composed of a set of minilabs, which will allow you to earn money in order to "buy" different functions of our calculator. 
 
-Progress:
+## Progress:
 
 As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments. Do note that integration has not been finished, so as of now our labs are not connected through money and many labs such as the Store and ATM have placeholder money values and variables. However, we will be working on the connection of these labs next week. We will also be adding more calculator functions to "buy" next week.
 
