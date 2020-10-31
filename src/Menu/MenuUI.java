@@ -5,6 +5,7 @@ import CalculatorUI.CalculatorUI;
 import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
 import GraphingCalculator.GraphingCalculator;
+import Quiz.QuizUI;
 import Store.Store;
 
 import javax.swing.*;
@@ -67,6 +68,13 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //RPS.runRPS();
+            }
+        });
+
+        quizSeanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                QuizUI.RunQuizUI();
             }
         });
     }
