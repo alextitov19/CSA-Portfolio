@@ -29,7 +29,7 @@ Andrew Pu | 5/5 | He manually created a higher/lower game where the user guesses
 ## Group Grade
 Grade | Reasoning
 ----- | ---------
-19/20   We completed all of our goals for the week.
+19/20 |  We completed all of our goals for the week.
 
 
 
