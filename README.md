@@ -14,7 +14,16 @@ As of now, we have created our individual mini labs that we will integrate toget
   Andrew, Sean, Alex - Games
   Alex - Email receipt, JSON file, and storing data
   
-  
+| Name     |     Code      |  Grade |
+|----------|:-------------:|------: |
+| col 1 is |  left-aligned | 5/5    |
+| col 2 is |    centered   | 5/5    |
+| col 3 is | right-aligned | 5/5    | 
+
+
+
+
+
 
 
 
