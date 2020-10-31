@@ -10,8 +10,11 @@ Progress:
 As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments.
 
   Eyaad - Store
+  
   Neil - ATM
+  
   Andrew, Sean, Alex - Games
+  
   Alex - Email receipt, XML file, and storing data
   
 ## Week 8 - Scrum Master Grades
