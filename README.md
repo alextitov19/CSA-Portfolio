@@ -2,6 +2,42 @@
 
 By Alex Titov, Andrew Pu, Sean Rollins, Eyaad Mir, and Neil Sahai
 
+10/30/2020
+This portfolio is composed of a set of minilabs, which allow you to earn money in order to "buy" different functions of our calculator. 
+
+Progress:
+
+As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments.
+
+  Eyaad - Store
+  Neil - ATM
+  Andrew, Sean, Alex - Games
+  Alex - Email receipt, JSON file, and storing data
+  
+| Name     |     Code      |  Grade |
+|----------|:-------------:|------: |
+| col 1 is |  left-aligned | 5/5    |
+| col 2 is |    centered   | 5/5    |
+| col 3 is | right-aligned | 5/5    | 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10/23/2020
+
 Compendium of various mini-labs for AP CSA.
 
 All of the labs are located in \CSA-Portfolio\src\. You can find the labs and run them here.
