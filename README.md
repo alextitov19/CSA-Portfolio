@@ -2,21 +2,21 @@
 
 By Alex Titov, Andrew Pu, Sean Rollins, Eyaad Mir, and Neil Sahai
 
-10/30/2020
+
 This portfolio is composed of a set of minilabs, which allow you to earn money in order to "buy" different functions of our calculator. 
 
 Progress:
 
 As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments.
 
-  Eyaad - Store
+    Eyaad - Store
   
-  Neil - ATM
+    Neil - ATM
+    
+    Andrew, Sean, Alex - Games
   
-  Andrew, Sean, Alex - Games
-  
-  Alex - Email receipt, XML file, and storing data
-  
+    Alex - Email receipt, XML file, and storing data
+   
 ## Week 8 - Scrum Master Grades
 Contributor | Grade (Out of 5) | Reasoning (Code Snippets Labelled in Project)
 ----------- | --------------------- | ---------------------------------------------
