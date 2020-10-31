@@ -148,7 +148,7 @@ public class HighLow {
         number1.setText("?");
         titleLabel.setText("");
         titleLabel.setIcon(new ImageIcon(".\\.\\.\\Icons\\HighLowTitle.png"));
-        scoreLabel.setText("<html><div style='text-align: center;'>\"Press START to begin</html>");
+        scoreLabel.setText("<html><div style='text-align: center;'>Press START to begin</html>");
         highScoreLabel.setText("High Score: 0");
         number2.setText("?");
         downButton.setText("LOWER");
@@ -159,22 +159,22 @@ public class HighLow {
     //method returns a set of grid bag constraints for label and button positioning
     public GridBagConstraints newConstraints(int a, int b, int c, int d, int g) {
 
-        GridBagConstraints constraint = new GridBagConstraints();
+        GridBagConstraints constraints = new GridBagConstraints();
         //fill cells horizontally
-        constraint.fill = GridBagConstraints.HORIZONTAL;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
         //fill cells vertically
-        constraint.fill = GridBagConstraints.VERTICAL;
+        constraints.fill = GridBagConstraints.VERTICAL;
         //main cell x position
-        constraint.gridx = a;
+        constraints.gridx = a;
         //main cell y position
-        constraint.gridy = b;
+        constraints.gridy = b;
         //height
-        constraint.ipady = c;
+        constraints.ipady = c;
         //width
-        constraint.ipadx = d;
+        constraints.ipadx = d;
         //number of cells vertically
-        constraint.gridheight = g;
-        return constraint;
+        constraints.gridheight = g;
+        return constraints;
     }
 
     public void winLose(int x, int y) {
