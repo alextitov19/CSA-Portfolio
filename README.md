@@ -45,6 +45,15 @@ All of our code can be run in the Main.java file except for the HighLow game. Th
 - Start integration of all of our mini labs and connect it to calculator.
 - Convert our code into Model View Control format.
 
+## Project Credits
+Contributor | GitHub Link |
+----------- | ----------- |
+Neil Sahai | [@Neil-Sahai](https://github.com/Neil-Sahai)
+Eyaad Mir | [@EyaadM](https://github.com/EyaadM) 
+Andrew Pu | [@andrewzpu](https://github.com/andrewzpu)
+Alex Titov | [@alextitov19](https://github.com/alextitov19)
+Sean Rollins | [banditcat12](https://github.com/banditcat12)
+
 
 
 
