@@ -12,13 +12,13 @@ As of now, we have created our individual mini labs that we will integrate toget
   Eyaad - Store
   Neil - ATM
   Andrew, Sean, Alex - Games
-  Alex - Email receipt, JSON file, and storing data
+  Alex - Email receipt, XML file, and storing data
   
 ## Week 8 - Individual Grades
 Contributor | Grade (Out of 20) | Reasoning (Code Snippets Labelled in Project)
 ----------- | --------------------- | ---------------------------------------------
 Neil Sahai | 19/20 | I worked on connecting my ATM to the [Main menu](https://github.com/alextitov19/CSA-Portfolio/blob/3e8eb7b29831f7b04d8b3398f58ac66254a12e15/src/Menu/MenuUI.java#L61) and I also added to the ATM.java file by creating the [main panel](https://github.com/alextitov19/CSA-Portfolio/blob/e144b5ac0077c6de00be99166d22e07244117647/src/ATM/ATM.java#L84) from where after you login, you deposit and withdraw money. I also added the logic to the [deposit and withdraw functions](https://github.com/alextitov19/CSA-Portfolio/blob/67655c410af48ecd705aa6327d9c2ffc20e38fba/src/ATM/ATM.java#L138) and made sure that the operations within the ATM are working with their intentded purposes. To use the ATM, the user logs in using the username CSA and the password test. Next week, I will be working with my group on integrating projects together with a global persistent variable money which will connect all of our code.
-
+Eyaad Mir | 19/20 | I connected my store to the .[Main menu](https://github.com/alextitov19/CSA-Portfolio/blob/3e8eb7b29831f7b04d8b3398f58ac66254a12e15/src/Menu/MenuUI.java#L55)
 
 
 
