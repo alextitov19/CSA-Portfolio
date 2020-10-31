@@ -52,7 +52,7 @@ Neil Sahai | [@Neil-Sahai](https://github.com/Neil-Sahai)
 Eyaad Mir | [@EyaadM](https://github.com/EyaadM) 
 Andrew Pu | [@andrewzpu](https://github.com/andrewzpu)
 Alex Titov | [@alextitov19](https://github.com/alextitov19)
-Sean Rollins | [banditcat12](https://github.com/banditcat12)
+Sean Rollins | [@banditcat12](https://github.com/banditcat12)
 
 
 
