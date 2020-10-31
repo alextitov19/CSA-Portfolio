@@ -1,24 +1,20 @@
 package ATM;
-//update week 2
-import CalculatorUI.CalculatorUI;
 
-import javax.print.attribute.standard.JobOriginatingUserName;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 //Welcome to Neil Sahai's portion of the Project!
 //This will be integrated with the other labs shortly
 //creating the variables and the basis for my project
 public class ATM extends JFrame {
-    private JPanel ATM;
-    private JLabel user;
-    private JTextField userfield;
-    private JButton login;
-    private JPasswordField passfield;
-    private JLabel update;
-    private JLabel pass;
+    protected JPanel ATM;
+    protected JLabel user;
+    protected JTextField userfield;
+    protected JButton login;
+    protected JPasswordField passfield;
+    protected JLabel update;
+    protected JLabel pass;
+    static int money = 100;
     String uname;
     String pword;
 
@@ -77,11 +73,90 @@ public class ATM extends JFrame {
 
             if (uname.equals("CSA") && pword.equals("test")) {
                 update.setText("Login Successful!");
+                function account = new function();
+                account.RunMainUI();
             } else {
                 update.setText("Login Unsuccessful, Please try again!");
             }
         });
     }}
+
+    class function extends ATM {
+        //creating the variables for the second panel
+        private JPanel main;
+        private JLabel withdraw;
+        private JLabel deposit;
+        private JLabel moneycount;
+        private JButton dep;
+        private JButton with;
+
+        public static void main(String[] args) {
+            EventQueue.invokeLater(() -> {
+                try {
+                    function frame = new function();
+                    frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+        }
+
+        public void RunMainUI() {
+            JFrame frame = new JFrame();
+            JPanel main = new JPanel();
+            JLabel withdraw = new JLabel("Click here to withdraw money");
+            JLabel moneycount = new JLabel("You currently have " + money + " dollars");
+            JLabel accountupdate = new JLabel("Welcome to your account!");
+            JButton with = new JButton("Withdraw $10");
+            JButton dep = new JButton("Deposit $10");
+            JLabel deposit = new JLabel("Click here to deposit money");
+
+            frame.setSize(500, 400);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setVisible(true);
+            frame.add(main);
+
+            main.setLayout(null);
+
+            //setting the location of the parts of my main screen
+            withdraw.setBounds(20, 200, 200, 25);
+            deposit.setBounds(250, 200, 200, 25);
+            moneycount.setBounds(175, 50, 200, 25);
+            accountupdate.setBounds(175, 100, 300, 25);
+            with.setBounds(40, 250, 200, 100);
+            dep.setBounds(250, 250, 200, 100);
+
+            //adding the parts to my main panel
+            main.add(withdraw);
+            main.add(deposit);
+            main.add(with);
+            main.add(dep);
+            main.add(moneycount);
+            main.add(accountupdate);
+
+
+            //logic for the deposit and withdraw functions
+            with.addActionListener(e -> {
+                if (money > 10) {
+                    money = money+10;
+                    moneycount.setText("You have " + money + " dollars available");
+
+                } else {
+                    accountupdate.setText("You do not have enough money to withdraw.");
+                }
+
+                dep.addActionListener(s -> {
+                    if (money > 0) {
+                        money = money-10;
+                        moneycount.setText("You have " + money + " dollars available");
+                    } else {
+                        accountupdate.setText("You do not have enough money to deposit.");
+                    }
+                });
+            });}
+        }
+
+
 
 
 
