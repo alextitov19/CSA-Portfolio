@@ -9,26 +9,29 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.lang.*;
+
 public class Store {
     protected JButton ViewItems;
     protected JButton ViewInventory;
     protected JPanel store;
     protected JLabel welcomeLabel;
     protected JLabel moneyLabel;
+    protected JLabel itemsLabel;
     protected static int money = 100;
     protected static int books = 0;
     protected static int cards = 0;
 
-    public static void main(String[] args) { }
+    public static void main(String[] args) {
+    }
 
     public static void RunStoreUI() {
         // Declaring parts of the main screen
         JFrame frame = new JFrame();
-        JButton ViewItems = new JButton("View Items");
-        JButton ViewInventory = new JButton("View Inventory");
+        JButton ViewItems = new JButton("Buy Items");
         JPanel store = new JPanel();
         JLabel welcomeLabel = new JLabel("Welcome to the store!");
         JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
+        JLabel itemsLabel = new JLabel("You have bought " + books + " books and " + cards + " cards.");
         store.setLayout(null);
 
         // Dimensions and properties of Frame
@@ -38,16 +41,16 @@ public class Store {
         frame.add(store);
 
         //Setting locations of my buttons and Labels
-        ViewItems.setBounds(40, 200, 200, 125);
-        ViewInventory.setBounds(340, 200, 200, 125);
+        ViewItems.setBounds(190, 200, 200, 125);
         welcomeLabel.setBounds(40, 0, 200, 175);
         moneyLabel.setBounds(40, 400, 200, 175);
+        itemsLabel.setBounds(340, 400, 300, 175);
 
         store.add(ViewItems);
-        store.add(ViewInventory);
         store.add(welcomeLabel);
         store.add(moneyLabel);
-
+        store.add(itemsLabel);
+        //Brings user to buying items
         ViewItems.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -55,9 +58,6 @@ public class Store {
                 buy.RunItemsUI();
             }
         });
-
-
-
 
 
     }
@@ -86,6 +86,7 @@ class Items extends Store {
     private JLabel test;
     private JPanel items;
     private JLabel moneyLabel;
+    private JLabel itemsLabel;
     private JLabel book;
     private JLabel card;
     private JButton buyBook;
@@ -100,6 +101,7 @@ class Items extends Store {
         JLabel book = new JLabel();
         JLabel card = new JLabel();
         JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
+        JLabel itemsLabel = new JLabel("You have bought " + books + " books and " + cards + " cards.");
         JButton buyBook = new JButton("Buy Book: $10");
         JButton buyCards = new JButton("Buy Cards: $5");
         JButton goBack = new JButton("Go Back");
@@ -112,11 +114,13 @@ class Items extends Store {
         frame.setVisible(true);
         frame.add(items);
 
+        //Setting images of the items
         book.setIcon(new ImageIcon(".\\.\\.\\Icons\\book.jpg"));
         card.setIcon(new ImageIcon(".\\.\\.\\Icons\\cards.jpg"));
         //Setting locations of my buttons and Labels
         test.setBounds(40, 0, 200, 175);
         moneyLabel.setBounds(40, 450, 500, 175);
+        itemsLabel.setBounds(340, 400, 300, 175);
         buyBook.setBounds(40,120,150,125);
         buyCards.setBounds(40,270,150,125);
         book.setBounds(300,120,175,135);
@@ -130,9 +134,10 @@ class Items extends Store {
         items.add(buyBook);
         items.add(buyCards);
         items.add(moneyLabel);
+        items.add(itemsLabel);
         items.add(goBack);
 
-
+        //When user presses button to buy book
         buyBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -141,7 +146,7 @@ class Items extends Store {
                     moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
                   //  try {
                         // thread to sleep for 1000 milliseconds
-                    //    Thread.sleep(1000);
+                       //    Thread.sleep(1000);
                     //}  catch (InterruptedException ex) {
                       //  Thread.currentThread().interrupt();
                     //}
@@ -151,9 +156,11 @@ class Items extends Store {
                     money = money - 10;
                     books += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
+                    itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
                 }
             }
         });
+        //When user presses button to buy cards
         buyCards.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -172,9 +179,11 @@ class Items extends Store {
                     money = money - 5;
                     cards += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
+                    itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
                 }
             }
         });
+        //Go back to store
         goBack.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
