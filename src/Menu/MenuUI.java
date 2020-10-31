@@ -7,6 +7,7 @@ import GraphingCalculator.GraphingCalculatorUI;
 import GraphingCalculator.GraphingCalculator;
 import Quiz.QuizUI;
 import Store.Store;
+import Games.RPS;
 
 import javax.swing.*;
 import java.awt.*;
@@ -67,7 +68,7 @@ public class MenuUI {
         rpsAndrewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //RPS.runRPS();
+                RPS.RunRPS();
             }
         });
 
