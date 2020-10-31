@@ -43,7 +43,7 @@ Compendium of various mini-labs for AP CSA.
 
 All of the labs are located in \CSA-Portfolio\src\. You can find the labs and run them here.
 
-<b>Andrew Pu: (19/20)</b>
+<b>Andrew Pu: (4/5)</b>
 
 Goal: This week I plan on creating a higher or lower game where the user
 predicts whether the next randomly generated number will be higher or lower
@@ -68,7 +68,7 @@ At the end of the week, I also
 learned how to set fonts
 (<a href = "https://github.com/alextitov19/CSA-Portfolio/blob/2cb6a17fcfb3a25c4151ea12d7968ca5fd542570/src/Games/HighLow.java#L138">line 138</a>).
 
-Overall, I would give myself a 19/20 because I completed my goals, but I
+Overall, I would give myself a 4/5 because I completed my goals, but I
 do them exceptionally well. I should've started my project earlier in the
 instead of procrastinating until Wednesday. I also think my project was
 pretty basic and I could have put in a lot more detail.
