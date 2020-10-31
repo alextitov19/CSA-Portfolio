@@ -59,6 +59,10 @@ public class RPS {
     }
 
     public static void main(String[] args) {
+        RunRPS();
+    }
+
+    public static void RunRPS() {
 
         //creates the JFrame
         JFrame frame = new JFrame("RPS");
