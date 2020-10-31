@@ -22,5 +22,17 @@ public class XmlReader {
         Document document = builder.parse(new File(path));
         System.out.println("Doc loaded");
 
+        //get root element
+        Element root = document.getDocumentElement();
+
+        //get user1 element
+        Node user1 = root.getElementsByTagName("User1").item(0);
+        System.out.println(user1.getNodeName());
+
+        //print amount of attributes in user1
+        System.out.println(user1.getAttributes().getLength());
+
+        int coins = Integer.parseInt(user1.getAttributes().getNamedItem("coins").getNodeValue());
+        System.out.println(coins);
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Users>
-    <User1>
+    <User1 coins="100">
         <coins>100</coins>
         <xp>50</xp>
         <unlocks>
