@@ -16,35 +16,55 @@ import java.io.*;
 
 public class FileWriter {
 
-    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
+    DocumentBuilderFactory factory;
+    DocumentBuilder builder;
+    Document document;
+    String path;
+    NamedNodeMap attributes;
+    Element root;
+    Node[] users;
+    Node coinsNode;
+    Node xpNode;
+
+    public FileWriter() {
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-
-            //get path of repo root and concatenate to get the path of xml file
-            String path = System.getProperty("user.dir");
-            System.out.println(path);
+            factory = DocumentBuilderFactory.newInstance();
+            builder = factory.newDocumentBuilder();
+            path = System.getProperty("user.dir");
             path += "/XMLs/Users";
-
-            //create xml doc
-            Document document = builder.parse(new File(path));
-            System.out.println("Doc loaded");
-
-            //get root element
-            Element root = document.getDocumentElement();
-
-            //get first user element
-            Node user1 = root.getElementsByTagName("User1").item(0);
-
-            //create NodeMap of all attributes of user1
-            NamedNodeMap attributes = user1.getAttributes();
+            document = builder.parse(new File(path));
+            root = document.getDocumentElement();
+            users = new Node[1];
+            users[0] = root.getElementsByTagName("User1").item(0);
+            attributes = users[0].getAttributes();
 
             //update coins value
-            Node coinsNode = attributes.getNamedItem("coins");
-            System.out.println(coinsNode.getTextContent());
+            coinsNode = attributes.getNamedItem("coins");
+            xpNode = attributes.getNamedItem("xp");
             coinsNode.setTextContent("400");
 
             // write the DOM object to the file
+
+
+        } catch (ParserConfigurationException pce) {     //catch exceptions
+            pce.printStackTrace();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } catch (SAXException sae) {
+            sae.printStackTrace();
+        }
+    }
+
+    public void SetValue(int[] atts) {
+        int coins = atts[0];
+        int xp = atts[1];
+        coinsNode.setTextContent(Integer.toString(coins));
+        xpNode.setTextContent(Integer.toString(xp));
+        Write();
+    }
+
+    private void Write() {
+        try {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
 
             Transformer transformer = transformerFactory.newTransformer();
@@ -53,17 +73,9 @@ public class FileWriter {
             StreamResult streamResult = new StreamResult(new File(path));
             transformer.transform(domSource, streamResult);
 
-            System.out.println("The XML File was updated");
-
-        } catch (ParserConfigurationException pce) {     //catch exceptions
-            pce.printStackTrace();
         } catch (TransformerException tfe) {
             tfe.printStackTrace();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        } catch (SAXException sae) {
-            sae.printStackTrace();
         }
-
     }
+
 }
