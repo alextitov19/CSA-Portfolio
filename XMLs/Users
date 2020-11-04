@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<Users>
-    <User1>
-        <coins>100</coins>
-        <xp>50</xp>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Users>
+    <User1 coins="900" xp="732">
         <unlocks>
             <calculator>0</calculator>
             <graphingCalculator>0</graphingCalculator>
