@@ -74,63 +74,25 @@ public class Chimp {
         scoreLabel.setText("Score: " + score);
         instructionLabel = new JLabel("Instructions", SwingConstants.CENTER);
         instructionLabel.setText("Press any button to begin");
-        b1 = new JButton();
-        b2 = new JButton();
-        b3 = new JButton();
-        b4 = new JButton();
-        b5 = new JButton();
-        b6 = new JButton();
-        b7 = new JButton();
-        b8 = new JButton();
-        b9 = new JButton();
-        b10 = new JButton();
-        b11 = new JButton();
-        b12 = new JButton();
-        b13 = new JButton();
-        b14 = new JButton();
-        b15 = new JButton();
-        b16 = new JButton();
-        b17 = new JButton();
-        b18 = new JButton();
-        b19 = new JButton();
-        b20 = new JButton();
-        b21 = new JButton();
-        b22 = new JButton();
-        b23 = new JButton();
-        b24 = new JButton();
-        b25 = new JButton();
 
         panel.add(titleLabel, newConstraints(1,0,75,225,3));
         panel.add(highScoreLabel, newConstraints(0,1,75,25,1));
         panel.add(instructionLabel, newConstraints(1,1,75,100,3));
         panel.add(scoreLabel, newConstraints(4,1,75,25,1));
-        panel.add(b1, newConstraints(0,2,75,75,1));
-        panel.add(b2, newConstraints(1,2,75,75,1));
-        panel.add(b3, newConstraints(2,2,75,75,1));
-        panel.add(b4, newConstraints(3,2,75,75,1));
-        panel.add(b5, newConstraints(4,2,75,75,1));
-        panel.add(b6, newConstraints(0,3,75,75,1));
-        panel.add(b7, newConstraints(1,3,75,75,1));
-        panel.add(b8, newConstraints(2,3,75,75,1));
-        panel.add(b9, newConstraints(3,3,75,75,1));
-        panel.add(b10, newConstraints(4,3,75,75,1));
-        panel.add(b11, newConstraints(0,4,75,75,1));
-        panel.add(b12, newConstraints(1,4,75,75,1));
-        panel.add(b13, newConstraints(2,4,75,75,1));
-        panel.add(b14, newConstraints(3,4,75,75,1));
-        panel.add(b15, newConstraints(4,4,75,75,1));
-        panel.add(b16, newConstraints(0,5,75,75,1));
-        panel.add(b17, newConstraints(1,5,75,75,1));
-        panel.add(b18, newConstraints(2,5,75,75,1));
-        panel.add(b19, newConstraints(3,5,75,75,1));
-        panel.add(b20, newConstraints(4,5,75,75,1));
-        panel.add(b21, newConstraints(0,6,75,75,1));
-        panel.add(b22, newConstraints(1,6,75,75,1));
-        panel.add(b23, newConstraints(2,6,75,75,1));
-        panel.add(b24, newConstraints(3,6,75,75,1));
-        panel.add(b25, newConstraints(4,6,75,75,1));
 
         JButton[] buttons = {b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25};
+
+        for (JButton button: buttons) {
+            setButton(button);
+        }
+    }
+
+    int i = 0;
+
+    public void setButton(JButton button) {
+        button = new JButton();
+        panel.add(button, newConstraints(i%5, i/5 + 2, 75,75,1));
+        i++;
     }
 
     //copied from old code
