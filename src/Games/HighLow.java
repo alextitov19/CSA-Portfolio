@@ -100,6 +100,12 @@ public class HighLow {
     //main method creates JFrame
     public static void main(String[] args) {
 
+        RunHighLow();
+
+    }
+
+    public static void RunHighLow() {
+
         JFrame frame = new JFrame("HighLow");
         frame.setContentPane(new HighLow().panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
