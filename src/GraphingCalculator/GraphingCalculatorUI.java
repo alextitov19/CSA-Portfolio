@@ -39,6 +39,9 @@ public class GraphingCalculatorUI {
         });
     }
 
+    public static void main(String[] args) {
+
+    }
 
     public static void RunGraphingCalculatorUI() {
         JFrame frame = new JFrame("GraphingCalculatorUI");
