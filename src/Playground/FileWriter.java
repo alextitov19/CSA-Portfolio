@@ -14,7 +14,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 
-public class XmlWriter {
+public class FileWriter {
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         try {
