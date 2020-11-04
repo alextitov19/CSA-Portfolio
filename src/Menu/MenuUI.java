@@ -8,6 +8,7 @@ import GraphingCalculator.GraphingCalculator;
 import Quiz.QuizUI;
 import Store.Store;
 import Games.RPS;
+import Games.HighLow;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,6 +25,7 @@ public class MenuUI {
     private JButton rpsAndrewButton;
     private JButton storeButton;
     private JButton quizSeanButton;
+    private JButton hlAndrewButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MenuUI");
@@ -76,6 +78,13 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 QuizUI.RunQuizUI();
+            }
+        });
+
+        hlAndrewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HighLow.RunHighLow();
             }
         });
     }
@@ -187,16 +196,29 @@ public class MenuUI {
         final JPanel spacer8 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 12;
+        gbc.gridy = 14;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer8, gbc);
         quizSeanButton = new JButton();
         quizSeanButton.setText("Quiz (Sean)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 13;
+        gbc.gridy = 15;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(quizSeanButton, gbc);
+        final JPanel spacer9 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 12;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer9, gbc);
+        hlAndrewButton = new JButton();
+        hlAndrewButton.setText("Higher Lower (Andrew)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 13;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(hlAndrewButton, gbc);
     }
 
     /**
