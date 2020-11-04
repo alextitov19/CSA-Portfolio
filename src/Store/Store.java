@@ -17,9 +17,9 @@ public class Store {
     protected JLabel welcomeLabel;
     protected JLabel moneyLabel;
     protected JLabel itemsLabel;
-    protected static int money = 100;
-    protected static int books = 0;
-    protected static int cards = 0;
+    protected int money = 100; //coins initialized
+    protected int books = 0;
+    protected int cards = 0;
 
     public static void main(String[] args) {
     }
@@ -30,8 +30,9 @@ public class Store {
         JButton ViewItems = new JButton("Buy Items");
         JPanel store = new JPanel();
         JLabel welcomeLabel = new JLabel("Welcome to the store!");
-        JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
-        JLabel itemsLabel = new JLabel("You have bought " + books + " books and " + cards + " cards.");
+        Store test = new Store();
+        JLabel moneyLabel = new JLabel("You currently have " + test.money + " dollars");
+        JLabel itemsLabel = new JLabel("You have bought " + test.books + " books and " + test.cards + " cards.");
         store.setLayout(null);
 
         // Dimensions and properties of Frame
@@ -153,7 +154,7 @@ class Items extends Store {
                     //moneyLabel.setText("You currently have " + money + " dollars");
                 }
                 else {
-                    money = money - 10;
+                    money = money - 10;//coins changed
                     books += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
@@ -176,7 +177,7 @@ class Items extends Store {
                     //moneyLabel.setText("You currently have " + money + " dollars");
                 }
                 else {
-                    money = money - 5;
+                    money = money - 5;//coins changed
                     cards += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
