@@ -8,7 +8,7 @@ public class Playground {
         System.out.println(fileReader.GetAttributes()[0]);
 
         FileWriter fileWriter = new FileWriter();
-        int[] atts = {500, 800};
+        int[] atts = {900, 732};
         fileWriter.SetValue(atts);
 
         fileReader = new FileReader();
