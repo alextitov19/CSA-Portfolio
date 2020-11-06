@@ -2,6 +2,9 @@
 
 package Games;
 
+import Playground.FileReader;
+import Playground.FileWriter;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -126,6 +129,16 @@ public class RPS {
 
     //converts input to win, lose, or tie and changes title text
     public void calculateWinner(int number) {
+        //update coins and xp
+        FileReader fileReader = new FileReader();
+        int[] atts = fileReader.GetAttributes();
+        int coins = atts[0];
+        int xp = atts[1];
+        coins += score;
+        atts = new int[]{coins, xp};
+        FileWriter fileWriter = new FileWriter();
+        fileWriter.SetValue(atts);
+
         switch (number) {
             //0 is a tie
             case 0:

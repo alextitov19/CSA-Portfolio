@@ -1,6 +1,8 @@
 package Store;
 //Created by Eyaad Mir
 import Gmail.GmailUI;
+import Playground.FileReader;
+import Playground.FileWriter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,12 +27,17 @@ public class Store {
     }
 
     public static void RunStoreUI() {
+        //load in coins and xp
+        FileReader fileReader = new FileReader();
+        int[] atts = fileReader.GetAttributes();
+
         // Declaring parts of the main screen
         JFrame frame = new JFrame();
         JButton ViewItems = new JButton("Buy Items");
         JPanel store = new JPanel();
         JLabel welcomeLabel = new JLabel("Welcome to the store!");
         Store test = new Store();
+        test.money = atts[0];
         JLabel moneyLabel = new JLabel("You currently have " + test.money + " dollars");
         JLabel itemsLabel = new JLabel("You have bought " + test.books + " books and " + test.cards + " cards.");
         store.setLayout(null);
@@ -158,6 +165,15 @@ class Items extends Store {
                     books += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                    //update coins and xp
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int xp = atts[1];
+                    int coins = money;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);
+
                 }
             }
         });
