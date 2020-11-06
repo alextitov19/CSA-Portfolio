@@ -202,6 +202,13 @@ class Items extends Store {
                     cards += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int xp = atts[1];
+                    int coins = money;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);
                 }
             }
         });
