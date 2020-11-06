@@ -14,7 +14,7 @@ public class ATM extends JFrame {
     protected JPasswordField passfield;
     protected JLabel update;
     protected JLabel pass;
-    static int money = 100;
+    protected int money = 100;
     String uname;
     String pword;
 
