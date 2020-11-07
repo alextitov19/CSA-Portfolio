@@ -102,12 +102,17 @@ class Items extends Store {
     private JButton goBack;
 
     public void RunItemsUI() {
+        //load in coins and xp
+        FileReader fileReader = new FileReader();
+        int[] atts = fileReader.GetAttributes();
+
         //Initializing GUI
         JFrame frame = new JFrame();
         JPanel items = new JPanel();
         JLabel test = new JLabel("Buy Items:");
         JLabel book = new JLabel();
         JLabel card = new JLabel();
+        money = atts[0];
         JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
         JLabel itemsLabel = new JLabel("You have bought " + books + " books and " + cards + " cards.");
         JButton buyBook = new JButton("Buy Book: $10");
@@ -197,6 +202,13 @@ class Items extends Store {
                     cards += 1;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int xp = atts[1];
+                    int coins = money;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);
                 }
             }
         });
