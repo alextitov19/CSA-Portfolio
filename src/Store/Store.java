@@ -3,6 +3,7 @@ package Store;
 import Gmail.GmailUI;
 import Playground.FileReader;
 import Playground.FileWriter;
+import Store.Model;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,9 +20,9 @@ public class Store {
     protected JLabel welcomeLabel;
     protected JLabel moneyLabel;
     protected JLabel itemsLabel;
-    protected int money = 100; //coins initialized
-    protected int books = 0;
-    protected int cards = 0;
+    public int money = 100; //coins initialized
+    public int books = 0;
+    public int cards = 0;
 
     public static void main(String[] args) {
     }
@@ -44,7 +45,7 @@ public class Store {
 
         // Dimensions and properties of Frame
         frame.setSize(600, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
         frame.add(store);
 
@@ -93,8 +94,8 @@ public class Store {
 class Items extends Store {
     private JLabel test;
     private JPanel items;
-    private JLabel moneyLabel;
-    private JLabel itemsLabel;
+    public JLabel moneyLabel;
+    public JLabel itemsLabel;
     private JLabel book;
     private JLabel card;
     private JButton buyBook;
@@ -123,7 +124,7 @@ class Items extends Store {
 
         // Dimensions and properties of Frame
         frame.setSize(600, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
         frame.add(items);
 
@@ -154,16 +155,8 @@ class Items extends Store {
         buyBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //For when you don't have enough money
                 if (money < 10) {
                     moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
-                  //  try {
-                        // thread to sleep for 1000 milliseconds
-                       //    Thread.sleep(1000);
-                    //}  catch (InterruptedException ex) {
-                      //  Thread.currentThread().interrupt();
-                    //}
-                    //moneyLabel.setText("You currently have " + money + " dollars");
                 }
                 else {
                     money = money - 10;//coins changed
@@ -171,14 +164,13 @@ class Items extends Store {
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
                     //update coins and xp
-                    FileReader fileReader = new FileReader();
-                    int[] atts = fileReader.GetAttributes();
-                    int xp = atts[1];
-                    int coins = money;
-                    atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);
-
+                    //FileReader fileReader = new FileReader();
+                    //int[] atts = fileReader.GetAttributes();
+                    //int xp = atts[1];
+                    //int coins = please.money;
+                    //atts = new int[]{coins, xp};
+                    //FileWriter fileWriter = new FileWriter();
+                    //fileWriter.SetValue(atts);
                 }
             }
         });
