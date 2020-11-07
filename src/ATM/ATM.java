@@ -1,5 +1,6 @@
 package ATM;
 
+import ATM.ATMmodel;
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,6 +18,7 @@ public class ATM extends JFrame {
     protected int money = 100;
     String uname;
     String pword;
+    private static String response;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -66,18 +68,15 @@ public class ATM extends JFrame {
         ATM.add(userfield);
         ATM.add(login);
 
-        //logic to check if the username and password entered are valid, only one works right now.
+        //logic to check if the username and password entered are valid.
+        //model
         login.addActionListener(e -> {
+            update.setText("");
             String uname = userfield.getText();
             String pword = String.valueOf(passfield.getPassword());
-
-            if (uname.equals("CSA") && pword.equals("test")) {
-                update.setText("Login Successful!");
-                function account = new function();
-                account.RunMainUI();
-            } else {
-                update.setText("Login Unsuccessful, Please try again!");
-            }
+            ATMmodel authentication = new ATMmodel(uname, pword);
+            response = authentication.status;
+            update.setText(response);
         });
     }}
 
@@ -136,8 +135,10 @@ public class ATM extends JFrame {
 
 
             //logic for the deposit and withdraw functions
+            //model
             with.addActionListener(e -> {
                 if (money > 10) {
+                    //control
                     money = money+10;
                     moneycount.setText("You have " + money + " dollars available");
 
@@ -147,6 +148,7 @@ public class ATM extends JFrame {
 
                 dep.addActionListener(s -> {
                     if (money > 0) {
+                        //control
                         money = money-10;
                         moneycount.setText("You have " + money + " dollars available");
                     } else {
