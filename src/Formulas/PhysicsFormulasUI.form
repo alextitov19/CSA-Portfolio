@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Formulas.PhysicsFormulasUI">
-  <grid id="27dc6" binding="MainPanel" layout-manager="GridBagLayout">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridBagLayout">
     <constraints>
       <xy x="20" y="12" width="925" height="734"/>
     </constraints>
@@ -13,16 +13,16 @@
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="2"/>
         </properties>
       </component>
-      <component id="7fee9" class="javax.swing.JButton" binding="button3" default-binding="true">
+      <component id="7fee9" class="javax.swing.JButton" binding="button1">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="1"/>
         </properties>
       </component>
       <component id="9dab3" class="javax.swing.JButton" binding="button4" default-binding="true">
@@ -31,10 +31,10 @@
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="4"/>
         </properties>
       </component>
-      <component id="6e957" class="javax.swing.JTextPane" binding="V0TextArea">
+      <component id="6e957" class="javax.swing.JTextPane" binding="ViTextArea">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
@@ -46,7 +46,7 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="3af6" class="javax.swing.JTextPane" binding="V1TextArea">
+      <component id="3af6" class="javax.swing.JTextPane" binding="VfTextArea">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
@@ -82,49 +82,49 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="b5e93" class="javax.swing.JLabel" binding="V1Label">
+      <component id="b5e93" class="javax.swing.JLabel" binding="VfLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.5" weighty="0.0"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.5" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Vf"/>
         </properties>
       </component>
-      <component id="56257" class="javax.swing.JLabel" binding="V0Label">
+      <component id="56257" class="javax.swing.JLabel" binding="ViLabel">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.5" weighty="0.0"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.5" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Vi"/>
         </properties>
       </component>
       <component id="c6a09" class="javax.swing.JLabel" binding="TLabel">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.5" weighty="0.0"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.5" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="T"/>
         </properties>
       </component>
       <component id="3173e" class="javax.swing.JLabel" binding="ALabel">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.5" weighty="0.0"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.5" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="A"/>
         </properties>
       </component>
-      <component id="41c6a" class="javax.swing.JButton" binding="button1" default-binding="true">
+      <component id="41c6a" class="javax.swing.JButton" binding="button3">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Button"/>
+          <text value="3"/>
         </properties>
       </component>
       <component id="d1e0f" class="javax.swing.JTextPane" binding="XiTextArea">
@@ -153,20 +153,29 @@
       </component>
       <component id="88baf" class="javax.swing.JLabel" binding="XiLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.5" weighty="0.0"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.5" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Xi"/>
         </properties>
       </component>
       <component id="f9edb" class="javax.swing.JLabel" binding="XfLabel">
         <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.5" weighty="0.0"/>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="0.5" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Xf"/>
+        </properties>
+      </component>
+      <component id="c5bb9" class="javax.swing.JLabel" binding="answerLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Answer"/>
         </properties>
       </component>
     </children>

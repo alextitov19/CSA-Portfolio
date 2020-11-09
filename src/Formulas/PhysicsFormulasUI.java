@@ -10,10 +10,10 @@ public class PhysicsFormulasUI {
     private JButton button2;
     private JButton button3;
     private JButton button4;
-    private JTextPane V0TextArea;
-    private JLabel V1Label;
-    private JTextPane V1TextArea;
-    private JLabel V0Label;
+    private JTextPane ViTextArea;
+    private JLabel VfLabel;
+    private JTextPane VfTextArea;
+    private JLabel ViLabel;
     private JLabel TLabel;
     private JTextPane TTextArea;
     private JLabel ALabel;
@@ -22,43 +22,68 @@ public class PhysicsFormulasUI {
     private JTextPane XiTextArea;
     private JLabel XfLabel;
     private JTextPane XfTextArea;
-    private JPanel MainPanel;
+    private JPanel mainPanel;
+    private JLabel answerLabel;
+
+    private double[] vals;
+
+    private JTextPane[] textAreas;
 
 
     public PhysicsFormulasUI() {
 
+        vals = new double[6];
+        textAreas = new JTextPane[]{XiTextArea, XfTextArea, ViTextArea, VfTextArea, ATextArea, TTextArea};
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                SetVals();
+                PhysicsCalculation physicsCalculation = new PhysicsCalculation(vals);
+                answerLabel.setText(Double.toString(physicsCalculation.Calculate(1)));
             }
         });
 
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                SetVals();
+                PhysicsCalculation physicsCalculation = new PhysicsCalculation(vals);
+                answerLabel.setText(Double.toString(physicsCalculation.Calculate(2)));
             }
         });
 
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                SetVals();
+                PhysicsCalculation physicsCalculation = new PhysicsCalculation(vals);
+                answerLabel.setText(Double.toString(physicsCalculation.Calculate(3)));
             }
         });
 
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                SetVals();
+                PhysicsCalculation physicsCalculation = new PhysicsCalculation(vals);
+                answerLabel.setText(Double.toString(physicsCalculation.Calculate(4)));
             }
         });
     }
 
-    public static void RunPhysicsFormulasUI() {
+    public void SetVals() {
+        for (int i = 0; i < textAreas.length; i++) {
+            if (textAreas[i].getText().isBlank()) {
+                textAreas[i].setText("0.0");
+            }
+            vals[i] = Double.parseDouble(textAreas[i].getText());
+        }
+    }
+
+    public static void main(String[] args) {
         JFrame frame = new JFrame("Physics Formulas");
-        frame.setContentPane(new PhysicsFormulasUI().MainPanel);
+        frame.setContentPane(new PhysicsFormulasUI().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -80,10 +105,10 @@ public class PhysicsFormulasUI {
      * @noinspection ALL
      */
     private void $$$setupUI$$$() {
-        MainPanel = new JPanel();
-        MainPanel.setLayout(new GridBagLayout());
+        mainPanel = new JPanel();
+        mainPanel.setLayout(new GridBagLayout());
         button2 = new JButton();
-        button2.setText("Button");
+        button2.setText("2");
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -91,43 +116,43 @@ public class PhysicsFormulasUI {
         gbc.gridwidth = 4;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        MainPanel.add(button2, gbc);
-        button3 = new JButton();
-        button3.setText("Button");
+        mainPanel.add(button2, gbc);
+        button1 = new JButton();
+        button1.setText("1");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.gridwidth = 4;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        MainPanel.add(button3, gbc);
+        mainPanel.add(button1, gbc);
         button4 = new JButton();
-        button4.setText("Button");
+        button4.setText("4");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.gridwidth = 4;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        MainPanel.add(button4, gbc);
-        V0TextArea = new JTextPane();
-        V0TextArea.setBackground(new Color(-9014670));
-        V0TextArea.setText("");
+        mainPanel.add(button4, gbc);
+        ViTextArea = new JTextPane();
+        ViTextArea.setBackground(new Color(-9014670));
+        ViTextArea.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 2;
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.BOTH;
-        MainPanel.add(V0TextArea, gbc);
-        V1TextArea = new JTextPane();
-        V1TextArea.setBackground(new Color(-9014670));
-        V1TextArea.setText("");
+        mainPanel.add(ViTextArea, gbc);
+        VfTextArea = new JTextPane();
+        VfTextArea.setBackground(new Color(-9014670));
+        VfTextArea.setText("");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
         gbc.gridy = 1;
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.BOTH;
-        MainPanel.add(V1TextArea, gbc);
+        mainPanel.add(VfTextArea, gbc);
         TTextArea = new JTextPane();
         TTextArea.setBackground(new Color(-9014670));
         TTextArea.setText("");
@@ -136,7 +161,7 @@ public class PhysicsFormulasUI {
         gbc.gridy = 1;
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.BOTH;
-        MainPanel.add(TTextArea, gbc);
+        mainPanel.add(TTextArea, gbc);
         ATextArea = new JTextPane();
         ATextArea.setBackground(new Color(-9014670));
         ATextArea.setText("");
@@ -145,48 +170,52 @@ public class PhysicsFormulasUI {
         gbc.gridy = 2;
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.BOTH;
-        MainPanel.add(ATextArea, gbc);
-        V1Label = new JLabel();
-        V1Label.setText("Label");
+        mainPanel.add(ATextArea, gbc);
+        VfLabel = new JLabel();
+        VfLabel.setText("Vf");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.WEST;
-        MainPanel.add(V1Label, gbc);
-        V0Label = new JLabel();
-        V0Label.setText("Label");
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        mainPanel.add(VfLabel, gbc);
+        ViLabel = new JLabel();
+        ViLabel.setText("Vi");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.WEST;
-        MainPanel.add(V0Label, gbc);
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        mainPanel.add(ViLabel, gbc);
         TLabel = new JLabel();
-        TLabel.setText("Label");
+        TLabel.setText("T");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
         gbc.gridy = 1;
         gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.WEST;
-        MainPanel.add(TLabel, gbc);
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        mainPanel.add(TLabel, gbc);
         ALabel = new JLabel();
-        ALabel.setText("Label");
+        ALabel.setText("A");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
         gbc.gridy = 2;
         gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.WEST;
-        MainPanel.add(ALabel, gbc);
-        button1 = new JButton();
-        button1.setText("Button");
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        mainPanel.add(ALabel, gbc);
+        button3 = new JButton();
+        button3.setText("3");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 5;
         gbc.gridwidth = 4;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        MainPanel.add(button1, gbc);
+        mainPanel.add(button3, gbc);
         XiTextArea = new JTextPane();
         XiTextArea.setBackground(new Color(-9014670));
         XiTextArea.setText("");
@@ -195,7 +224,7 @@ public class PhysicsFormulasUI {
         gbc.gridy = 0;
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.BOTH;
-        MainPanel.add(XiTextArea, gbc);
+        mainPanel.add(XiTextArea, gbc);
         XfTextArea = new JTextPane();
         XfTextArea.setBackground(new Color(-9014670));
         XfTextArea.setText("");
@@ -204,29 +233,40 @@ public class PhysicsFormulasUI {
         gbc.gridy = 0;
         gbc.weightx = 0.5;
         gbc.fill = GridBagConstraints.BOTH;
-        MainPanel.add(XfTextArea, gbc);
+        mainPanel.add(XfTextArea, gbc);
         XiLabel = new JLabel();
-        XiLabel.setText("Label");
+        XiLabel.setText("Xi");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.WEST;
-        MainPanel.add(XiLabel, gbc);
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        mainPanel.add(XiLabel, gbc);
         XfLabel = new JLabel();
-        XfLabel.setText("Label");
+        XfLabel.setText("Xf");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
         gbc.gridy = 0;
         gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.WEST;
-        MainPanel.add(XfLabel, gbc);
+        gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        mainPanel.add(XfLabel, gbc);
+        answerLabel = new JLabel();
+        answerLabel.setText("Answer");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 7;
+        gbc.gridwidth = 4;
+        gbc.weightx = 1.0;
+        mainPanel.add(answerLabel, gbc);
     }
 
     /**
      * @noinspection ALL
      */
     public JComponent $$$getRootComponent$$$() {
-        return MainPanel;
+        return mainPanel;
     }
+
 }

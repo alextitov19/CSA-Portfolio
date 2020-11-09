@@ -13,8 +13,8 @@ public class PhysicsCalculation {
         t = values[5];
     }
 
-    public double Calculate(int op) throws Exception {
-        double answer;
+    public double Calculate(int op) {
+        double answer = 0;
         switch (op){
             case 1:
                 answer = vi + (a*t);
@@ -29,7 +29,7 @@ public class PhysicsCalculation {
                 answer = xi + (0.5 * (vf + vi) * t);
                 break;
             default:
-                throw new Exception("PhysicsCalculation.Calculate.op value not 1-4");
+                System.out.println("PhysicsCalculation.Calculate.op value not 1-4");
         }
         return answer;
     }
