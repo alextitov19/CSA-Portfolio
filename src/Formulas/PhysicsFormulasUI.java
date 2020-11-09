@@ -81,7 +81,7 @@ public class PhysicsFormulasUI {
         }
     }
 
-    public static void main(String[] args) {
+    public static void RunPhysicsFormulasUI() {
         JFrame frame = new JFrame("Physics Formulas");
         frame.setContentPane(new PhysicsFormulasUI().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
