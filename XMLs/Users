@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Users>
-    <CurrentUser>0</CurrentUser>
-    <Size>1</Size>
-    <User coins="545" xp="732" email=" " password=" ">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Users currentUser="0" size="1">
+    <User coins="545" email=" " password=" " xp="732">
         <unlocks>
             <calculator>0</calculator>
             <graphingCalculator>0</graphingCalculator>

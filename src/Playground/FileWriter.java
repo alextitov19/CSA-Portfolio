@@ -13,6 +13,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.util.LinkedList;
 
 public class FileWriter {
 
@@ -20,31 +21,28 @@ public class FileWriter {
     DocumentBuilder builder;
     Document document;
     String path;
-    NamedNodeMap attributes;
     Element root;
-    Node[] users;
+    LinkedList<Node> users;
     Node coinsNode;
     Node xpNode;
+    Node currentuserNode;
+    int currentUser;
 
     public FileWriter() {
         try {
+            FileReader fr = new FileReader();
             factory = DocumentBuilderFactory.newInstance();
             builder = factory.newDocumentBuilder();
             path = System.getProperty("user.dir");
             path += "/XMLs/Users";
             document = builder.parse(new File(path));
-            root = document.getDocumentElement();
-            users = new Node[1];
-            users[0] = root.getElementsByTagName("User1").item(0);
-            attributes = users[0].getAttributes();
+            root = fr.root;
+            users = fr.users;
+            currentUser = fr.currentUser;
 
-            //update coins value
-            coinsNode = attributes.getNamedItem("coins");
-            xpNode = attributes.getNamedItem("xp");
-            coinsNode.setTextContent("400");
-
-            // write the DOM object to the file
-
+            coinsNode = users.get(currentUser).getAttributes().getNamedItem("coins");
+            xpNode = users.get(currentUser).getAttributes().getNamedItem("xp");
+            currentuserNode = root.getAttributes().getNamedItem("currentUser");
 
         } catch (ParserConfigurationException pce) {     //catch exceptions
             pce.printStackTrace();
@@ -76,6 +74,11 @@ public class FileWriter {
         } catch (TransformerException tfe) {
             tfe.printStackTrace();
         }
+    }
+
+    public void SetNewCurrentUser(int n) {
+        currentuserNode.setTextContent(Integer.toString(n));
+        Write();
     }
 
 }

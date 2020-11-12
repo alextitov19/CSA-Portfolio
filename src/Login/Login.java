@@ -8,7 +8,7 @@ public class Login {
         password = userPassword;
     }
 
-    public boolean CheckEmail() {
+    public void CheckEmail() {
 
     }
 }

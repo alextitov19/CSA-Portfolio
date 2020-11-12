@@ -30,8 +30,9 @@ public class FileReader {
             //get root element
             root = document.getDocumentElement();
 
-            size = Integer.parseInt(root.getElementsByTagName("Size").item(0).getNodeValue());
-            currentUser = Integer.parseInt(root.getElementsByTagName("CurrentUser").item(0).getNodeValue());
+            size = Integer.parseInt(root.getAttributes().getNamedItem("size").getNodeValue());
+            currentUser = Integer.parseInt(root.getAttributes().getNamedItem("currentUser").getNodeValue());
+            System.out.printf("Current user : %d\n", currentUser);
 
             //load all users
             users = new LinkedList<>();
@@ -50,9 +51,11 @@ public class FileReader {
     }
 
     public int[] GetAttributes() {
-        int coins = Integer.parseInt(users[0].getAttributes().getNamedItem("coins").getNodeValue());
-        int xp = Integer.parseInt(users[0].getAttributes().getNamedItem("xp").getNodeValue());
+        int coins = Integer.parseInt(users.get(currentUser).getAttributes().getNamedItem("coins").getNodeValue());
+        int xp = Integer.parseInt(users.get(currentUser).getAttributes().getNamedItem("xp").getNodeValue());
         int[] retArr = {coins, xp};
         return retArr;
     }
+
+
 }
