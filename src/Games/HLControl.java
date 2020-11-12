@@ -42,8 +42,8 @@ public class HLControl {
                 } else {
                     view.setTitleLabel("<html><div style='text-align: center;'>\"You Lost!<br>Press RESTART to try again<html>");
                     view.setNextButton("RESTART");
-                    view.score = 0;
                     getMoney(view.score);
+                    view.score = 0;
                 }
                 view.setScoreLabel("Score: " + view.score);
                 updateHighScore(view.score, model.highScore);
