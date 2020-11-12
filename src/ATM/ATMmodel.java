@@ -15,7 +15,6 @@ public class ATMmodel {
         FileReader fileReader = new FileReader();
         int[] atts = fileReader.GetAttributes();
         bankBalance = atts[0];
-        System.out.printf("Bank balance = %d", bankBalance);
         Boolean boolStatus = ATMcontrol.authenticate(uname, pword);
         if (boolStatus == true){
             this.status = "Login Successful";
