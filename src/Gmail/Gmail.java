@@ -16,6 +16,15 @@ public class Gmail {
     String to, from, pw, subject, body;
     private Queue<String> purchasedQueue = new LinkedList<>();
 
+    public Gmail(String[] arr) {
+        to = arr[0];
+        from = arr[1];
+        pw = arr[2];
+        subject = arr[3];
+        body = arr[4];
+    }
+
+
     public void Enqueue(String s) {
         purchasedQueue.add(s);
     }
@@ -59,7 +68,7 @@ public class Gmail {
             for (int i = 0; i < purchasedQueue.size(); i++) {
                 body = body + "\n " + Dequeue();
             }
-            
+
             message.setText(body);
 
             Transport.send(message);

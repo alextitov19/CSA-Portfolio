@@ -30,8 +30,9 @@ public class GmailUI {
                 String pw = passwordTextArea.getText();
                 String subject = subjectTextArea.getText();
                 String body = bodyTextArea.getText();
+                Gmail gmail = new Gmail(new String[] {to, from, pw, subject, body});
 
-                Gmail.SendEmail(to, from, pw, subject, body);
+                gmail.SendEmail();
             }
         });
     }
