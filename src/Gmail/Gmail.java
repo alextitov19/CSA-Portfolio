@@ -13,9 +13,18 @@ import javax.activation.*;
 
 public class Gmail {
 
-    public static void main(String[] args) { }
+    String to, from, pw, subject, body;
+    private Queue<String> purchasedQueue = new LinkedList<>();
 
-    public static void SendEmail(String to, String from, String pw, String subject, String body) {
+    public void Enqueue(String s) {
+        purchasedQueue.add(s);
+    }
+
+    public String Dequeue() {
+        return purchasedQueue.remove();
+    }
+
+    public void SendEmail() {
         // TODO Auto-generated method stub
         System.out.println("The Gmail program is starting up...");
 
@@ -46,6 +55,11 @@ public class Gmail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
 
             message.setSubject(subject);
+
+            for (int i = 0; i < purchasedQueue.size(); i++) {
+                body = body + "\n " + Dequeue();
+            }
+            
             message.setText(body);
 
             Transport.send(message);
