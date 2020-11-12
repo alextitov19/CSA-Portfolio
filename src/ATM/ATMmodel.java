@@ -1,4 +1,6 @@
 package ATM;
+import Playground.FileReader;
+
 import javax.swing.*;
 
 
@@ -10,6 +12,10 @@ public class ATMmodel {
     public String status;
 
     public ATMmodel(String uname, String pword){
+        FileReader fileReader = new FileReader();
+        int[] atts = fileReader.GetAttributes();
+        bankBalance = atts[0];
+        System.out.printf("Bank balance = %d", bankBalance);
         Boolean boolStatus = ATMcontrol.authenticate(uname, pword);
         if (boolStatus == true){
             this.status = "Login Successful";
