@@ -25,6 +25,7 @@ public class Store {
     public int cards = 0;
 
     public static void main(String[] args) {
+        RunStoreUI();
     }
 
     public static void RunStoreUI() {
@@ -164,13 +165,13 @@ class Items extends Store {
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
                     //update coins and xp
-                    //FileReader fileReader = new FileReader();
-                    //int[] atts = fileReader.GetAttributes();
-                    //int xp = atts[1];
-                    //int coins = please.money;
-                    //atts = new int[]{coins, xp};
-                    //FileWriter fileWriter = new FileWriter();
-                    //fileWriter.SetValue(atts);
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int xp = atts[1];
+                    int coins = money;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);
                 }
             }
         });
