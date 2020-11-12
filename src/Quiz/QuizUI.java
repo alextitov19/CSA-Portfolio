@@ -35,8 +35,14 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 if (button1.getText().equals(String.valueOf(currentAnswer))) {
                     System.out.println("Correct!");
-                    //coins += amount
-                } else {
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int coins = atts[0];
+                    int xp = atts[1];
+                    coins += 5;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);                } else {
                     System.out.println("Incorrect");
                 }
 
@@ -49,8 +55,14 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 if (button2.getText().equals(String.valueOf(currentAnswer))) {
                     System.out.println("Correct!");
-                    //coins += amount
-                } else {
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int coins = atts[0];
+                    int xp = atts[1];
+                    coins += 5;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);                } else {
                     System.out.println("Incorrect");
                 }
 
@@ -63,8 +75,14 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 if (button3.getText().equals(String.valueOf(currentAnswer))) {
                     System.out.println("Correct!");
-                    //coins += amount
-                } else {
+                    FileReader fileReader = new FileReader();
+                    int[] atts = fileReader.GetAttributes();
+                    int coins = atts[0];
+                    int xp = atts[1];
+                    coins += 5;
+                    atts = new int[]{coins, xp};
+                    FileWriter fileWriter = new FileWriter();
+                    fileWriter.SetValue(atts);                } else {
                     System.out.println("Incorrect");
                 }
 
@@ -77,7 +95,6 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 if (button4.getText().equals(String.valueOf(currentAnswer))) {
                     System.out.println("Correct!");
-                    //update coins and xp
                     FileReader fileReader = new FileReader();
                     int[] atts = fileReader.GetAttributes();
                     int coins = atts[0];
@@ -98,7 +115,7 @@ public class QuizUI {
     public static void RunQuizUI() {
         JFrame frame = new JFrame("QuizUI");
         frame.setContentPane(new QuizUI().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
