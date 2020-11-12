@@ -9,6 +9,7 @@ import Quiz.QuizUI;
 import Store.Store;
 import Games.RPS;
 import Games.HighLow;
+import Games.Chimp;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,6 +27,7 @@ public class MenuUI {
     private JButton storeButton;
     private JButton quizSeanButton;
     private JButton hlAndrewButton;
+    private JButton chimpAndrewButton;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MenuUI");
@@ -84,6 +86,13 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 HighLow.RunHighLow();
+            }
+        });
+
+        chimpAndrewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Chimp.RunChimp();
             }
         });
     }
@@ -202,7 +211,7 @@ public class MenuUI {
         quizSeanButton.setText("Quiz (Sean)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 15;
+        gbc.gridy = 17;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(quizSeanButton, gbc);
         final JPanel spacer9 = new JPanel();
@@ -218,6 +227,19 @@ public class MenuUI {
         gbc.gridy = 13;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(hlAndrewButton, gbc);
+        final JPanel spacer10 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 16;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer10, gbc);
+        chimpAndrewButton = new JButton();
+        chimpAndrewButton.setText("Chimp Memory (Andrew)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 15;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(chimpAndrewButton, gbc);
     }
 
     /**
