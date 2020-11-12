@@ -1,5 +1,6 @@
 package Store;
 //Created by Eyaad Mir
+import Gmail.Gmail;
 import Gmail.GmailUI;
 import Playground.FileReader;
 import Playground.FileWriter;
@@ -102,6 +103,7 @@ class Items extends Store {
     private JButton buyBook;
     private JButton buyCards;
     private JButton goBack;
+    private Gmail gmail;
 
     public void RunItemsUI() {
         //load in coins and xp
