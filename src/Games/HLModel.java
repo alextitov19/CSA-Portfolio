@@ -11,9 +11,6 @@ public class HLModel {
 
     public boolean compare(int x, int y) {
         boolean win;
-        //update coins and xp
-
-
         if (y > x) {
             win = true;
         } else {

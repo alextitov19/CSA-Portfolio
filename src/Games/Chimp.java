@@ -59,7 +59,7 @@ public class Chimp {
 
     public static void RunChimp() {
 
-        JFrame frame = new JFrame("HighLow");
+        JFrame frame = new JFrame("Chimp Game");
         frame.setContentPane(new Chimp().panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,500);
