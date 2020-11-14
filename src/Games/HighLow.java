@@ -187,15 +187,6 @@ public class HighLow {
     }
 
     public void winLose(int x, int y) {
-        //update coins and xp
-        FileReader fileReader = new FileReader();
-        int[] atts = fileReader.GetAttributes();
-        int coins = atts[0];
-        int xp = atts[1];
-        coins += score;
-        atts = new int[]{coins, xp};
-        FileWriter fileWriter = new FileWriter();
-        fileWriter.SetValue(atts);
         
         if (y > x) {
             titleLabel.setText("<html><div style='text-align: center;'>Correct!<br>+1 point<br>Press NEXT</html>");
@@ -208,6 +199,17 @@ public class HighLow {
         } else {
             titleLabel.setText("<html><div style='text-align: center;'>\"You Lost!<br>Press RESTART to try again<html>");
             nextButton.setText("RESTART");
+
+            //update coins and xp
+            FileReader fileReader = new FileReader();
+            int[] atts = fileReader.GetAttributes();
+            int coins = atts[0];
+            int xp = atts[1];
+            coins += score;
+            atts = new int[]{coins, xp};
+            FileWriter fileWriter = new FileWriter();
+            fileWriter.SetValue(atts);
+
             score = 0;
         }
     }

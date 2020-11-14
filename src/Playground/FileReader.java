@@ -5,13 +5,15 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.*;
 import java.io.*;
+import java.util.LinkedList;
 
 public class FileReader {
 
     Document document;
     String path;
     Element root;
-    Node[] users;
+    LinkedList<Node> users;
+    int size, currentUser;
 
     public FileReader() {
         try {
@@ -28,17 +30,16 @@ public class FileReader {
             //get root element
             root = document.getDocumentElement();
 
+            size = Integer.parseInt(root.getAttributes().getNamedItem("size").getNodeValue());
+            currentUser = Integer.parseInt(root.getAttributes().getNamedItem("currentUser").getNodeValue());
+            System.out.printf("Current user : %d\n", currentUser);
+
             //load all users
-            users = new Node[1];
-
-            //get user1 element
-            users[0] = root.getElementsByTagName("User1").item(0);
-
-            //get coins value of user1
-            int coins = Integer.parseInt(users[0].getAttributes().getNamedItem("coins").getNodeValue());
-
-            //get xp value of user1
-            int xp = Integer.parseInt(users[0].getAttributes().getNamedItem("xp").getNodeValue());
+            users = new LinkedList<>();
+            NodeList nlUsers = root.getElementsByTagName("User");
+            for (int i = 0; i < nlUsers.getLength(); i++) {
+                users.add(nlUsers.item(i));
+            }
 
         } catch (ParserConfigurationException pce) {     //catch exceptions
             pce.printStackTrace();
@@ -50,9 +51,11 @@ public class FileReader {
     }
 
     public int[] GetAttributes() {
-        int coins = Integer.parseInt(users[0].getAttributes().getNamedItem("coins").getNodeValue());
-        int xp = Integer.parseInt(users[0].getAttributes().getNamedItem("xp").getNodeValue());
+        int coins = Integer.parseInt(users.get(currentUser).getAttributes().getNamedItem("coins").getNodeValue());
+        int xp = Integer.parseInt(users.get(currentUser).getAttributes().getNamedItem("xp").getNodeValue());
         int[] retArr = {coins, xp};
         return retArr;
     }
+
+
 }
