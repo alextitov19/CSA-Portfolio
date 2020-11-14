@@ -13,25 +13,18 @@ import Store.Store;
 import Store.Items;
 
 public class Model {
-    public void bookCheck() {
-        Items please = new Items();
-        //for when you don't have enough money
-        if (please.money < 10) {
-            //please.moneyLabel.setText("You do not have enough money for this purchase. You only have " + please.money + " dollars");
-        }
-        else {
-            please.money = please.money - 10;//coins changed
-            please.books += 1;
-            //please.moneyLabel.setText("You currently have " + please.money + " dollars.");
-            //please.itemsLabel.setText("You have bought " + please.books + " books and " + please.cards + " cards.");
-            //update coins and xp
-            //FileReader fileReader = new FileReader();
-            //int[] atts = fileReader.GetAttributes();
-            //int xp = atts[1];
-            //int coins = please.money;
-            //atts = new int[]{coins, xp};
-            //FileWriter fileWriter = new FileWriter();
-            //fileWriter.SetValue(atts);
+    public String label1;
+    public String label2;
+
+    public Model(int money, int cards, int books) {
+        Boolean bool = Control.authenticateBook(money);
+        if (bool == true){
+            money-=10;
+            books+=1;
+            this.label1 = "You currently have " + money + " dollars";
+            this.label2 = "You have bought " + books + " books and " + cards + " cards.";
+        } else {
+            this.label1 = "You do not have enough money for this purchase. You only have " + money + " dollars";
         }
 
     }

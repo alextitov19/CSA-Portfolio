@@ -158,7 +158,7 @@
       </component>
       <component id="1529e" class="javax.swing.JButton" binding="button0">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -169,7 +169,7 @@
       </component>
       <component id="4d739" class="javax.swing.JButton" binding="buttonNegative">
         <constraints>
-          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -180,7 +180,7 @@
       </component>
       <component id="b817e" class="javax.swing.JButton" binding="buttonDot">
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
@@ -191,7 +191,7 @@
       </component>
       <component id="ee32e" class="javax.swing.JButton" binding="buttonEquals">
         <constraints>
-          <grid row="5" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
@@ -213,6 +213,19 @@
           <text value="+"/>
         </properties>
       </component>
+      <component id="481e3" class="javax.swing.JButton" binding="sinButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="78" height="141"/>
+          </grid>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <background color="-7567360"/>
+          <foreground color="-12829636"/>
+          <text value="sin"/>
+        </properties>
+      </component>
       <component id="2f30b" class="javax.swing.JButton" binding="buttonSubtract">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -224,6 +237,17 @@
           <text value="-"/>
         </properties>
       </component>
+      <component id="6906c" class="javax.swing.JButton" binding="cosButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <background color="-7567360"/>
+          <foreground color="-12829636"/>
+          <text value="cos"/>
+        </properties>
+      </component>
       <component id="74b8d" class="javax.swing.JButton" binding="buttonRoot">
         <constraints>
           <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -233,6 +257,17 @@
           <background color="-7567360"/>
           <foreground color="-12829636"/>
           <text value="root"/>
+        </properties>
+      </component>
+      <component id="2f084" class="javax.swing.JButton" binding="tanButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <background color="-7567360"/>
+          <foreground color="-12829636"/>
+          <text value="tan"/>
         </properties>
       </component>
       <component id="60c19" class="javax.swing.JButton" binding="buttonPower">
@@ -296,7 +331,7 @@
       </component>
       <hspacer id="e0047">
         <constraints>
-          <grid row="2" column="3" row-span="4" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="5" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </hspacer>
