@@ -24,6 +24,8 @@ public class Store {
     public int books = 0;
     public int cards = 0;
 
+
+
     public static void main(String[] args) {
     }
 
@@ -101,6 +103,8 @@ class Items extends Store {
     private JButton buyBook;
     private JButton buyCards;
     private JButton goBack;
+    private static String label1;
+    private static String label2;
 
     public void RunItemsUI() {
         //load in coins and xp
@@ -155,23 +159,19 @@ class Items extends Store {
         buyBook.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (money < 10) {
-                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
-                }
-                else {
-                    money = money - 10;//coins changed
-                    books += 1;
-                    moneyLabel.setText("You currently have " + money + " dollars.");
-                    itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
-                    //update coins and xp
-                    //FileReader fileReader = new FileReader();
-                    //int[] atts = fileReader.GetAttributes();
-                    //int xp = atts[1];
-                    //int coins = please.money;
-                    //atts = new int[]{coins, xp};
-                    //FileWriter fileWriter = new FileWriter();
-                    //fileWriter.SetValue(atts);
-                }
+                Model boook = new Model(money, cards, books);
+                label1 = boook.label1;
+                label2 = boook.label2;
+                moneyLabel.setText(label1);
+                itemsLabel.setText(label2);
+                FileReader fileReader = new FileReader();
+                int[] atts = fileReader.GetAttributes();
+                int xp = atts[1];
+                int coins = money;
+                atts = new int[]{coins, xp};
+                FileWriter fileWriter = new FileWriter();
+                fileWriter.SetValue(atts);
+
             }
         });
         //When user presses button to buy cards

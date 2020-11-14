@@ -12,16 +12,21 @@ import Playground.FileReader;
 import Playground.FileWriter;
 import Store.Store;
 import Store.Items;
+import Store.Model;
 
 public class Control {
-    public void changePriceBook() {
-        Items pog = new Items();
-        pog.money-=10;
-        pog.books+=1;
+    public static Boolean authenticateBook(int money) {
+        if (money >= 10) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    public void changePriceCard() {
-        Items pog = new Items();
-        pog.money-=5;
-        pog.cards+=1;
+    public static Boolean authenticateCard(int money) {
+        if (money >= 5) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
