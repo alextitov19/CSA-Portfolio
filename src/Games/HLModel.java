@@ -1,9 +1,6 @@
 package Games;
 
 import Playground.FileReader;
-import Playground.FileWriter;
-
-import java.util.Random;
 
 public class HLModel {
 
