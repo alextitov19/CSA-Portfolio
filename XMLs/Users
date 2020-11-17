@@ -3,6 +3,10 @@
         <unlocks>
             <calculator>0</calculator>
             <graphingCalculator>0</graphingCalculator>
+            <physicsFormula1>0</physicsFormula1>
+            <physicsFormula2>0</physicsFormula2>
+            <physicsFormula3>0</physicsFormula3>
+            <physicsFormula4>0</physicsFormula4>
         </unlocks>
     </User>
 </Users>
