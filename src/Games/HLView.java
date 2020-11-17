@@ -1,15 +1,10 @@
 package Games;
 
-import Playground.FileReader;
-import Playground.FileWriter;
-
 import javax.swing.*;
 import java.awt.*;
 
 //need these imports for later
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class HLView {
 

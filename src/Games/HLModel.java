@@ -1,9 +1,6 @@
 package Games;
 
 import Playground.FileReader;
-import Playground.FileWriter;
-
-import java.util.Random;
 
 public class HLModel {
 
@@ -33,8 +30,7 @@ public class HLModel {
         int xp = atts[1];
         coins += score;
         atts = new int[]{coins, xp};
-        FileWriter fileWriter = new FileWriter();
-        fileWriter.SetValue(atts);
+        fileReader.SetValue(atts);
     }
 
 }

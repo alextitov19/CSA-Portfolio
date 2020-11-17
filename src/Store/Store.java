@@ -1,16 +1,11 @@
 package Store;
 //Created by Eyaad Mir
-import Gmail.GmailUI;
 import Playground.FileReader;
-import Playground.FileWriter;
-import Store.Model;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.lang.*;
 
 public class Store {
@@ -169,8 +164,7 @@ class Items extends Store {
                 int xp = atts[1];
                 int coins = money;
                 atts = new int[]{coins, xp};
-                FileWriter fileWriter = new FileWriter();
-                fileWriter.SetValue(atts);
+                fileReader.SetValue(atts);
 
             }
         });
@@ -199,8 +193,7 @@ class Items extends Store {
                     int xp = atts[1];
                     int coins = money;
                     atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);
+                    fileReader.SetValue(atts);
                 }
             }
         });

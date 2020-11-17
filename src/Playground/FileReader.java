@@ -4,6 +4,11 @@ import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.*;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.LinkedList;
 
@@ -55,6 +60,34 @@ public class FileReader {
         int xp = Integer.parseInt(users.get(currentUser).getAttributes().getNamedItem("xp").getNodeValue());
         int[] retArr = {coins, xp};
         return retArr;
+    }
+
+    public void SetValue(int[] atts) {
+        int coins = atts[0];
+        int xp = atts[1];
+        users.get(currentUser).getAttributes().getNamedItem("coins").setTextContent(Integer.toString(coins));
+        users.get(currentUser).getAttributes().getNamedItem("xp").setTextContent(Integer.toString(xp));
+        Write();
+    }
+
+    private void Write() {
+        try {
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource domSource = new DOMSource(document);
+
+            StreamResult streamResult = new StreamResult(new File(path));
+            transformer.transform(domSource, streamResult);
+
+        } catch (TransformerException tfe) {
+            tfe.printStackTrace();
+        }
+    }
+
+    public void SetNewCurrentUser(int n) {
+        root.getAttributes().getNamedItem("currentUser").setTextContent(Integer.toString(n));
+        Write();
     }
 
 
