@@ -7,10 +7,9 @@ public class Playground {
         FileReader fileReader = new FileReader();
         System.out.println(fileReader.GetAttributes()[0]);
 
-        FileWriter fileWriter = new FileWriter();
         int[] atts = {900, 732};
-        fileWriter.SetValue(atts);
-        fileWriter.SetNewCurrentUser(5);
+        fileReader.SetValue(atts);
+        fileReader.SetNewCurrentUser(5);
 
     }
 }
