@@ -408,8 +408,7 @@ public class Chimp {
                 int xp = atts[1];
                 coins += score;
                 atts = new int[]{coins, xp};
-                FileWriter fileWriter = new FileWriter();
-                fileWriter.SetValue(atts);
+                fileReader.SetValue(atts);
             }
 
             if(counter == score + 2) {

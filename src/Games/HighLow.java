@@ -206,8 +206,7 @@ public class HighLow {
             int xp = atts[1];
             coins += score;
             atts = new int[]{coins, xp};
-            FileWriter fileWriter = new FileWriter();
-            fileWriter.SetValue(atts);
+            fileReader.SetValue(atts);
 
             score = 0;
         }

@@ -164,8 +164,7 @@ class Items extends Store {
                 int xp = atts[1];
                 int coins = money;
                 atts = new int[]{coins, xp};
-                FileWriter fileWriter = new FileWriter();
-                fileWriter.SetValue(atts);
+                fileReader.SetValue(atts);
 
             }
         });
@@ -194,8 +193,7 @@ class Items extends Store {
                     int xp = atts[1];
                     int coins = money;
                     atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);
+                    fileReader.SetValue(atts);
                 }
             }
         });
