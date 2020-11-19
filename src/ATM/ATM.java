@@ -43,9 +43,10 @@ public class ATM extends JFrame {
         JPasswordField passfield = new JPasswordField();
         JButton login = new JButton("Login!");
 
+
         // setting the size and constraints for the login window
         frame.setSize(400, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
         frame.add(ATM);
 
@@ -113,7 +114,7 @@ public class ATM extends JFrame {
             JLabel deposit = new JLabel("Click here to deposit money");
 
             frame.setSize(500, 400);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.setVisible(true);
             frame.add(main);
 
@@ -122,7 +123,7 @@ public class ATM extends JFrame {
             //setting the location of the parts of my main screen
             withdraw.setBounds(20, 200, 200, 25);
             deposit.setBounds(250, 200, 200, 25);
-            moneycount.setBounds(175, 50, 300, 25);
+            moneycount.setBounds(125, 50, 300, 25);
             balancecount.setBounds(125,150,400, 25);
             accountupdate.setBounds(175, 100, 300, 25);
             with.setBounds(40, 250, 200, 100);
