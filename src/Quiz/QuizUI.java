@@ -38,21 +38,16 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
                 if (button1.getText().equals(String.valueOf(currentAnswer))) {
-                    System.out.println("Correct!");
                     FileReader fileReader = new FileReader();
                     int[] atts = fileReader.GetAttributes();
                     int coins = atts[0];
                     int xp = atts[1];
                     coins += 5;
                     fileReader.SetValue(atts);
-                    System.out.println(fileReader.GetAttributes().toString());
                     coinsEarnedInSession+=5;
                     evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
                 }
 
-                else if (!button1.getText().equals("A")){
-                    System.out.println("Incorrect");
-                }
 
                 ResetQuiz();
             }
@@ -63,20 +58,17 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
                 if (button2.getText().equals(String.valueOf(currentAnswer))) {
-                    System.out.println("Correct!");
                     FileReader fileReader = new FileReader();
                     int[] atts = fileReader.GetAttributes();
                     int coins = atts[0];
                     int xp = atts[1];
                     coins += 5;
-                    FileReader filereader = new FileReader();
                     fileReader.SetValue(atts);
                     coinsEarnedInSession+=5;
                     evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
+
                 }
-                else if (!button1.getText().equals("B")){
-                    System.out.println("Incorrect");
-                }
+
 
                 ResetQuiz();
             }
@@ -87,18 +79,14 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
                 if (button3.getText().equals(String.valueOf(currentAnswer))) {
-                    System.out.println("Correct!");
                     FileReader fileReader = new FileReader();
                     int[] atts = fileReader.GetAttributes();
                     int coins = atts[0];
                     int xp = atts[1];
                     coins += 5;
-                    FileReader filereader = new FileReader();
                     fileReader.SetValue(atts);
                     coinsEarnedInSession+=5;
-                    evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));}
-                else if (!button1.getText().equals("C")){
-                    System.out.println("Incorrect");
+                    evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
                 }
 
                 ResetQuiz();
@@ -110,21 +98,16 @@ public class QuizUI {
             public void actionPerformed(ActionEvent e) {
                 ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
                 if (button4.getText().equals(String.valueOf(currentAnswer))) {
-                    System.out.println("Correct!");
                     FileReader fileReader = new FileReader();
                     int[] atts = fileReader.GetAttributes();
                     int coins = atts[0];
                     int xp = atts[1];
                     coins += 5;
-                    FileReader filereader = new FileReader();
                     fileReader.SetValue(atts);
                     coinsEarnedInSession+=5;
                     evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
-                }
-                else if (!button1.getText().equals("D")){
-                    System.out.println("Incorrect");
-                }
 
+                }
                 ResetQuiz();
             }
         });
