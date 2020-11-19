@@ -1,8 +1,12 @@
 package ATM;
 
 import ATM.ATMmodel;
+import Playground.FileReader;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 //Welcome to Neil Sahai's portion of the Project!
 //This will be integrated with the other labs shortly
@@ -102,6 +106,11 @@ public class ATM extends JFrame {
         }
 
         public void RunMainUI() {
+            //load in coins and xp
+            FileReader fileReader = new FileReader();
+            int[] atts = fileReader.GetAttributes();
+
+            money = atts[0];
             JFrame frame = new JFrame();
             JPanel main = new JPanel();
             JLabel withdraw = new JLabel("Click here to withdraw money");
@@ -123,7 +132,7 @@ public class ATM extends JFrame {
             withdraw.setBounds(20, 200, 200, 25);
             deposit.setBounds(250, 200, 200, 25);
             moneycount.setBounds(175, 50, 300, 25);
-            balancecount.setBounds(125,150,400, 25);
+            balancecount.setBounds(125, 150, 400, 25);
             accountupdate.setBounds(175, 100, 300, 25);
             with.setBounds(40, 250, 200, 100);
             dep.setBounds(250, 250, 200, 100);
@@ -140,32 +149,50 @@ public class ATM extends JFrame {
 
             //logic for the deposit and withdraw functions
             //model
-            with.addActionListener(e -> {
-                if (money > 10) {
-                    //control
-                    //deposit action listener
-                    money = money+10;
-                    balance = balance-10;
-                    moneycount.setText("You have " + money + " dollars available");
-                    balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
-
-                } else {
-                    accountupdate.setText("You do not have enough money to withdraw.");
-                }
-                    //withdraw action listener
-                dep.addActionListener(s -> {
-                    if (money > 0) {
+            with.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if (money > 10) {
                         //control
-                        money = money-10;
-                        balance = balance+10;
+                        //deposit action listener
+                        money = money + 10;
+                        balance = balance - 10;
                         moneycount.setText("You have " + money + " dollars available");
                         balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
+                        FileReader fileReader = new FileReader();
+                        int[] atts = fileReader.GetAttributes();
+                        int xp = atts[1];
+                        int coins = money;
+                        atts = new int[]{coins, xp};
+                        fileReader.SetValue(atts);
+                    } else {
+                        accountupdate.setText("You do not have enough money to withdraw.");
+                    }
+                }
+            });
+            //withdraw action listener
+            dep.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if (money > 0) {
+                        //control
+                        money = money - 10;
+                        balance = balance + 10;
+                        moneycount.setText("You have " + money + " dollars available");
+                        balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
+                        FileReader fileReader = new FileReader();
+                        int[] atts = fileReader.GetAttributes();
+                        int xp = atts[1];
+                        int coins = money;
+                        atts = new int[]{coins, xp};
+                        fileReader.SetValue(atts);
                     } else {
                         accountupdate.setText("You do not have enough money to deposit.");
                     }
-                });
-            });}
+                }
+            });
         }
+    }
 
 
 
