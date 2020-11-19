@@ -16,6 +16,7 @@ public class ATM extends JFrame {
     protected JLabel update;
     protected JLabel pass;
     protected int money = 100;
+    protected int balance = 0;
     String uname;
     String pword;
     private static String response;
@@ -104,7 +105,8 @@ public class ATM extends JFrame {
             JFrame frame = new JFrame();
             JPanel main = new JPanel();
             JLabel withdraw = new JLabel("Click here to withdraw money");
-            JLabel moneycount = new JLabel("You currently have " + money + " dollars");
+            JLabel moneycount = new JLabel("You currently have " + money + " dollars in your wallet");
+            JLabel balancecount = new JLabel("You currently have " + balance + "dollars in your Bank Account");
             JLabel accountupdate = new JLabel("Welcome to your account!");
             JButton with = new JButton("Withdraw $10");
             JButton dep = new JButton("Deposit $10");
@@ -120,7 +122,8 @@ public class ATM extends JFrame {
             //setting the location of the parts of my main screen
             withdraw.setBounds(20, 200, 200, 25);
             deposit.setBounds(250, 200, 200, 25);
-            moneycount.setBounds(175, 50, 200, 25);
+            moneycount.setBounds(175, 50, 300, 25);
+            balancecount.setBounds(125,150,400, 25);
             accountupdate.setBounds(175, 100, 300, 25);
             with.setBounds(40, 250, 200, 100);
             dep.setBounds(250, 250, 200, 100);
@@ -132,6 +135,7 @@ public class ATM extends JFrame {
             main.add(dep);
             main.add(moneycount);
             main.add(accountupdate);
+            main.add(balancecount);
 
 
             //logic for the deposit and withdraw functions
@@ -139,18 +143,23 @@ public class ATM extends JFrame {
             with.addActionListener(e -> {
                 if (money > 10) {
                     //control
+                    //deposit action listener
                     money = money+10;
+                    balance = balance-10;
                     moneycount.setText("You have " + money + " dollars available");
+                    balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
 
                 } else {
                     accountupdate.setText("You do not have enough money to withdraw.");
                 }
-
+                    //withdraw action listener
                 dep.addActionListener(s -> {
                     if (money > 0) {
                         //control
                         money = money-10;
+                        balance = balance+10;
                         moneycount.setText("You have " + money + " dollars available");
+                        balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
                     } else {
                         accountupdate.setText("You do not have enough money to deposit.");
                     }

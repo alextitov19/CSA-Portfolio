@@ -1,7 +1,6 @@
 package Games;
 
 import Playground.FileReader;
-import Playground.FileWriter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -59,7 +58,7 @@ public class Chimp {
 
     public static void RunChimp() {
 
-        JFrame frame = new JFrame("HighLow");
+        JFrame frame = new JFrame("Chimp Game");
         frame.setContentPane(new Chimp().panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,500);
@@ -409,8 +408,7 @@ public class Chimp {
                 int xp = atts[1];
                 coins += score;
                 atts = new int[]{coins, xp};
-                FileWriter fileWriter = new FileWriter();
-                fileWriter.SetValue(atts);
+                fileReader.SetValue(atts);
             }
 
             if(counter == score + 2) {

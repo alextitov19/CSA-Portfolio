@@ -1,7 +1,6 @@
 package Quiz;
 
 import Playground.FileReader;
-import Playground.FileWriter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,8 +40,7 @@ public class QuizUI {
                     int xp = atts[1];
                     coins += 5;
                     atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);                } else {
+                    fileReader.SetValue(atts);                } else {
                     System.out.println("Incorrect");
                 }
 
@@ -61,8 +59,7 @@ public class QuizUI {
                     int xp = atts[1];
                     coins += 5;
                     atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);                } else {
+                    fileReader.SetValue(atts);                } else {
                     System.out.println("Incorrect");
                 }
 
@@ -81,8 +78,7 @@ public class QuizUI {
                     int xp = atts[1];
                     coins += 5;
                     atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);                } else {
+                    fileReader.SetValue(atts);                } else {
                     System.out.println("Incorrect");
                 }
 
@@ -101,8 +97,7 @@ public class QuizUI {
                     int xp = atts[1];
                     coins += 5;
                     atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);
+                    fileReader.SetValue(atts);
                 } else {
                     System.out.println("Incorrect");
                 }

@@ -34,6 +34,9 @@ public class CalculatorUI {
     private JButton buttonNegative;
     private JButton buttonBackspace;
     private JButton buttonClear;
+    private JButton sinButton;
+    private JButton cosButton;
+    private JButton tanButton;
 
     private final int ADD = 0;
     private final int SUB = 1;
@@ -41,6 +44,9 @@ public class CalculatorUI {
     private final int DIV = 3;
     private final int POW = 4;
     private final int ROO = 5;
+    private final int SIN = 6;
+    private final int COS = 7;
+    private final int TAN = 8;
 
     private int currentOp;
 
@@ -329,6 +335,30 @@ public class CalculatorUI {
             }
         });
 
+        sinButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SetOperation(labelOutput, SIN);
+                decimalInPlace = false;
+                prohibitConcat = true;
+            }
+        });
+        cosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SetOperation(labelOutput, COS);
+                decimalInPlace = false;
+                prohibitConcat = true;
+            }
+        });
+        tanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SetOperation(labelOutput, TAN);
+                decimalInPlace = false;
+                prohibitConcat = true;
+            }
+        });
     }
 
     //calculate result of math operation and set labelOutput text to result
@@ -355,6 +385,15 @@ public class CalculatorUI {
                     break;
                 case ROO:
                     result = Math.pow(firstInput, 1 / secondInput);
+                    break;
+                case SIN:
+                    result = Math.sin(firstInput);
+                    break;
+                case COS:
+                    result = Math.cos(firstInput);
+                    break;
+                case TAN:
+                    result = Math.tan(firstInput);
                     break;
                 default:
                     System.out.printf("currentOp value = %d\n", currentOp);
@@ -411,6 +450,9 @@ public class CalculatorUI {
         buttonDivide.setEnabled(status);
         buttonRoot.setEnabled(status);
         buttonPower.setEnabled(status);
+        sinButton.setEnabled(status);
+        cosButton.setEnabled(status);
+        tanButton.setEnabled(status);
     }
 
     //reset/clear calculator
@@ -592,7 +634,7 @@ public class CalculatorUI {
         button0.setText("0");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(button0, gbc);
@@ -602,7 +644,7 @@ public class CalculatorUI {
         buttonNegative.setText("(-)");
         gbc = new GridBagConstraints();
         gbc.gridx = 2;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonNegative, gbc);
@@ -612,7 +654,7 @@ public class CalculatorUI {
         buttonDot.setText(".");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -624,7 +666,7 @@ public class CalculatorUI {
         buttonEquals.setText("=");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.gridwidth = 3;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
@@ -643,6 +685,18 @@ public class CalculatorUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonAdd, gbc);
+        sinButton = new JButton();
+        sinButton.setBackground(new Color(-7567360));
+        sinButton.setForeground(new Color(-12829636));
+        sinButton.setText("sin");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 4;
+        gbc.gridy = 5;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        panelMain.add(sinButton, gbc);
         buttonSubtract = new JButton();
         buttonSubtract.setBackground(new Color(-7567360));
         buttonSubtract.setForeground(new Color(-12829636));
@@ -655,6 +709,18 @@ public class CalculatorUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonSubtract, gbc);
+        cosButton = new JButton();
+        cosButton.setBackground(new Color(-7567360));
+        cosButton.setForeground(new Color(-12829636));
+        cosButton.setText("cos");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 5;
+        gbc.gridy = 5;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        panelMain.add(cosButton, gbc);
         buttonRoot = new JButton();
         buttonRoot.setBackground(new Color(-7567360));
         buttonRoot.setForeground(new Color(-12829636));
@@ -667,6 +733,18 @@ public class CalculatorUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(buttonRoot, gbc);
+        tanButton = new JButton();
+        tanButton.setBackground(new Color(-7567360));
+        tanButton.setForeground(new Color(-12829636));
+        tanButton.setText("tan");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 6;
+        gbc.gridy = 5;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        panelMain.add(tanButton, gbc);
         buttonPower = new JButton();
         buttonPower.setBackground(new Color(-7567360));
         buttonPower.setForeground(new Color(-12829636));
@@ -728,7 +806,7 @@ public class CalculatorUI {
         gbc = new GridBagConstraints();
         gbc.gridx = 3;
         gbc.gridy = 2;
-        gbc.gridheight = 4;
+        gbc.gridheight = 5;
         gbc.fill = GridBagConstraints.BOTH;
         panelMain.add(spacer1, gbc);
         final JPanel spacer2 = new JPanel();

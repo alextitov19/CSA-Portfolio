@@ -3,7 +3,6 @@
 package Games;
 
 import Playground.FileReader;
-import Playground.FileWriter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -136,8 +135,7 @@ public class RPS {
         int xp = atts[1];
         coins += score;
         atts = new int[]{coins, xp};
-        FileWriter fileWriter = new FileWriter();
-        fileWriter.SetValue(atts);
+        fileReader.SetValue(atts);
 
         switch (number) {
             //0 is a tie

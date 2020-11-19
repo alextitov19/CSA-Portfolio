@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><Users currentUser="0" size="1">
-    <User coins="545" email=" " password=" " xp="732">
+    <User coins="900" email=" " password=" " xp="732">
         <unlocks>
             <calculator>0</calculator>
             <graphingCalculator>0</graphingCalculator>
+            <physicsFormula1>0</physicsFormula1>
+            <physicsFormula2>0</physicsFormula2>
+            <physicsFormula3>0</physicsFormula3>
+            <physicsFormula4>0</physicsFormula4>
         </unlocks>
     </User>
 </Users>
