@@ -27,28 +27,22 @@ public class QuizUI {
     }
 
     public QuizUI() {
+
         button1.setText("A");
         button2.setText("B");
         button3.setText("C");
         button4.setText("D");
         evalLabel.setText("Coins Earned: ");
         questionLabel.setText("Press any button to start");
+
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
+                displayPrevAnswer();
                 if (button1.getText().equals(String.valueOf(currentAnswer))) {
-                    FileReader fileReader = new FileReader();
-                    int[] atts = fileReader.GetAttributes();
-                    int coins = atts[0];
-                    int xp = atts[1];
-                    coins += 5;
-                    fileReader.SetValue(atts);
-                    coinsEarnedInSession+=5;
-                    evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
+                    coinGet();
                 }
-
-
                 ResetQuiz();
             }
         });
@@ -56,20 +50,10 @@ public class QuizUI {
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
+                displayPrevAnswer();
                 if (button2.getText().equals(String.valueOf(currentAnswer))) {
-                    FileReader fileReader = new FileReader();
-                    int[] atts = fileReader.GetAttributes();
-                    int coins = atts[0];
-                    int xp = atts[1];
-                    coins += 5;
-                    fileReader.SetValue(atts);
-                    coinsEarnedInSession+=5;
-                    evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
-
+                    coinGet();
                 }
-
-
                 ResetQuiz();
             }
         });
@@ -77,18 +61,10 @@ public class QuizUI {
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
+                displayPrevAnswer();
                 if (button3.getText().equals(String.valueOf(currentAnswer))) {
-                    FileReader fileReader = new FileReader();
-                    int[] atts = fileReader.GetAttributes();
-                    int coins = atts[0];
-                    int xp = atts[1];
-                    coins += 5;
-                    fileReader.SetValue(atts);
-                    coinsEarnedInSession+=5;
-                    evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
+                    coinGet();
                 }
-
                 ResetQuiz();
             }
         });
@@ -96,17 +72,9 @@ public class QuizUI {
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
+                displayPrevAnswer();
                 if (button4.getText().equals(String.valueOf(currentAnswer))) {
-                    FileReader fileReader = new FileReader();
-                    int[] atts = fileReader.GetAttributes();
-                    int coins = atts[0];
-                    int xp = atts[1];
-                    coins += 5;
-                    fileReader.SetValue(atts);
-                    coinsEarnedInSession+=5;
-                    evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
-
+                    coinGet();
                 }
                 ResetQuiz();
             }
@@ -146,6 +114,25 @@ public class QuizUI {
         button3.setText(String.valueOf(l.get(2)));
         button4.setText(String.valueOf(l.get(3)));
     }
+
+    public void displayPrevAnswer(){
+        ansLabel.setText("Previous Answer:!".replace("!",Integer.toString(currentAnswer)));
+    }
+
+    public void writeCoins(){
+        FileReader fileReader = new FileReader();
+        int[] atts = fileReader.GetAttributes();
+        int coins = atts[0];
+        int xp = atts[1];
+        coins += 5;
+        fileReader.SetValue(atts);
+    }
+
+public void coinGet(){
+        writeCoins();
+        coinsEarnedInSession+=5;
+        evalLabel.setText("Coins Earned:!".replace("!",String.valueOf(coinsEarnedInSession)));
+}
 
 
     {

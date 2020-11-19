@@ -4,6 +4,8 @@ package Quiz;
 import java.util.ArrayList;
 import java.util.Collections;
 
+//model section of code
+
 public class QuestionGenerator { //generates a question, given a  question type, and 2 parameters
     int questionType;
     int param1;
@@ -37,7 +39,7 @@ public class QuestionGenerator { //generates a question, given a  question type,
             case 4:
                 return "The floor of the product of roots of the polynomial \n !x^2 + @ = 0 \n is most nearly:".replace("!",String.valueOf(param1/10)).replace("@",String.valueOf(param2/10));
             case 5:
-                return "What is the floor of the hypotenuse of a right triangle with legs of ! and @?".replace("!",String.valueOf(param1/10)).replace("@",String.valueOf(param2/10));
+                return "What is the floor of the length of the hypotenuse of a right triangle with legs of ! and @?".replace("!",String.valueOf(param1/10)).replace("@",String.valueOf(param2/10));
         }
         return "error occured";
     }
