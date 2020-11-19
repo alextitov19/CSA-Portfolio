@@ -247,7 +247,6 @@ public class RPS {
         gbc.gridy = 0;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
-        gbc.anchor = GridBagConstraints.WEST;
         panel1.add(titleLabel, gbc);
         userLabel = new JLabel();
         userLabel.setText("");
