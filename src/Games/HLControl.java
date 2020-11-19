@@ -7,25 +7,27 @@ import java.util.Random;
 import Games.HLView;
 import Games.HLModel;
 
+import javax.swing.*;
+
 public class HLControl {
 
-    boolean roundStarted = false;
+    public boolean roundStarted = false;
     private HLView view;
     private HLModel model;
+    private ActionListener upActionListener;
+    private ActionListener nextActionListener;
+    private ActionListener downActionListener;
 
-    public static void RunControl() {
-        new HLControl();
-    }
+    public HLControl(HLModel model, HLView view) {
+        this.model = model;
+        this.view = view;
 
-    public HLControl() {
-        model = new HLModel();
-        view = new HLView();
+        view.RunHLView(view);
 
         view.setUpActionListener(new UpListener());
         view.setNextActionListener(new NextListener());
-        view.setDownActionListener(new NextListener());
+        view.setDownActionListener(new DownListener());
 
-        view.RunHLView();
     }
 
 
@@ -33,7 +35,7 @@ public class HLControl {
         public void actionPerformed(ActionEvent e) {
             if(roundStarted) {
                 roundStarted = false;
-                int one = Integer.parseInt(view.getNumber1());
+                int one = Integer.parseInt(view.getNumber1Text());
                 int two = randomize(one);
                 view.setNumber2(Integer.toString(two));
                 if(compare(one,two)) {
@@ -42,8 +44,8 @@ public class HLControl {
                 } else {
                     view.setTitleLabel("<html><div style='text-align: center;'>\"You Lost!<br>Press RESTART to try again<html>");
                     view.setNextButton("RESTART");
-                    getMoney(view.score);
                     view.score = 0;
+                    getMoney(view.score);
                 }
                 view.setScoreLabel("Score: " + view.score);
                 updateHighScore(view.score, model.highScore);
@@ -55,7 +57,7 @@ public class HLControl {
         public void actionPerformed(ActionEvent e) {
             if(roundStarted) {
                 roundStarted = false;
-                int one = Integer.parseInt(view.getNumber1());
+                int one = Integer.parseInt(view.getNumber1Text());
                 int two = randomize(one);
                 view.setNumber2(Integer.toString(two));
                 if(compare(two,one)) {
@@ -84,7 +86,7 @@ public class HLControl {
                     int x = random.nextInt(9) + 1;
                     view.setNumber2(Integer.toString(x));
                 }
-                view.setNumber1(view.getNumber2());
+                view.setNumber1(view.getNumber2Text());
                 view.setNumber2("?");
                 view.clearTitleIcon();
                 view.setTitleLabel("<html><div style='text-align: center;'>\"Will the next number be<br>HIGHER or LOWER?");
@@ -105,7 +107,7 @@ public class HLControl {
     }
 
     private boolean compare(int x, int y) {
-        return compare(x,y);
+        return model.compare(x,y);
     }
 
     private void updateHighScore(int score, int highScore) {

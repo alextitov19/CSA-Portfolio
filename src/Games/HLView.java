@@ -4,17 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 
 //need these imports for later
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class HLView {
 
     //creating panel, buttons, and labels
-    private JPanel panel;
-    private JButton downButton;
+    public JPanel panel;
+    public JButton downButton;
     private JButton nextButton;
-    private JButton upButton;
+    public JButton upButton;
     private JLabel number1;
-    private JLabel titleLabel;
+    public JLabel titleLabel;
     private JLabel scoreLabel;
     private JLabel highScoreLabel;
     private JLabel number2;
@@ -29,23 +30,15 @@ public class HLView {
 
     }
 
-    //main method creates JFrame
-    public static void main(String[] args) {
-
-        RunHLView();
-
-    }
-
-    public static void RunHLView() {
+    public static void RunHLView(HLView view) {
 
         JFrame frame = new JFrame("HighLow");
-        frame.setContentPane(new HLView().panel);
+        frame.setContentPane(view.panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,600);
         frame.pack();
         frame.setVisible(true);
 
-        new HLView();
     }
 
     public void GUI() {
@@ -95,7 +88,6 @@ public class HLView {
         downButton.setText("LOWER");
         nextButton.setText("   START  ");
         upButton.setText("HIGHER");
-
 
     }
 
@@ -148,30 +140,14 @@ public class HLView {
         downButton.setText(text);
     }
 
-    public String getNumber1() {
+    public String getNumber1Text() {
         return number1.getText();
     }
-    public String getNumber2() {
+    public String getNumber2Text() {
         return number2.getText();
     }
-    public String getTitleLabel() {
-        return titleLabel.getText();
-    }
-    public String getScoreLabel() {
-        return scoreLabel.getText();
-    }
-    public String getHighScoreLabel() {
-        return highScoreLabel.getText();
-    }
-    public String getUpButton() {
-        return upButton.getText();
-    }
-    public String getNextButton() {
-        return nextButton.getText();
-    }
-    public String getDownButton() {
-        return downButton.getText();
-    }
+
+    public JButton getUpButton() {return upButton;}
 
     public void setUpActionListener(ActionListener actionListener) {
         upButton.addActionListener(actionListener);
