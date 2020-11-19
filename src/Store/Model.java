@@ -38,10 +38,10 @@ class Model1 extends Store {
         if (bool == true){
             money-=5;
             cards+=1;
-            //this.label1 = "You currently have " + money + " dollars";
-            //this.label2 = "You have bought " + books + " books and " + cards + " cards.";
+            this.label1 = "You currently have " + money + " dollars";
+            this.label2 = "You have bought " + books + " books and " + cards + " cards.";
         } else {
-            //this.label1 = "You do not have enough money for this purchase. You only have " + money + " dollars";
+            this.label1 = "You do not have enough money for this purchase. You only have " + money + " dollars";
         }
 
     }

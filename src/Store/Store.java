@@ -41,7 +41,7 @@ public class Store {
         Store test = new Store();
         test.money = atts[0];
         JLabel moneyLabel = new JLabel("You currently have " + test.money + " dollars");
-        JLabel itemsLabel = new JLabel("You have bought " + test.books + " books and " + test.cards + " cards.");
+        //JLabel itemsLabel = new JLabel("You have bought " + test.books + " books and " + test.cards + " cards.");
         store.setLayout(null);
 
         // Dimensions and properties of Frame
@@ -54,12 +54,12 @@ public class Store {
         ViewItems.setBounds(190, 200, 200, 125);
         welcomeLabel.setBounds(40, 0, 200, 175);
         moneyLabel.setBounds(40, 400, 200, 175);
-        itemsLabel.setBounds(340, 400, 300, 175);
+        //itemsLabel.setBounds(340, 400, 300, 175);
 
         store.add(ViewItems);
         store.add(welcomeLabel);
         store.add(moneyLabel);
-        store.add(itemsLabel);
+        //store.add(itemsLabel);
         //Brings user to buying items
         ViewItems.addActionListener(new ActionListener() {
             @Override
@@ -96,11 +96,15 @@ class Items extends Store {
     private JLabel test;
     private JPanel items;
     public JLabel moneyLabel;
-    public JLabel itemsLabel;
-    private JLabel book;
-    private JLabel card;
-    private JButton buyBook;
-    private JButton buyCards;
+    //public JLabel itemsLabel;
+    public JLabel sinPurchased;
+    public JLabel cosPurchased;
+    public JLabel tanPurchased;
+    //private JLabel book;
+    //private JLabel card;
+    private JButton buySin;
+    private JButton buyCos;
+    private JButton buyTan;
     private JButton goBack;
     private static String label1;
     private static String label2;
@@ -114,13 +118,19 @@ class Items extends Store {
         JFrame frame = new JFrame();
         JPanel items = new JPanel();
         JLabel test = new JLabel("Buy Items:");
-        JLabel book = new JLabel();
-        JLabel card = new JLabel();
+        //JLabel book = new JLabel();
+        //JLabel card = new JLabel();
         money = atts[0];
         JLabel moneyLabel = new JLabel("You currently have " + money + " dollars");
-        JLabel itemsLabel = new JLabel("You have bought " + books + " books and " + cards + " cards.");
-        JButton buyBook = new JButton("Buy Book: $10");
-        JButton buyCards = new JButton("Buy Cards: $5");
+        //JLabel itemsLabel = new JLabel("You have bought " + books + " books and " + cards + " cards.");
+        JButton buySin = new JButton("Buy Sine: $50");
+        JButton buyCos = new JButton("Buy Cosine: $50");
+        JButton buyTan = new JButton("Buy Tangent: $100");
+        JLabel sinPurchased = new JLabel();
+        JLabel cosPurchased = new JLabel();
+        JLabel tanPurchased = new JLabel();
+
+
         JButton goBack = new JButton("Go Back");
 
         items.setLayout(null);
@@ -132,37 +142,49 @@ class Items extends Store {
         frame.add(items);
 
         //Setting images of the items
-        book.setIcon(new ImageIcon(".\\.\\.\\Icons\\book.jpg"));
-        card.setIcon(new ImageIcon(".\\.\\.\\Icons\\cards.jpg"));
+        //book.setIcon(new ImageIcon(".\\.\\.\\Icons\\book.jpg"));
+        //card.setIcon(new ImageIcon(".\\.\\.\\Icons\\cards.jpg"));
         //Setting locations of my buttons and Labels
         test.setBounds(40, 0, 200, 175);
         moneyLabel.setBounds(40, 450, 500, 175);
-        itemsLabel.setBounds(340, 400, 300, 175);
-        buyBook.setBounds(40,120,150,125);
-        buyCards.setBounds(40,270,150,125);
-        book.setBounds(300,120,175,135);
-        card.setBounds(300,270,175,117);
+        sinPurchased.setBounds(340, 400, 300, 175);
+        cosPurchased.setBounds(340, 425, 300, 175);
+        tanPurchased.setBounds(340, 450, 300, 175);
+        buySin.setBounds(40,120,150,125);
+        buyCos.setBounds(40,270,150,125);
+        buyTan.setBounds(300,120,150,125);
+        //card.setBounds(300,270,175,117);
         goBack.setBounds(20,400,120,100);
 
         //Adding parts to panel
-        items.add(book);
-        items.add(card);
         items.add(test);
-        items.add(buyBook);
-        items.add(buyCards);
+        items.add(buySin);
+        items.add(buyCos);
+        items.add(buyTan);
         items.add(moneyLabel);
-        items.add(itemsLabel);
+        items.add(sinPurchased);
+        items.add(cosPurchased);
+        items.add(tanPurchased);
         items.add(goBack);
 
         //When user presses button to buy book
-        buyBook.addActionListener(new ActionListener() {
+        buySin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Model boook = new Model(money, cards, books);
-                label1 = boook.label1;
-                label2 = boook.label2;
-                moneyLabel.setText(label1);
-                itemsLabel.setText(label2);
+                if (money >= 50) {
+                    money-=50;
+                    moneyLabel.setText("You currently have " + money + " dollars.");
+                    sinPurchased.setText("Sine function purchased");
+                    buySin.setVisible(false);
+                }
+                else {
+                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+                }
+                //Model boook = new Model(money, cards, books);
+                //label1 = boook.label1;
+                //label2 = boook.label2;
+                //moneyLabel.setText(label1);
+                //itemsLabel.setText(label2);
                 FileReader fileReader = new FileReader();
                 int[] atts = fileReader.GetAttributes();
                 int xp = atts[1];
@@ -173,9 +195,18 @@ class Items extends Store {
             }
         });
         //When user presses button to buy cards
-        buyCards.addActionListener(new ActionListener() {
+        buyCos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (money >= 50) {
+                    money-=50;
+                    moneyLabel.setText("You currently have " + money + " dollars.");
+                    cosPurchased.setText("Cosine function purchased");
+                    buyCos.setVisible(false);
+                }
+                else {
+                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+                }
                 //For when you don't have enough money
                // if (money < 5) {
                  //   moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
@@ -200,13 +231,64 @@ class Items extends Store {
                 //    FileWriter fileWriter = new FileWriter();
                 //    fileWriter.SetValue(atts);
                // }
-                Model1 boook = new Model1(money, cards, books);
+                //Model1 boook = new Model1(money, cards, books);
                 //label1 = boook.label1;
                 //label2 = boook.label2;
                 //moneyLabel.setText(label1);
                 //itemsLabel.setText(label2);
-                moneyLabel.setText("You currently have " + money + " dollars.");
-                itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                //moneyLabel.setText("You currently have " + money + " dollars.");
+                //itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                FileReader fileReader = new FileReader();
+                int[] atts = fileReader.GetAttributes();
+                int xp = atts[1];
+                int coins = money;
+                atts = new int[]{coins, xp};
+                fileReader.SetValue(atts);
+            }
+        });
+        buyTan.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (money >= 100) {
+                    money-=100;
+                    moneyLabel.setText("You currently have " + money + " dollars.");
+                    tanPurchased.setText("Tangent function purchased");
+                    buyTan.setVisible(false);
+                }
+                else {
+                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+                }
+                //For when you don't have enough money
+                // if (money < 5) {
+                //   moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+                //  try {
+                // thread to sleep for 1000 milliseconds
+                //    Thread.sleep(1000);
+                //}  catch (InterruptedException ex) {
+                //  Thread.currentThread().interrupt();
+                //}
+                //moneyLabel.setText("You currently have " + money + " dollars");
+                //  }
+                // else {
+                //     money = money - 5;//coins changed
+                //     cards += 1;
+                //    moneyLabel.setText("You currently have " + money + " dollars.");
+                //    itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                //    FileReader fileReader = new FileReader();
+                //    int[] atts = fileReader.GetAttributes();
+                //    int xp = atts[1];
+                //    int coins = money;
+                //    atts = new int[]{coins, xp};
+                //    FileWriter fileWriter = new FileWriter();
+                //    fileWriter.SetValue(atts);
+                // }
+                //Model1 boook = new Model1(money, cards, books);
+                //label1 = boook.label1;
+                //label2 = boook.label2;
+                //moneyLabel.setText(label1);
+                //itemsLabel.setText(label2);
+                //moneyLabel.setText("You currently have " + money + " dollars.");
+                //itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
                 FileReader fileReader = new FileReader();
                 int[] atts = fileReader.GetAttributes();
                 int xp = atts[1];
