@@ -20,7 +20,7 @@ public class Store {
     protected JLabel welcomeLabel;
     protected JLabel moneyLabel;
     protected JLabel itemsLabel;
-    public int money = 100; //coins initialized
+    public int money; //coins initialized
     public int books = 0;
     public int cards = 0;
 
@@ -179,8 +179,8 @@ class Items extends Store {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //For when you don't have enough money
-                if (money < 5) {
-                    moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
+               // if (money < 5) {
+                 //   moneyLabel.setText("You do not have enough money for this purchase. You only have " + money + " dollars");
                     //  try {
                     // thread to sleep for 1000 milliseconds
                     //    Thread.sleep(1000);
@@ -188,20 +188,34 @@ class Items extends Store {
                     //  Thread.currentThread().interrupt();
                     //}
                     //moneyLabel.setText("You currently have " + money + " dollars");
-                }
-                else {
-                    money = money - 5;//coins changed
-                    cards += 1;
-                    moneyLabel.setText("You currently have " + money + " dollars.");
-                    itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
-                    FileReader fileReader = new FileReader();
-                    int[] atts = fileReader.GetAttributes();
-                    int xp = atts[1];
-                    int coins = money;
-                    atts = new int[]{coins, xp};
-                    FileWriter fileWriter = new FileWriter();
-                    fileWriter.SetValue(atts);
-                }
+              //  }
+               // else {
+               //     money = money - 5;//coins changed
+               //     cards += 1;
+                //    moneyLabel.setText("You currently have " + money + " dollars.");
+                //    itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                //    FileReader fileReader = new FileReader();
+                //    int[] atts = fileReader.GetAttributes();
+                //    int xp = atts[1];
+                //    int coins = money;
+                //    atts = new int[]{coins, xp};
+                //    FileWriter fileWriter = new FileWriter();
+                //    fileWriter.SetValue(atts);
+               // }
+                Model1 boook = new Model1(money, cards, books);
+                //label1 = boook.label1;
+                //label2 = boook.label2;
+                //moneyLabel.setText(label1);
+                //itemsLabel.setText(label2);
+                moneyLabel.setText("You currently have " + money + " dollars.");
+                itemsLabel.setText("You have bought " + books + " books and " + cards + " cards.");
+                FileReader fileReader = new FileReader();
+                int[] atts = fileReader.GetAttributes();
+                int xp = atts[1];
+                int coins = money;
+                atts = new int[]{coins, xp};
+                FileWriter fileWriter = new FileWriter();
+                fileWriter.SetValue(atts);
             }
         });
         //Go back to store
