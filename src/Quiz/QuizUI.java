@@ -125,6 +125,7 @@ public class QuizUI {
         int coins = atts[0];
         int xp = atts[1];
         coins += 5;
+        atts = new int[]{coins, xp};
         fileReader.SetValue(atts);
     }
 
