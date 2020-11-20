@@ -31,7 +31,7 @@ public class MenuUI {
     private JButton chimpAndrewButton;
     private JButton numberAndrewButton;
 
-    public static void main(String[] args) {
+    public static void RunMenuUI() {
         JFrame frame = new JFrame("MenuUI");
         frame.setContentPane(new MenuUI().panelMain);
         frame.pack();
