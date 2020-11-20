@@ -62,6 +62,39 @@ public class FileReader {
         return retArr;
     }
 
+    public int[] GetUnlocks() {
+        NodeList children = users.get(currentUser).getChildNodes();
+        int[] arr = new int[6];
+        for (int i = 0; i < children.getLength(); i++) {
+            Node child = children.item(i);
+            String name = child.getNodeName();
+            if (child instanceof Element == false) {
+                continue;
+            }
+            switch (name) {
+                case "physicsFormula1":
+                    arr[0] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "physicsFormula2":
+                    arr[1] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "physicsFormula3":
+                    arr[2] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "physicsFormula4":
+                    arr[3] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "calculator":
+                    arr[4] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "graphingCalculator":
+                    arr[5] = Integer.parseInt(child.getTextContent());
+                    break;
+            }
+        }
+        return arr;
+    }
+
     public void SetValue(int[] atts) {
         int coins = atts[0];
         int xp = atts[1];
