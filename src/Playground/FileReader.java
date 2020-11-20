@@ -95,6 +95,20 @@ public class FileReader {
         return arr;
     }
 
+    public void SetUnlock(String s, int n) {
+        NodeList children = users.get(currentUser).getChildNodes();
+        for (int i = 0; i < children.getLength(); i++) {
+            Node child = children.item(i);
+            if (child instanceof Element == false) {
+                continue;
+            }
+            if (child.getNodeName() == s) {
+                child.setTextContent(Integer.toString(n));
+            }
+        }
+        Write();
+    }
+
     public void SetValue(int[] atts) {
         int coins = atts[0];
         int xp = atts[1];
