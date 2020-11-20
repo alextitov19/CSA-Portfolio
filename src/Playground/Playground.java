@@ -7,9 +7,10 @@ public class Playground {
         FileReader fileReader = new FileReader();
         System.out.println(fileReader.GetAttributes()[0]);
 
-        int[] atts = {900, 732};
-        fileReader.SetValue(atts);
-        fileReader.SetNewCurrentUser(5);
+        int[] arr = fileReader.GetUnlocks();
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
 
     }
 }
