@@ -64,7 +64,7 @@ public class FileReader {
 
     public int[] GetUnlocks() {
         NodeList children = users.get(currentUser).getChildNodes();
-        int[] arr = new int[6];
+        int[] arr = new int[9];
         for (int i = 0; i < children.getLength(); i++) {
             Node child = children.item(i);
             String name = child.getNodeName();
@@ -89,6 +89,15 @@ public class FileReader {
                     break;
                 case "graphingCalculator":
                     arr[5] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "sin":
+                    arr[6] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "cos":
+                    arr[7] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "tan":
+                    arr[8] = Integer.parseInt(child.getTextContent());
                     break;
             }
         }

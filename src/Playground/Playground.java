@@ -11,7 +11,7 @@ public class Playground {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
-        fileReader.SetUnlock("calculator", 6);
+        fileReader.SetUnlock("sin", 66);
 
     }
 }

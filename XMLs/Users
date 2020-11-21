@@ -6,5 +6,8 @@
         <physicsFormula4>4</physicsFormula4>
         <calculator>5</calculator>
         <graphingCalculator>6</graphingCalculator>
+        <sin>7</sin>
+        <cos>8</cos>
+        <tan>9</tan>
     </User>
 </Users>
