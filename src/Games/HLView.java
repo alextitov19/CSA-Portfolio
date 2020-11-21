@@ -34,7 +34,7 @@ public class HLView {
 
         JFrame frame = new JFrame("HighLow");
         frame.setContentPane(view.panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(1200,600);
         frame.pack();
         frame.setVisible(true);

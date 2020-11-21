@@ -11,6 +11,7 @@ import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
 import Quiz.QuizUI;
 import Store.Store;
+import Games.MVCHighLowMain;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,6 +32,7 @@ public class MenuUI {
     private JButton chimpAndrewButton;
     private JButton numberAndrewButton;
     private JButton physicsFormulas;
+    private JButton HLAndrewButton;
 
     public static void RunMenuUI() {
         JFrame frame = new JFrame("MenuUI");
@@ -109,6 +111,12 @@ public class MenuUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 PhysicsFormulasUI.RunPhysicsFormulasUI();
+            }
+        });
+        HLAndrewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MVCHighLowMain.RunHL();
             }
         });
     }
@@ -220,14 +228,14 @@ public class MenuUI {
         final JPanel spacer8 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 16;
+        gbc.gridy = 18;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer8, gbc);
         quizSeanButton = new JButton();
         quizSeanButton.setText("Quiz (Sean)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 21;
+        gbc.gridy = 23;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(quizSeanButton, gbc);
         final JPanel spacer9 = new JPanel();
@@ -246,27 +254,27 @@ public class MenuUI {
         final JPanel spacer10 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 20;
+        gbc.gridy = 22;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer10, gbc);
         chimpAndrewButton = new JButton();
         chimpAndrewButton.setText("Chimp Memory (Andrew)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 17;
+        gbc.gridy = 19;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(chimpAndrewButton, gbc);
         final JPanel spacer11 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 18;
+        gbc.gridy = 20;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer11, gbc);
         numberAndrewButton = new JButton();
         numberAndrewButton.setText("Number Memory (Andrew)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 19;
+        gbc.gridy = 21;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(numberAndrewButton, gbc);
         physicsFormulas = new JButton();
@@ -282,6 +290,19 @@ public class MenuUI {
         gbc.gridy = 6;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer12, gbc);
+        final JPanel spacer13 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 16;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer13, gbc);
+        HLAndrewButton = new JButton();
+        HLAndrewButton.setText("Higher Lower MVC (Andrew)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 17;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(HLAndrewButton, gbc);
     }
 
     /**
