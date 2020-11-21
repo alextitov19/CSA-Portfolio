@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><Users currentUser="0" size="1">
     <User coins="675" email=" " password=" " xp="732">
         <physicsFormula1>1</physicsFormula1>
-        <physicsFormula2>2</physicsFormula2>
-        <physicsFormula3>3</physicsFormula3>
-        <physicsFormula4>4</physicsFormula4>
-        <calculator>5</calculator>
-        <graphingCalculator>6</graphingCalculator>
-        <sin>7</sin>
-        <cos>8</cos>
-        <tan>9</tan>
+        <physicsFormula2>1</physicsFormula2>
+        <physicsFormula3>1</physicsFormula3>
+        <physicsFormula4>1</physicsFormula4>
+        <calculator>1</calculator>
+        <graphingCalculator>1</graphingCalculator>
+        <sin>1</sin>
+        <cos>1</cos>
+        <tan>1</tan>
     </User>
 </Users>
