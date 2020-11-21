@@ -1,5 +1,7 @@
 package Formulas;
 
+import Playground.FileReader;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -34,6 +36,22 @@ public class PhysicsFormulasUI {
 
         vals = new double[6];
         textAreas = new JTextPane[]{XiTextArea, XfTextArea, ViTextArea, VfTextArea, ATextArea, TTextArea};
+
+        FileReader fileReader = new FileReader();
+        int[] unlocks = fileReader.GetUnlocks();
+
+        if (unlocks[0] == 0) {
+            button1.setEnabled(false);
+        }
+        if (unlocks[1] == 0) {
+            button2.setEnabled(false);
+        }
+        if (unlocks[2] == 0) {
+            button3.setEnabled(false);
+        }
+        if (unlocks[3] == 0) {
+            button4.setEnabled(false);
+        }
 
         button1.addActionListener(new ActionListener() {
             @Override

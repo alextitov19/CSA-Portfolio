@@ -2,13 +2,13 @@ package Menu;
 
 import ATM.ATM;
 import CalculatorUI.CalculatorUI;
+import Formulas.PhysicsFormulasUI;
 import Games.RPS;
 import Games.HighLow;
 import Games.Chimp;
 import Games.Numbers;
 import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
-import GraphingCalculator.GraphingCalculator;
 import Quiz.QuizUI;
 import Store.Store;
 
@@ -30,6 +30,7 @@ public class MenuUI {
     private JButton hlAndrewButton;
     private JButton chimpAndrewButton;
     private JButton numberAndrewButton;
+    private JButton physicsFormulas;
 
     public static void RunMenuUI() {
         JFrame frame = new JFrame("MenuUI");
@@ -104,6 +105,12 @@ public class MenuUI {
                 Numbers.RunNumbers();
             }
         });
+        physicsFormulas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PhysicsFormulasUI.RunPhysicsFormulasUI();
+            }
+        });
     }
 
     {
@@ -162,7 +169,7 @@ public class MenuUI {
         gmailAlexButton.setText("Gmail (Alex)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 5;
+        gbc.gridy = 7;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(gmailAlexButton, gbc);
         final JPanel spacer4 = new JPanel();
@@ -175,93 +182,106 @@ public class MenuUI {
         storeEyaadButton.setText("Store(Eyaad)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 7;
+        gbc.gridy = 9;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(storeEyaadButton, gbc);
         final JPanel spacer5 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 6;
+        gbc.gridy = 8;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer5, gbc);
         atmNeilButton = new JButton();
         atmNeilButton.setText("ATM (Neil)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 9;
+        gbc.gridy = 11;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(atmNeilButton, gbc);
         final JPanel spacer6 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 8;
+        gbc.gridy = 10;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer6, gbc);
         final JPanel spacer7 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 10;
+        gbc.gridy = 12;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer7, gbc);
         rpsAndrewButton = new JButton();
         rpsAndrewButton.setText("Rock Paper Scissors (Andrew)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 11;
+        gbc.gridy = 13;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(rpsAndrewButton, gbc);
         final JPanel spacer8 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 14;
+        gbc.gridy = 16;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer8, gbc);
         quizSeanButton = new JButton();
         quizSeanButton.setText("Quiz (Sean)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 19;
+        gbc.gridy = 21;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(quizSeanButton, gbc);
         final JPanel spacer9 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 12;
+        gbc.gridy = 14;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer9, gbc);
         hlAndrewButton = new JButton();
         hlAndrewButton.setText("Higher Lower (Andrew)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 13;
+        gbc.gridy = 15;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(hlAndrewButton, gbc);
         final JPanel spacer10 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 18;
+        gbc.gridy = 20;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer10, gbc);
         chimpAndrewButton = new JButton();
         chimpAndrewButton.setText("Chimp Memory (Andrew)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 15;
+        gbc.gridy = 17;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(chimpAndrewButton, gbc);
         final JPanel spacer11 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 16;
+        gbc.gridy = 18;
         gbc.fill = GridBagConstraints.VERTICAL;
         panelMain.add(spacer11, gbc);
         numberAndrewButton = new JButton();
         numberAndrewButton.setText("Number Memory (Andrew)");
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 17;
+        gbc.gridy = 19;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panelMain.add(numberAndrewButton, gbc);
+        physicsFormulas = new JButton();
+        physicsFormulas.setText("Physics Formulas (Alex)");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 5;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panelMain.add(physicsFormulas, gbc);
+        final JPanel spacer12 = new JPanel();
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 6;
+        gbc.fill = GridBagConstraints.VERTICAL;
+        panelMain.add(spacer12, gbc);
     }
 
     /**

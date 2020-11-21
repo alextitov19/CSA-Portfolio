@@ -64,7 +64,7 @@ public class FileReader {
 
     public int[] GetUnlocks() {
         NodeList children = users.get(currentUser).getChildNodes();
-        int[] arr = new int[6];
+        int[] arr = new int[9];
         for (int i = 0; i < children.getLength(); i++) {
             Node child = children.item(i);
             String name = child.getNodeName();
@@ -90,9 +90,32 @@ public class FileReader {
                 case "graphingCalculator":
                     arr[5] = Integer.parseInt(child.getTextContent());
                     break;
+                case "sin":
+                    arr[6] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "cos":
+                    arr[7] = Integer.parseInt(child.getTextContent());
+                    break;
+                case "tan":
+                    arr[8] = Integer.parseInt(child.getTextContent());
+                    break;
             }
         }
         return arr;
+    }
+
+    public void SetUnlock(String s, int n) {
+        NodeList children = users.get(currentUser).getChildNodes();
+        for (int i = 0; i < children.getLength(); i++) {
+            Node child = children.item(i);
+            if (child instanceof Element == false) {
+                continue;
+            }
+            if (child.getNodeName() == s) {
+                child.setTextContent(Integer.toString(n));
+            }
+        }
+        Write();
     }
 
     public void SetValue(int[] atts) {
