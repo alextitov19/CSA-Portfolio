@@ -152,13 +152,13 @@ public class ATM extends JFrame {
             with.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    if (money > 10) {
+                    if (balance > 0) {
                         //control
                         //deposit action listener
                         money = money + 10;
                         balance = balance - 10;
                         moneycount.setText("You have " + money + " dollars available");
-                        balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
+                        balancecount.setText("You currently have " + balance + " dollars in your Bank Account");
                         FileReader fileReader = new FileReader();
                         int[] atts = fileReader.GetAttributes();
                         int xp = atts[1];
@@ -179,7 +179,7 @@ public class ATM extends JFrame {
                         money = money - 10;
                         balance = balance + 10;
                         moneycount.setText("You have " + money + " dollars available");
-                        balancecount.setText("You currently have" + balance + "dollars in your Bank Account");
+                        balancecount.setText("You currently have " + balance + " dollars in your Bank Account");
                         FileReader fileReader = new FileReader();
                         int[] atts = fileReader.GetAttributes();
                         int xp = atts[1];
