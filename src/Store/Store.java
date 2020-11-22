@@ -25,7 +25,6 @@ public class Store {
 
 
 
-
     public static void main(String[] args) {
     }
 
@@ -106,7 +105,6 @@ class Items extends Store {
     private JButton buySin;
     private JButton buyCos;
     private JButton buyTan;
-    private JButton sendReceipt;
     private JButton goBack;
     private static String label1;
     private static String label2;
@@ -128,13 +126,9 @@ class Items extends Store {
         JButton buySin = new JButton("Buy Sine: $50");
         JButton buyCos = new JButton("Buy Cosine: $50");
         JButton buyTan = new JButton("Buy Tangent: $100");
-<<<<<<< HEAD
-        JButton sendReceipt = 
-=======
->>>>>>> parent of f5945fa... receipt func added
-        JLabel sinPurchased = new JLabel();
-        JLabel cosPurchased = new JLabel();
-        JLabel tanPurchased = new JLabel();
+        JLabel sinPurchased = new JLabel("Sine function purchased");
+        JLabel cosPurchased = new JLabel("Cosine function purchased");
+        JLabel tanPurchased = new JLabel("Tangent function purchased");
 
         JButton goBack = new JButton("Go Back");
 
@@ -172,6 +166,31 @@ class Items extends Store {
         items.add(tanPurchased);
         items.add(goBack);
 
+
+        FileReader filereader = new FileReader();
+        int arr[] = filereader.GetUnlocks();
+        if (arr[6] == 1) {
+            buySin.setVisible(false);
+            sinPurchased.setVisible(true);
+        } else {
+            buySin.setVisible(true);
+            sinPurchased.setVisible(false);
+        }
+        if (arr[7] == 1) {
+            buyCos.setVisible(false);
+            cosPurchased.setVisible(true);
+        } else {
+            buyCos.setVisible(true);
+            cosPurchased.setVisible(false);
+        }
+        if (arr[8] == 1) {
+            buyTan.setVisible(false);
+            tanPurchased.setVisible(true);
+        } else {
+            buyTan.setVisible(true);
+            tanPurchased.setVisible(false);
+
+        }
         //When user presses button to buy book
         buySin.addActionListener(new ActionListener() {
             @Override
@@ -179,12 +198,9 @@ class Items extends Store {
                 if (money >= 50) {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    sinPurchased.setText("Sine function purchased");
-<<<<<<< HEAD
+                    sinPurchased.setVisible(true);
                     FileReader filereader = new FileReader();
                     filereader.SetUnlock("sin", 1);
-=======
->>>>>>> parent of f5945fa... receipt func added
                     buySin.setVisible(false);
                 }
                 else {
@@ -211,12 +227,9 @@ class Items extends Store {
                 if (money >= 50) {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    cosPurchased.setText("Cosine function purchased");
-<<<<<<< HEAD
+                    cosPurchased.setVisible(true);
                     FileReader filereader = new FileReader();
                     filereader.SetUnlock("cos", 1);
-=======
->>>>>>> parent of f5945fa... receipt func added
                     buyCos.setVisible(false);
                 }
                 else {
@@ -267,12 +280,9 @@ class Items extends Store {
                 if (money >= 100) {
                     money-=100;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    tanPurchased.setText("Tangent function purchased");
-<<<<<<< HEAD
+                    tanPurchased.setVisible(true);
                     FileReader filereader = new FileReader();
                     filereader.SetUnlock("tan", 1);
-=======
->>>>>>> parent of f5945fa... receipt func added
                     buyTan.setVisible(false);
                 }
                 else {
