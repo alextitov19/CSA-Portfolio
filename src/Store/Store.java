@@ -1,5 +1,6 @@
 package Store;
 //Created by Eyaad Mir
+import Gmail.Gmail;
 import Gmail.GmailUI;
 import Playground.FileReader;
 import Store.Model;
@@ -22,6 +23,7 @@ public class Store {
     public int money; //coins initialized
     //public int books = 0;
     //public int cards = 0;
+
 
 
 
@@ -105,14 +107,19 @@ class Items extends Store {
     private JButton buySin;
     private JButton buyCos;
     private JButton buyTan;
+    private JButton sendReceipt;
     private JButton goBack;
     private static String label1;
     private static String label2;
+
+    private Gmail gmail;
 
     public void RunItemsUI() {
         //load in coins and xp
         FileReader fileReader = new FileReader();
         int[] atts = fileReader.GetAttributes();
+
+        gmail = new Gmail();
 
         //Initializing GUI
         JFrame frame = new JFrame();
@@ -126,6 +133,7 @@ class Items extends Store {
         JButton buySin = new JButton("Buy Sine: $50");
         JButton buyCos = new JButton("Buy Cosine: $50");
         JButton buyTan = new JButton("Buy Tangent: $100");
+        JButton sendReceipt = 
         JLabel sinPurchased = new JLabel();
         JLabel cosPurchased = new JLabel();
         JLabel tanPurchased = new JLabel();
