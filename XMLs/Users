@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><Users currentUser="0" size="1">
-<<<<<<< HEAD
-    <User coins="375" email=" " password=" " xp="732">
-=======
     <User coins="675" email=" " password=" " xp="732">
->>>>>>> parent of f5945fa... receipt func added
         <physicsFormula1>1</physicsFormula1>
         <physicsFormula2>1</physicsFormula2>
         <physicsFormula3>1</physicsFormula3>
