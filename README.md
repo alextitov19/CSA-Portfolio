@@ -5,6 +5,82 @@ By Alex Titov, Andrew Pu, Sean Rollins, Eyaad Mir, and Neil Sahai
 
 This portfolio is composed of a set of minilabs, which will allow you to earn money in order to "buy" different functions of our calculator. 
 
+# Week 11
+
+## Communication
+
+NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
+
+Video link: https://www.youtube.com/watch?v=y1jqfy87D-w
+
+Eyaad, Neil, and Andrew's MVC Calculator and Journal: https://github.com/Neil-Sahai/TrioProjects
+https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
+
+Alex and Sean's MVC Calculator and Journal:
+
+
+## Collaboration
+
+### Eyaad
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Neil Sahai  |     | 
+Alex Titov  |     |
+Sean Rollins |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Neil
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Alex Titov  |     |
+Sean Rollins |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Sean
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Alex Titov  |     |
+Neil Sahai |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Andrew
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Alex Titov  |     |
+Sean Rollins |     |
+Neil Sahai  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Alex
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Neil Sahai  |     |
+Sean Rollins |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
 ## Week 8 Progress:
 
 As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments. Do note that integration has not been finished, so as of now our labs are not connected through money and many labs such as the Store and ATM have placeholder money values and variables. However, we will be working on the connection of these labs next week. We will also be adding more calculator functions to "buy" next week.

@@ -3,6 +3,8 @@
 
 package CalculatorUI;
 
+import Playground.FileReader;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -68,7 +70,23 @@ public class CalculatorUI {
 
         Reset();
 
-
+        FileReader fileReader = new FileReader();
+        int arr[] = fileReader.GetUnlocks();
+        if (arr[6] == 0) {
+            sinButton.setVisible(false);
+        } else {
+            sinButton.setVisible(true);
+        }
+        if (arr[7] == 0) {
+            cosButton.setVisible(false);
+        } else {
+            cosButton.setVisible(true);
+        }
+        if (arr[8] == 0) {
+            tanButton.setVisible(false);
+        } else {
+            tanButton.setVisible(true);
+        }
         //add listeners to all buttons
         button0.addActionListener(new ActionListener() {
             @Override
