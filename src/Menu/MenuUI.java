@@ -7,6 +7,7 @@ import Games.RPS;
 import Games.HighLow;
 import Games.Chimp;
 import Games.Numbers;
+import Gmail.Gmail;
 import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
 import Quiz.QuizUI;
@@ -58,7 +59,7 @@ public class MenuUI {
         gmailAlexButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GmailUI.RunGmailUI();
+                GmailUI.RunGmailUI(new Gmail());
             }
         });
         storeEyaadButton.addActionListener(new ActionListener() {
