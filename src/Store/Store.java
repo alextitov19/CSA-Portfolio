@@ -116,7 +116,7 @@ class Items extends Store {
         //load in coins and xp
         FileReader fileReader = new FileReader();
         int[] atts = fileReader.GetAttributes();
-
+        //added gmail
         gmail = new Gmail();
 
         //Initializing GUI
