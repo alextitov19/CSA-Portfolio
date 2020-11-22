@@ -469,7 +469,7 @@ public class CalculatorUI {
     public static void RunCalculatorUI() {
         JFrame frame = new JFrame("CalculatorUI");
         frame.setContentPane(new CalculatorUI().panelMain);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
