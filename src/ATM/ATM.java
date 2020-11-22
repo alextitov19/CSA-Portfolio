@@ -122,7 +122,7 @@ public class ATM extends JFrame {
             JLabel deposit = new JLabel("Click here to deposit money");
 
             frame.setSize(500, 400);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.setVisible(true);
             frame.add(main);
 
