@@ -16,8 +16,10 @@ Neil Sahai  |     |
 Alex Titov  |     |
 Sean Rollins |     |
 Andrew Pu  |     |
+
 MVP | Reasoning
 --- | ---------
+Alex Titov | 
 
 ## Week 8 Progress:
 
