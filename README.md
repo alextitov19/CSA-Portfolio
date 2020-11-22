@@ -10,7 +10,6 @@ This portfolio is composed of a set of minilabs, which will allow you to earn mo
 ## Communication
 
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
-
 Video link: https://www.youtube.com/watch?v=y1jqfy87D-w
 
 Eyaad, Neil, and Andrew's MVC Calculator and Journal: https://github.com/Neil-Sahai/TrioProjects
