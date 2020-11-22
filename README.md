@@ -19,7 +19,55 @@ Andrew Pu  |     |
 
 MVP | Reasoning
 --- | ---------
-Alex Titov | 
+xxx | 
+
+### Neil
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Alex Titov  |     |
+Sean Rollins |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Sean
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Alex Titov  |     |
+Neil Sahai |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Andrew
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Alex Titov  |     |
+Sean Rollins |     |
+Neil Sahai  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
+
+### Alex
+Contributor | Grade | Reasoning 
+----------- | --------------------- | ---------------------------------------------
+Eyaad Mir  |     | 
+Neil Sahai  |     |
+Sean Rollins |     |
+Andrew Pu  |     |
+
+MVP | Reasoning
+--- | ---------
+xxx | 
 
 ## Week 8 Progress:
 
