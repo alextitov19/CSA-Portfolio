@@ -10,37 +10,23 @@ import java.awt.event.ActionListener;
 public class GmailUI {
     private JTextArea recipientTextArea;
     private JLabel recipientLabel;
-    private JLabel senderLabel;
-    private JLabel passwordLabel;
-    private JLabel subjectLabel;
-    private JLabel bodyLabel;
-    private JTextArea senderTextArea;
-    private JTextArea passwordTextArea;
-    private JTextArea subjectTextArea;
-    private JTextArea bodyTextArea;
     private JPanel mainPanel;
     private JButton sendButton;
 
-    public GmailUI() {
+    public GmailUI(Gmail gmail) {
         sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String to = recipientTextArea.getText();
-                String from = senderTextArea.getText();
-                String pw = passwordTextArea.getText();
-                String subject = subjectTextArea.getText();
-                String body = bodyTextArea.getText();
-                Gmail gmail = new Gmail(new String[]{to, from, pw, subject, body});
-
+                gmail.to = recipientTextArea.getText();
                 gmail.SendEmail();
             }
         });
     }
 
 
-    public static void RunGmailUI() {
+    public static void RunGmailUI(Gmail gmail) {
         JFrame frame = new JFrame("GmailUI");
-        frame.setContentPane(new GmailUI().mainPanel);
+        frame.setContentPane(new GmailUI(gmail).mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -64,6 +50,7 @@ public class GmailUI {
         mainPanel = new JPanel();
         mainPanel.setLayout(new GridBagLayout());
         recipientTextArea = new JTextArea();
+        recipientTextArea.setText("email@email.com");
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
@@ -75,7 +62,7 @@ public class GmailUI {
         mainPanel.add(recipientTextArea, gbc);
         recipientLabel = new JLabel();
         recipientLabel.setHorizontalAlignment(11);
-        recipientLabel.setText("Recipient email  ");
+        recipientLabel.setText("Please enter your email");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -84,91 +71,11 @@ public class GmailUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         mainPanel.add(recipientLabel, gbc);
-        senderTextArea = new JTextArea();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.weightx = 1.0;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(senderTextArea, gbc);
-        senderLabel = new JLabel();
-        senderLabel.setHorizontalAlignment(11);
-        senderLabel.setText("Sender email  ");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.weightx = 0.1;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(senderLabel, gbc);
-        passwordTextArea = new JTextArea();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        gbc.weightx = 1.0;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(passwordTextArea, gbc);
-        passwordLabel = new JLabel();
-        passwordLabel.setHorizontalAlignment(11);
-        passwordLabel.setText("Sender password  ");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.weightx = 0.1;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(passwordLabel, gbc);
-        subjectTextArea = new JTextArea();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 3;
-        gbc.weightx = 1.0;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(subjectTextArea, gbc);
-        subjectLabel = new JLabel();
-        subjectLabel.setHorizontalAlignment(11);
-        subjectLabel.setText("Gmail subject  ");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 3;
-        gbc.weightx = 0.1;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(subjectLabel, gbc);
-        bodyTextArea = new JTextArea();
-        gbc = new GridBagConstraints();
-        gbc.gridx = 1;
-        gbc.gridy = 4;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(bodyTextArea, gbc);
-        bodyLabel = new JLabel();
-        bodyLabel.setHorizontalAlignment(11);
-        bodyLabel.setText("Gmail body text  ");
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 4;
-        gbc.weightx = 0.1;
-        gbc.weighty = 0.1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        mainPanel.add(bodyLabel, gbc);
         sendButton = new JButton();
         sendButton.setText("Send");
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
-        gbc.gridy = 5;
+        gbc.gridy = 1;
         gbc.gridwidth = 2;
         gbc.weightx = 0.1;
         gbc.weighty = 0.1;
