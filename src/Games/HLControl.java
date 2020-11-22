@@ -89,7 +89,7 @@ public class HLControl {
                 view.setNumber1(view.getNumber2Text());
                 view.setNumber2("?");
                 view.clearTitleIcon();
-                view.setTitleLabel("<html><div style='text-align: center;'>\"Will the next number be<br>HIGHER or LOWER?");
+                view.setTitleLabel("<html><div style='text-align: center;'>Will the next number be<br>HIGHER or LOWER?");
                 view.setScoreLabel("Score: " + view.score);
                 view.setNextButton("    NEXT   ");
             }

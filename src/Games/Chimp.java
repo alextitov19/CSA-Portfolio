@@ -60,7 +60,7 @@ public class Chimp {
 
         JFrame frame = new JFrame("Chimp Game");
         frame.setContentPane(new Chimp().panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(400,500);
         frame.pack();
         frame.setVisible(true);

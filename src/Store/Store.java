@@ -20,8 +20,8 @@ public class Store {
     protected JLabel moneyLabel;
     protected JLabel itemsLabel;
     public int money; //coins initialized
-    public int books = 0;
-    public int cards = 0;
+    //public int books = 0;
+    //public int cards = 0;
 
 
 
@@ -130,7 +130,6 @@ class Items extends Store {
         JLabel cosPurchased = new JLabel();
         JLabel tanPurchased = new JLabel();
 
-
         JButton goBack = new JButton("Go Back");
 
         items.setLayout(null);
@@ -175,6 +174,8 @@ class Items extends Store {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     sinPurchased.setText("Sine function purchased");
+                    FileReader filereader = new FileReader();
+                    filereader.SetUnlock("sin", 1);
                     buySin.setVisible(false);
                 }
                 else {
@@ -202,6 +203,8 @@ class Items extends Store {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     cosPurchased.setText("Cosine function purchased");
+                    FileReader filereader = new FileReader();
+                    filereader.SetUnlock("cos", 1);
                     buyCos.setVisible(false);
                 }
                 else {
@@ -253,6 +256,8 @@ class Items extends Store {
                     money-=100;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     tanPurchased.setText("Tangent function purchased");
+                    FileReader filereader = new FileReader();
+                    filereader.SetUnlock("tan", 1);
                     buyTan.setVisible(false);
                 }
                 else {
