@@ -25,6 +25,7 @@ public class Store {
 
 
 
+
     public static void main(String[] args) {
     }
 
@@ -105,6 +106,7 @@ class Items extends Store {
     private JButton buySin;
     private JButton buyCos;
     private JButton buyTan;
+    private JButton sendReceipt;
     private JButton goBack;
     private static String label1;
     private static String label2;
@@ -126,6 +128,10 @@ class Items extends Store {
         JButton buySin = new JButton("Buy Sine: $50");
         JButton buyCos = new JButton("Buy Cosine: $50");
         JButton buyTan = new JButton("Buy Tangent: $100");
+<<<<<<< HEAD
+        JButton sendReceipt = 
+=======
+>>>>>>> parent of f5945fa... receipt func added
         JLabel sinPurchased = new JLabel();
         JLabel cosPurchased = new JLabel();
         JLabel tanPurchased = new JLabel();
@@ -174,8 +180,11 @@ class Items extends Store {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     sinPurchased.setText("Sine function purchased");
+<<<<<<< HEAD
                     FileReader filereader = new FileReader();
                     filereader.SetUnlock("sin", 1);
+=======
+>>>>>>> parent of f5945fa... receipt func added
                     buySin.setVisible(false);
                 }
                 else {
@@ -203,8 +212,11 @@ class Items extends Store {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     cosPurchased.setText("Cosine function purchased");
+<<<<<<< HEAD
                     FileReader filereader = new FileReader();
                     filereader.SetUnlock("cos", 1);
+=======
+>>>>>>> parent of f5945fa... receipt func added
                     buyCos.setVisible(false);
                 }
                 else {
@@ -256,8 +268,11 @@ class Items extends Store {
                     money-=100;
                     moneyLabel.setText("You currently have " + money + " dollars.");
                     tanPurchased.setText("Tangent function purchased");
+<<<<<<< HEAD
                     FileReader filereader = new FileReader();
                     filereader.SetUnlock("tan", 1);
+=======
+>>>>>>> parent of f5945fa... receipt func added
                     buyTan.setVisible(false);
                 }
                 else {
