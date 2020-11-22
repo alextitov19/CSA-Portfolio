@@ -1,6 +1,5 @@
 package Store;
 //Created by Eyaad Mir
-import Gmail.Gmail;
 import Gmail.GmailUI;
 import Playground.FileReader;
 import Store.Model;
@@ -21,8 +20,8 @@ public class Store {
     protected JLabel moneyLabel;
     protected JLabel itemsLabel;
     public int money; //coins initialized
-    public int books = 0;
-    public int cards = 0;
+    //public int books = 0;
+    //public int cards = 0;
 
 
 
@@ -110,14 +109,10 @@ class Items extends Store {
     private static String label1;
     private static String label2;
 
-    private Gmail gmail;
-
     public void RunItemsUI() {
         //load in coins and xp
         FileReader fileReader = new FileReader();
         int[] atts = fileReader.GetAttributes();
-
-        gmail = new Gmail();
 
         //Initializing GUI
         JFrame frame = new JFrame();
@@ -131,11 +126,9 @@ class Items extends Store {
         JButton buySin = new JButton("Buy Sine: $50");
         JButton buyCos = new JButton("Buy Cosine: $50");
         JButton buyTan = new JButton("Buy Tangent: $100");
-        JButton sendReceipt = new JButton("Send receipt");
-        JLabel sinPurchased = new JLabel();
-        JLabel cosPurchased = new JLabel();
-        JLabel tanPurchased = new JLabel();
-
+        JLabel sinPurchased = new JLabel("Sine function purchased");
+        JLabel cosPurchased = new JLabel("Cosine function purchased");
+        JLabel tanPurchased = new JLabel("Tangent function purchased");
 
         JButton goBack = new JButton("Go Back");
 
@@ -159,7 +152,6 @@ class Items extends Store {
         buySin.setBounds(40,120,150,125);
         buyCos.setBounds(40,270,150,125);
         buyTan.setBounds(300,120,150,125);
-        sendReceipt.setBounds(300,270,150,125);
         //card.setBounds(300,270,175,117);
         goBack.setBounds(20,400,120,100);
 
@@ -168,20 +160,37 @@ class Items extends Store {
         items.add(buySin);
         items.add(buyCos);
         items.add(buyTan);
-        items.add(sendReceipt);
         items.add(moneyLabel);
         items.add(sinPurchased);
         items.add(cosPurchased);
         items.add(tanPurchased);
         items.add(goBack);
 
-        sendReceipt.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                GmailUI.RunGmailUI(gmail);
-            }
-        });
 
+        FileReader filereader = new FileReader();
+        int arr[] = filereader.GetUnlocks();
+        if (arr[6] == 1) {
+            buySin.setVisible(false);
+            sinPurchased.setVisible(true);
+        } else {
+            buySin.setVisible(true);
+            sinPurchased.setVisible(false);
+        }
+        if (arr[7] == 1) {
+            buyCos.setVisible(false);
+            cosPurchased.setVisible(true);
+        } else {
+            buyCos.setVisible(true);
+            cosPurchased.setVisible(false);
+        }
+        if (arr[8] == 1) {
+            buyTan.setVisible(false);
+            tanPurchased.setVisible(true);
+        } else {
+            buyTan.setVisible(true);
+            tanPurchased.setVisible(false);
+
+        }
         //When user presses button to buy book
         buySin.addActionListener(new ActionListener() {
             @Override
@@ -189,8 +198,9 @@ class Items extends Store {
                 if (money >= 50) {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    sinPurchased.setText("Sine function purchased");
-                    gmail.Enqueue("sin");
+                    sinPurchased.setVisible(true);
+                    FileReader filereader = new FileReader();
+                    filereader.SetUnlock("sin", 1);
                     buySin.setVisible(false);
                 }
                 else {
@@ -217,8 +227,9 @@ class Items extends Store {
                 if (money >= 50) {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    cosPurchased.setText("Cosine function purchased");
-                    gmail.Enqueue("cos");
+                    cosPurchased.setVisible(true);
+                    FileReader filereader = new FileReader();
+                    filereader.SetUnlock("cos", 1);
                     buyCos.setVisible(false);
                 }
                 else {
@@ -269,8 +280,9 @@ class Items extends Store {
                 if (money >= 100) {
                     money-=100;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    tanPurchased.setText("Tangent function purchased");
-                    gmail.Enqueue("tan");
+                    tanPurchased.setVisible(true);
+                    FileReader filereader = new FileReader();
+                    filereader.SetUnlock("tan", 1);
                     buyTan.setVisible(false);
                 }
                 else {

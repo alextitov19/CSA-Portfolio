@@ -7,9 +7,9 @@ import Games.RPS;
 import Games.HighLow;
 import Games.Chimp;
 import Games.Numbers;
-import Gmail.Gmail;
 import Gmail.GmailUI;
 import GraphingCalculator.GraphingCalculatorUI;
+import Playground.FileReader;
 import Quiz.QuizUI;
 import Store.Store;
 import Games.MVCHighLowMain;
@@ -36,6 +36,10 @@ public class MenuUI {
     private JButton HLAndrewButton;
 
     public static void RunMenuUI() {
+        FileReader filereader = new FileReader();
+        filereader.SetUnlock("sin", 0);
+        filereader.SetUnlock("cos", 0);
+        filereader.SetUnlock("tan", 0);
         JFrame frame = new JFrame("MenuUI");
         frame.setContentPane(new MenuUI().panelMain);
         frame.pack();
@@ -59,7 +63,7 @@ public class MenuUI {
         gmailAlexButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GmailUI.RunGmailUI(new Gmail());
+                GmailUI.RunGmailUI();
             }
         });
         storeEyaadButton.addActionListener(new ActionListener() {
