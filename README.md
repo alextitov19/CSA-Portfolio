@@ -124,7 +124,7 @@ Andrew Pu |  10 | Andrew worked on a number of games including highlow, and rock
 
 MVP | Reasoning
 --- | ---------
-xxx | 
+Alex | Alex, demonstrating a deep knowledge of workings inside and outside of Java, was our go-to man if there was at all a problem. His experience with XML bound the project together; without it, there would be no central purpose of the project.
 
 ### Andrew
 Contributor | Evaluation Score | Reasoning
