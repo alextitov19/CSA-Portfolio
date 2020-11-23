@@ -142,9 +142,9 @@ xxx |
 ## Creativity
 One example of creativity in our project was Alex's gmail program. In the past, Mr. M had highlighted stacks and queues as something to put in our project. Mr. M had also personally suggested we use our gmail program to make a receipt for the store. So, Alex set out to use queues to make our gmail program send receipts:
 
-![](./gmail.PNG)
+![](./send_receipt.PNG)   ![](./gmail.PNG)
 
-![](https://files.slack.com/files-tmb/TRDESSQ3T-F01F3MFCBLN-043831c7a1/image_720.png)
+![](./receipt.png)
 
 # Week 8 Progress:
 
