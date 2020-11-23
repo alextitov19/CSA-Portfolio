@@ -1,7 +1,7 @@
 package ATM;
 import Playground.FileReader;
-
 import javax.swing.*;
+import ATM.*;
 
 
 public class ATMmodel {
