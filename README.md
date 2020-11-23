@@ -82,10 +82,10 @@ Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingC
 ### Eyaad
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |  10   | Worked on and successfully completed his [ATM](./src/ATM/ATM.java). Also worked on integrating us with [NATM](http://ntm.nighthawkcoders.cf/p1_asciimenu/).
-Alex Titov  |   10  | Developed the [XML](./XMLs/Users) file that contained coins and allowed us to integrate our project together. Also contributed lots of work to the [Calculator](./src/CalculatorUI/CalculatorUI.java) and did queues with his [Gmail](./src/Gmail/GmailUI.java).
-Sean Rollins |   10   | Contributed to one of the "games" that provide money for the store with his [quiz](./src/Quiz/QuizUI.java). 
-Andrew Pu |  10 | Created many "games" that provide money for the store like [HighLow](./src/Games/HighLow.java), which had [Model](./src/Games/HLModel.java), [View](./src/Games/HLView.java), and [Control](./src/Games/HLControl.java).
+Neil Sahai  |        10         | Worked on and successfully completed his [ATM](./src/ATM/ATM.java). Also worked on integrating us with [NATM](http://ntm.nighthawkcoders.cf/p1_asciimenu/).
+Alex Titov  |        10  | Developed the [XML](./XMLs/Users) file that contained coins and allowed us to integrate our project together. Also contributed lots of work to the [Calculator](./src/CalculatorUI/CalculatorUI.java) and did queues with his [Gmail](./src/Gmail/GmailUI.java).
+Sean Rollins |       10   | Contributed to one of the "games" that provide money for the store with his [quiz](./src/Quiz/QuizUI.java). 
+Andrew Pu |          10 | Created many "games" that provide money for the store like [HighLow](./src/Games/HighLow.java), which had [Model](./src/Games/HLModel.java), [View](./src/Games/HLView.java), and [Control](./src/Games/HLControl.java).
 
 MVP | Reasoning
 --- | ---------
