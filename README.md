@@ -15,7 +15,10 @@ Video guide link: https://www.youtube.com/watch?v=y1jqfy87D-w
 Eyaad, Neil, and Andrew's Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
 https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
 
-Alex and Sean's Calculator and Journal links: 
+Alex and Sean's Calculator and Journal links:
+https://docs.google.com/document/d/179YQwRy_Z3VPrH-tna0JrGzOdYIIuOfOYXNn2D1xtVA/edit?usp=sharing
+
+Calculators: [CalculatorUI](https://gist.github.com/671ad155f95553e21678c728363137ad) and [GraphingCalculator](https://gist.github.com/6d2b570a3b3ebfea115dfe905a4627a1)
 
 ## Collaboration
 
@@ -46,10 +49,10 @@ xxx |
 ### Alex
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     |
-Eyaad Mir  |     |
-Sean Rollins |      |
-Andrew Pu |   |
+Neil Sahai  |     10 &nbsp 
+Eyaad Mir  |     10
+Sean Rollins |      10
+Andrew Pu |   10
 
 MVP | Reasoning
 --- | ---------
