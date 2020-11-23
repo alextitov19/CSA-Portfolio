@@ -82,9 +82,9 @@ Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingC
 ### Eyaad
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |        10         | Worked on and successfully completed his [ATM](./src/ATM/ATM.java). Also worked on integrating us with [NATM](http://ntm.nighthawkcoders.cf/p1_asciimenu/).
+Neil Sahai  |        10         | Worked on and successfully completed his [ATM](./src/ATM/ATM.java). Also worked on integrating us with [NATM](http://ntm.nighthawkcoders.cf/p1_asciimenu/). Added the [sine](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L440), [cosine](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L443), and [tangent](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L446) functions
 Alex Titov  |        10  | Developed the [XML](./XMLs/Users) file that contained coins and allowed us to integrate our project together. Also contributed lots of work to the [Calculator](./src/CalculatorUI/CalculatorUI.java) and did queues with his [Gmail](./src/Gmail/GmailUI.java).
-Sean Rollins |       10   | Contributed to one of the "games" that provide money for the store with his [quiz](./src/Quiz/QuizUI.java). 
+Sean Rollins |       10   | Contributed to one of the "games" that provide money for the store with his [quiz](./src/Quiz/QuizUI.java). Added the [ln](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L449) and [log](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L452) functions to the calculator
 Andrew Pu |          10 | Created many "games" that provide money for the store like [HighLow](./src/Games/HighLow.java), which had [Model](./src/Games/HLModel.java), [View](./src/Games/HLView.java), and [Control](./src/Games/HLControl.java).
 
 MVP | Reasoning
@@ -94,9 +94,9 @@ Alex | His work with the XML file was a must have for us to integrate our projec
 ### Neil
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Eyaad Mir  |  10   | Worked on succesfully [integrating the store](https://github.com/alextitov19/CSA-Portfolio/blob/1c48bdd0b445a377b51a3e057a4f05a20d3ba008/src/Store/Store.java#L181) with the calculator functions in a clean and seamless UI. Communicated well with other groups
+Eyaad Mir  |  10   | Worked on succesfully [integrating the store](https://github.com/alextitov19/CSA-Portfolio/blob/1c48bdd0b445a377b51a3e057a4f05a20d3ba008/src/Store/Store.java#L181) with the calculator functions in a clean and seamless UI. Communicated well with other groups. Also worked hard on the [README](./README.md) to make it display our project information effectively
 Alex Titov  |   10  | Worked on connecting all of our mini-labs together through a seamless and well put together [XML](./XMLs/Users). Used queues and added receipts through the [gmail](.src/Gmail/Gmail.)
-Sean Rollins |  10  | Created one of many games in our project which you can play to earn money - [quiz](./src/Quiz/QuizUI.java). 
+Sean Rollins |  10  | Created one of many games in our project which you can play to earn money - [quiz](./src/Quiz/QuizUI.java). Sean also added [log and natural log functions to the calculator](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L449)
 Andrew Pu | 10  | Worked on multiple games in our project such as [Higher Lower](./src/Games/HighLow.java), [Chimp memory game](./src/Games/Chimp.java), and [Rock Paper Scissors](./src/Games/RPS.java). Included [MVC](./src/Games/) in some of his games aswell.
 
 MVP | Reasoning
@@ -107,7 +107,7 @@ Alex | Without the XML file, our project would have just been a bunch of random,
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
 Neil Sahai  |     10|Worked hard and was on time with completing [tasks](./src/ATM/ATM.java). Took up extra tasks lite integrating project into Night at the Museum. Excelled at communicating with the team.
-Eyaad Mir  |     10|Developed a complicated [feature](./src/Store/Model.java) to the program which allowed the user to purchase [items](./src/Store/Store.java) which would then be saved in the [XML file](./XMLs/Users) and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
+Eyaad Mir  |     10|Developed a complicated [feature](./src/Store/Store.java) to the program which allowed the user to purchase [items](./src/Store/Store.java#L98) which would then be saved in the [XML file](./XMLs/Users) and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
 Sean Rollins |      10|Created a [mini game](./src/Quiz/QuizUI.java) that tested user's knowledge and gave our app variety. Took up tasks and finished them on time while communicating well with team and pair-share.
 Andrew Pu |   10|Coded many [key elements](./src/Games) to the project which gave the user a [variety](./src/Games/HighLow.java) of [options](./src/Games/Numbers.java) to choose from. Assisted in conecting to the Night at the Museum. Finished tasks on time and communicated well.
 
@@ -118,10 +118,10 @@ Eyaad | Communicated well within the team, with Mr. Mortensen, and with other te
 ### Sean
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |  10   | Neil was responsible for the ATM, which allowed the user to deposit and withdraw money. Not only that, he is chiefly responsible for N@TM integration, having been the only one to attend Mr. Mortensen's integration meeting.
-Alex Titov  |  10   | Alex mainly worked on the XML file, but also with the mail functionality. He frequently committed, and informed us well of the important changes he made to his code.
-Eyaad Mir |  10    | Eyaad worked mainly on the store, which was the unifying part of our project; it connected the games to the calculator. Due to the importance of the store, he was also very informative with the rest of the team about his process.
-Andrew Pu |  10 | Andrew worked on a number of games including highlow, and rock paper scissors. His code is very adherent to mvc guidelines. He was communicative despite the fact that he mainly worked by himself.
+Neil Sahai  |  10   | Neil was responsible for the [ATM]((./src/ATM/ATM.java), which allowed the user to deposit and withdraw money. Not only that, he is chiefly responsible for [N@TM integration](http://ntm.nighthawkcoders.cf/p1_asciimenu/), having been the only one to attend Mr. Mortensen's integration meeting.
+Alex Titov  |  10   | Alex mainly worked on the [XML](./XMLs/Users) file, but also with the [mail](./src/Gmail/GmailUI.java) functionality. He frequently committed, and informed us well of the important changes he made to his code.
+Eyaad Mir |  10    | Eyaad worked mainly on the [store](./src/Store/Store.java), which was the unifying part of our project; it connected the games to the calculator. Due to the importance of the store, he was also very informative with the rest of the team about his process.
+Andrew Pu |  10 | Andrew worked on a number of games including [highlow](./src/Games/HighLow.java), and rock paper scissors(./src/Games/RPS.java). His code is very adherent to mvc guidelines. He was communicative despite the fact that he mainly worked by himself.
 
 MVP | Reasoning
 --- | ---------
@@ -138,6 +138,10 @@ Eyaad Mir |   |
 MVP | Reasoning
 --- | ---------
 xxx | 
+
+
+## Scrum Master MVP Evaluation
+To pick the MVP of our scrum team, I had each member vote for who they thought was the most important in our team. Our group members decided on Alex Titov, for his large contributions to the XML file that integrates our project together.
 
 ## Creativity
 The most notable example of creativity in our project was Alex's gmail program. In the past, Mr. M had highlighted stacks and queues as something to put in our project. Mr. M had also personally suggested we use our gmail program to make a receipt for the store. So, Alex set out to use queues to make our gmail program send receipts:
