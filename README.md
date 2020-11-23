@@ -51,10 +51,10 @@ xxx |
 ### Alex
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     10|Worked hard and was on time with completing tasks. Took up extra tasks lite integrating project into Night at the Museum. Excelled at communicating with the team.
-Eyaad Mir  |     10|Developed a complicated feature to the program which allowed the user to purchase items which would then be saved in the XML file and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
-Sean Rollins |      10|Created many mini games, giving our app variety which shold keep the user intrigued. Took up important tasks and finished them on time which communicating well with team and pair-share.
-Andrew Pu |   10|Coded many key elements to the project. Assisted in conecting to the Night at the Museum. Finished tasks on time and communicated well.
+Neil Sahai  |     10|Worked hard and was on time with completing [tasks](./src/ATM/ATM.java). Took up extra tasks lite integrating project into Night at the Museum. Excelled at communicating with the team.
+Eyaad Mir  |     10|Developed a complicated [feature](./src/Store/Model.java) to the program which allowed the user to purchase [items](./src/Store/Store.java) which would then be saved in the [XML file](./XMLs/Users) and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
+Sean Rollins |      10|Created a [mini game](./src/Quiz/QuizUI.java) that tested user's knowledge and gave our app variety. Took up tasks and finished them on time while communicating well with team and pair-share.
+Andrew Pu |   10|Coded many [key elements](./src/Games) to the project which gave the user a [variety](./src/Games/HighLow.java) of [options](./src/Games/Numbers.java) to choose from. Assisted in conecting to the Night at the Museum. Finished tasks on time and communicated well.
 
 MVP | Reasoning
 --- | ---------

@@ -6,7 +6,7 @@
         <physicsFormula4>1</physicsFormula4>
         <calculator>1</calculator>
         <graphingCalculator>1</graphingCalculator>
-        <sin>1</sin>
+        <sin>0</sin>
         <cos>0</cos>
         <tan>0</tan>
     </User>
