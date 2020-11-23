@@ -118,10 +118,10 @@ Eyaad | Communicated well within the team, with Mr. Mortensen, and with other te
 ### Sean
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |  10   | Neil was responsible for the [ATM]((./src/ATM/ATM.java), which allowed the user to deposit and withdraw money. Not only that, he is chiefly responsible for [N@TM integration](http://ntm.nighthawkcoders.cf/p1_asciimenu/), having been the only one to attend Mr. Mortensen's integration meeting.
+Neil Sahai  |  10   | Neil was responsible for the [ATM](./src/ATM/ATM.java), which allowed the user to deposit and withdraw money. Not only that, he is chiefly responsible for [N@TM integration](http://ntm.nighthawkcoders.cf/p1_asciimenu/), having been the only one to attend Mr. Mortensen's integration meeting.
 Alex Titov  |  10   | Alex mainly worked on the [XML](./XMLs/Users) file, but also with the [mail](./src/Gmail/GmailUI.java) functionality. He frequently committed, and informed us well of the important changes he made to his code.
 Eyaad Mir |  10    | Eyaad worked mainly on the [store](./src/Store/Store.java), which was the unifying part of our project; it connected the games to the calculator. Due to the importance of the store, he was also very informative with the rest of the team about his process.
-Andrew Pu |  10 | Andrew worked on a number of games including [highlow](./src/Games/HighLow.java), and rock paper scissors(./src/Games/RPS.java). His code is very adherent to mvc guidelines. He was communicative despite the fact that he mainly worked by himself.
+Andrew Pu |  10 | Andrew worked on a number of games including [highlow](./src/Games/HighLow.java), and [rock paper scissors](./src/Games/RPS.java). His code is very adherent to mvc guidelines. He was communicative despite the fact that he mainly worked by himself.
 
 MVP | Reasoning
 --- | ---------
