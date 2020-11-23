@@ -16,12 +16,12 @@ public class Gmail {
     String to, from, pw, subject, body;
     private Queue<String> purchasedQueue = new LinkedList<>();
 
-    public Gmail(String[] arr) {
-        to = arr[0];
-        from = arr[1];
-        pw = arr[2];
-        subject = arr[3];
-        body = arr[4];
+    public Gmail() {
+        to = "";
+        from = "testytester1914@gmail.com";
+        pw = "Test1914";
+        subject = "Eyaad's Cool Store receipt";
+        body = "Here is the list of all the functions you bought:";
     }
 
 
@@ -40,7 +40,7 @@ public class Gmail {
         String recipient = to;
         String sender = from;
         String host = "smtp.gmail.com";
-        
+
         Properties properties = System.getProperties();
 
         // Setup mail server
