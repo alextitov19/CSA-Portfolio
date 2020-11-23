@@ -77,6 +77,8 @@ https://docs.google.com/document/d/179YQwRy_Z3VPrH-tna0JrGzOdYIIuOfOYXNn2D1xtVA/
 
 Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingCalculator](./src/GraphingCalculator/GraphingCalculator.java)
 
+We communicated with each other primarily on slack. In order to integrate all of our labs together, we had to communicate with each other thoroughly. We were very successful in communicating with each other and Mr M.
+
 ## Collaboration
 
 ### Eyaad
