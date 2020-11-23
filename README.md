@@ -73,7 +73,7 @@ https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/
 Alex and Sean's Calculator and Journal links:
 https://docs.google.com/document/d/179YQwRy_Z3VPrH-tna0JrGzOdYIIuOfOYXNn2D1xtVA/edit?usp=sharing
 
-** Note: Alex and Sean's Calculator is the one we used in our portfolio. Unfortunately, we were unable to figure out how to have an MVC Calculator along with the XML file. Eyaad, Neil, and Andrew's seperate calculator uses MVC.
+** Note: Alex and Sean's Calculator is the one we used in our portfolio. Unfortunately, we were unable to figure out how to have an MVC Calculator, Store, or ATM along with the XML file. Eyaad, Neil, and Andrew's seperate calculator uses MVC.
 
 Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingCalculator](./src/GraphingCalculator/GraphingCalculator.java)
 
