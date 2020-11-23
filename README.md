@@ -17,7 +17,7 @@ All of our labs can be accessed by running the Main.java file.
 ## Features
 
 
-Here is a diagram of our project in BlueJ
+Here is a diagram of our project in BlueJ.
 
 ![](./BlueJ.png)
 
