@@ -25,7 +25,7 @@ Here is a diagram of our project in BlueJ.
 | --- | --- |
 | Calculator | Calculator with many functions like addition, subtraction, multiplication, division, powers, sine, cosine, tangent, log, and ln. 
 | Store | A store that allows the user to purchase the sine, cosine, and tangent functions for the calculator. User must spend money that was earned by playing the games in this portfolio.
-| ATM | ATM allows the user to deposit the money that they earned from games and withdraw it for later use, specifically, you can save the money in the ATM to buy when new functions are added to the store.
+| ATM | ATM allows the user to deposit the money that they earned from games and withdraw it for later use, specifically, you can save the money in the ATM to buy when there are new functions are added to the store.
 | Rock Paper Scissors | User plays rock paper scissors with the computer and gains coins for the store if they win the round.
 | HighLow | User recieves a number and has to guess if the next number will be higher or lower. If they are correct, they gain coins for the store. This game features [Model](./src/Games/HLModel.java), [View](./src/Games/HLView.java), and [Control](./src/Games/HLControl.java).
 | Chimp | User is presented with a certain order to press buttons. If they memorize it and press the buttons in the right order, they gain points and can continue. The game gets harder each round the user continues. The user earns coins for each point they get.
