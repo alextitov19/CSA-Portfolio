@@ -46,11 +46,15 @@ Here is a diagram of our project in BlueJ.
 
 ### Games
 
+#### Rock Paper Scissors
+![](./RPS.gif)
+
 #### HighLow
 ![](./highlow.gif)
 
 #### Quiz
 ![](./quizdemo.gif)
+
 ## Communication
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
