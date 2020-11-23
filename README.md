@@ -19,7 +19,7 @@ Alex and Sean's Calculator and Journal links:
 
 ## Collaboration
 
-# Eyaad
+### Eyaad
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
 Neil Sahai  |     |
@@ -31,7 +31,7 @@ MVP | Reasoning
 --- | ---------
 xxx | 
 
-# Neil
+### Neil
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
 Eyaad Mir  |     |
@@ -43,7 +43,7 @@ MVP | Reasoning
 --- | ---------
 xxx | 
 
-# Alex
+### Alex
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
 Neil Sahai  |     |
@@ -55,7 +55,7 @@ MVP | Reasoning
 --- | ---------
 xxx | 
 
-# Sean
+### Sean
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
 Neil Sahai  |     |
@@ -67,7 +67,7 @@ MVP | Reasoning
 --- | ---------
 xxx | 
 
-# Andrew
+### Andrew
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
 Neil Sahai  |     |
