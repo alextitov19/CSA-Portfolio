@@ -132,14 +132,14 @@ Alex | Alex, demonstrating a deep knowledge of workings inside and outside of Ja
 ### Andrew
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     |
-Alex Titov  |     |
-Sean Rollins |      |
-Eyaad Mir |   |
+Neil Sahai  |  10   | Neil created the [ATM](./src/ATM/ATM.java) program in our project that dealt with money earned from [minigames](./src/Games/). He did most of the work in integrating our project into N@TM. He added the [sine](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L440), [cosine](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L443), and [tangent](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L446) functions to the [Calculator](./src/CalculatorUI/).
+Alex Titov  |  10   | Alex created the [XML](./XMLs/Users) file that stored data for the project and tied all of the programs together. He also created the [gmail](./src/Gmail/GmailUI.java) program that incorporated queues. Alex completed his work on time and often assisted the rest of us when we ran into issues
+Sean Rollins |  10   | Sean created the [quiz](./src/Quiz/QuizUI.java) game program which gives users math problems to earn money. He also added [logarithmic](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L449) functions to the [Calculator](./src/CalculatorUI/CalculatorUI.java)
+Eyaad Mir |  10 | Eyaad created the [store](./src/Store/StoreUI.java) in our project that connected the [game](./src/Games/) programs to the [Calculator](./src/CalculatorUI/CalculatorUI.java). Communicated well with group members and other groups
 
 MVP | Reasoning
 --- | ---------
-xxx | 
+Alex | Alex demonstrated good knowledge on our learning by incorporating many different features learned from class. He help troubleshoot other group members' code and connect all the programs with his xml file. 
 
 
 ## Scrum Master MVP Evaluation
