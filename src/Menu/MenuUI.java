@@ -41,6 +41,8 @@ public class MenuUI {
         filereader.SetUnlock("sin", 0);
         filereader.SetUnlock("cos", 0);
         filereader.SetUnlock("tan", 0);
+        filereader.SetUnlock("ln", 1);
+        filereader.SetUnlock("log", 1);
         JFrame frame = new JFrame("MenuUI");
         frame.setContentPane(new MenuUI().panelMain);
         frame.pack();

@@ -510,6 +510,8 @@ public class CalculatorUI {
         sinButton.setEnabled(status);
         cosButton.setEnabled(status);
         tanButton.setEnabled(status);
+        lnButton.setEnabled(status);
+        logButton.setEnabled(status);
     }
 
     //reset/clear calculator
@@ -764,7 +766,7 @@ public class CalculatorUI {
         sinButton.setText("sin");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -790,7 +792,7 @@ public class CalculatorUI {
         cosButton.setText("cos");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -816,7 +818,7 @@ public class CalculatorUI {
         tanButton.setText("tan");
         gbc = new GridBagConstraints();
         gbc.gridx = 6;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
@@ -891,7 +893,7 @@ public class CalculatorUI {
         lnButton.setText("ln");
         gbc = new GridBagConstraints();
         gbc.gridx = 4;
-        gbc.gridy = 6;
+        gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(lnButton, gbc);
@@ -902,7 +904,7 @@ public class CalculatorUI {
         logButton.setText("log");
         gbc = new GridBagConstraints();
         gbc.gridx = 5;
-        gbc.gridy = 6;
+        gbc.gridy = 5;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         panelMain.add(logButton, gbc);
