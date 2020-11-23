@@ -49,14 +49,14 @@ xxx |
 ### Alex
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     10 &nbsp 
-Eyaad Mir  |     10
-Sean Rollins |      10
-Andrew Pu |   10
+Neil Sahai  |     10|Worked hard and was on time with completing tasks. Took up extra tasks lite integrating project into Night at the Museum. Excelled at communicating with the team.
+Eyaad Mir  |     10|Developed a complicated feature to the program which allowed the user to purchase items which would then be saved in the XML file and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
+Sean Rollins |      10|Created many mini games, giving our app variety which shold keep the user intrigued. Took up important tasks and finished them on time which communicating well with team and pair-share.
+Andrew Pu |   10|Coded many key elements to the project. Assisted in conecting to the Night at the Museum. Finished tasks on time and communicated well.
 
 MVP | Reasoning
 --- | ---------
-xxx | 
+Eyaad | Communicated well within the team, with Mr. Mortensen, and with other teams.
 
 ### Sean
 Contributor | Evaluation Score | Reasoning
