@@ -12,7 +12,7 @@ NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
 Video guide link: https://www.youtube.com/watch?v=y1jqfy87D-w
 
-[BlueJ screenshot]()
+[BlueJ screenshot](./BlueJ.png)
 
 Eyaad, Neil, and Andrew's Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
 https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
@@ -20,7 +20,7 @@ https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/
 Alex and Sean's Calculator and Journal links:
 https://docs.google.com/document/d/179YQwRy_Z3VPrH-tna0JrGzOdYIIuOfOYXNn2D1xtVA/edit?usp=sharing
 
-Calculators: [CalculatorUI](https://gist.github.com/671ad155f95553e21678c728363137ad) and [GraphingCalculator](https://gist.github.com/6d2b570a3b3ebfea115dfe905a4627a1)
+Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingCalculator](./src/GraphingCalculator/GraphingCalculator.java)
 
 ## Collaboration
 
