@@ -23,14 +23,15 @@ Here is a diagram of our project in BlueJ.
 
 | Lab | Description |
 | --- | --- |
-| Calculator |
-| Store |
+| Calculator | Calculator with many functions like addition, subtraction, multiplication, division, powers, sine, cosine, tangent, log, and ln. 
+| Store | A store that allows the user to purchase the sine, cosine, and tangent functions for the calculator. User must spend money that was earned by playing the games in this portfolio.
 | ATM |
 | Rock Paper Scissors |
 | HighLow |
 | Chimp |
 | Numbers |
-| Gmail |
+| Quiz | Presents the user with a variety of multiple-choice randomly-generated math questions. Types of questions range in difficulty from basic addition and multiplication (albeit of large numbers), to trickier ones, such as finding the product of the roots of a quadratic equation. All answers, including the 3 fake answers, are integers. If the user guesses the correct answer, 5 coins are added towards expenditures in the store. There is no penalty for incorrect answers. The correct answer of the previous question is set to display.
+| Gmail | Extention to the store which allows user to get a receipt of their purchases. More on how this was done down below in "Creativity"
 
 ## Demos
 
@@ -39,7 +40,6 @@ Here is a diagram of our project in BlueJ.
 
 ### Store
 ![](./storeandcalc.gif)
-
 
 ### ATM
 ![](./atm.gif)
@@ -51,6 +51,12 @@ Here is a diagram of our project in BlueJ.
 
 #### HighLow
 ![](./highlow.gif)
+
+#### Chimp Memory Game
+![](./chimp.gif)
+
+#### Numbers Memory Game
+![](./memory.gif)
 
 #### Quiz
 ![](./quizdemo.gif)
@@ -129,6 +135,8 @@ Eyaad Mir |   |
 MVP | Reasoning
 --- | ---------
 xxx | 
+
+## Creativity
 ## Week 8 Progress:
 
 As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments. Do note that integration has not been finished, so as of now our labs are not connected through money and many labs such as the Store and ATM have placeholder money values and variables. However, we will be working on the connection of these labs next week. We will also be adding more calculator functions to "buy" next week.
