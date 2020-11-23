@@ -108,7 +108,7 @@ Alex | Without the XML file, our project would have just been a bunch of random,
 ### Alex
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     10|Worked hard and was on time with completing [tasks](./src/ATM/ATM.java). Took up extra tasks lite integrating project into Night at the Museum. Excelled at communicating with the team.
+Neil Sahai  |     10|Worked hard and was on time with completing [tasks](./src/ATM/ATM.java). Took up extra tasks like integrating project into Night at the Museum. Excelled at communicating with the team.
 Eyaad Mir  |     10|Developed a complicated [feature](./src/Store/Store.java) to the program which allowed the user to purchase [items](./src/Store/Store.java#L98) which would then be saved in the [XML file](./XMLs/Users) and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
 Sean Rollins |      10|Created a [mini game](./src/Quiz/QuizUI.java) that tested user's knowledge and gave our app variety. Took up tasks and finished them on time while communicating well with team and pair-share.
 Andrew Pu |   10|Coded many [key elements](./src/Games) to the project which gave the user a [variety](./src/Games/HighLow.java) of [options](./src/Games/Numbers.java) to choose from. Assisted in conecting to the Night at the Museum. Finished tasks on time and communicated well.
@@ -135,11 +135,11 @@ Contributor | Evaluation Score | Reasoning
 Neil Sahai  |  10   | Neil created the [ATM](./src/ATM/ATM.java) program in our project that dealt with money earned from [minigames](./src/Games/). He did most of the work in integrating our project into N@TM. He added the [sine](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L440), [cosine](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L443), and [tangent](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L446) functions to the [Calculator](./src/CalculatorUI/).
 Alex Titov  |  10   | Alex created the [XML](./XMLs/Users) file that stored data for the project and tied all of the programs together. He also created the [gmail](./src/Gmail/GmailUI.java) program that incorporated queues. Alex completed his work on time and often assisted the rest of us when we ran into issues
 Sean Rollins |  10   | Sean created the [quiz](./src/Quiz/QuizUI.java) game program which gives users math problems to earn money. He also added [logarithmic](https://github.com/alextitov19/CSA-Portfolio/blob/64f4be8be80b987550c45d279c95ca1e7d214173/src/CalculatorUI/CalculatorUI.java#L449) functions to the [Calculator](./src/CalculatorUI/CalculatorUI.java)
-Eyaad Mir |  10 | Eyaad created the [store](./src/Store/StoreUI.java) in our project that connected the [game](./src/Games/) programs to the [Calculator](./src/CalculatorUI/CalculatorUI.java). Communicated well with group members and other groups
+Eyaad Mir |  10 | Eyaad created the [store](./src/Store/Store.java) in our project that connected the [game](./src/Games/) programs to the [Calculator](./src/CalculatorUI/CalculatorUI.java). Communicated well with group members and other groups
 
 MVP | Reasoning
 --- | ---------
-Alex | Alex demonstrated good knowledge on our learning by incorporating many different features learned from class. He help troubleshoot other group members' code and connect all the programs with his xml file. 
+Alex | Alex demonstrated good knowledge on our learning by incorporating many different features learned from class. He helped troubleshoot other group members' code and connected all the programs with his xml file. 
 
 
 ## Scrum Master MVP Evaluation
