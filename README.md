@@ -7,6 +7,8 @@ This portfolio is composed of a set of minilabs, which will allow you to earn mo
 
 # Week 11
 
+## Features
+
 ## Communication
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
