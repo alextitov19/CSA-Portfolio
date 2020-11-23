@@ -12,24 +12,29 @@ NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
 Video guide link: https://www.youtube.com/watch?v=y1jqfy87D-w
 
+[BlueJ screenshot](./BlueJ.png)
+
 Eyaad, Neil, and Andrew's Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
 https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
 
-Alex and Sean's Calculator and Journal links: 
+Alex and Sean's Calculator and Journal links:
+https://docs.google.com/document/d/179YQwRy_Z3VPrH-tna0JrGzOdYIIuOfOYXNn2D1xtVA/edit?usp=sharing
+
+Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingCalculator](./src/GraphingCalculator/GraphingCalculator.java)
 
 ## Collaboration
 
 ### Eyaad
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     |
-Alex Titov  |     |
-Sean Rollins |      |
-Andrew Pu |   |
+Neil Sahai  |  10   | Worked on and successfully completed his [ATM](./src/ATM/ATM.java). Also worked on integrating us with [NATM](http://ntm.nighthawkcoders.cf/p1_asciimenu/).
+Alex Titov  |   10  | Developed the [XML](./XMLs/Users) file that contained coins and allowed us to integrate our project together. Also contributed lots of work to the [Calculator](./src/CalculatorUI/CalculatorUI.java) and did queues with his [Gmail](./src/Gmail/GmailUI.java).
+Sean Rollins |   10   | Contributed to one of the "games" that provide money for the store with his [quiz](./src/Quiz/QuizUI.java). 
+Andrew Pu |  10 | Created many "games" that provide money for the store like [HighLow](./src/Games/HighLow.java), which had [Model](./src/Games/HLModel.java), [View](./src/Games/HLView.java), and [Control](./src/Games/HLControl.java).
 
 MVP | Reasoning
 --- | ---------
-xxx | 
+Alex | His work with the XML file was a must have for us to intergrate our project.
 
 ### Neil
 Contributor | Evaluation Score | Reasoning
@@ -46,14 +51,14 @@ xxx |
 ### Alex
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     |
-Eyaad Mir  |     |
-Sean Rollins |      |
-Andrew Pu |   |
+Neil Sahai  |     10|Worked hard and was on time with completing [tasks](./src/ATM/ATM.java). Took up extra tasks lite integrating project into Night at the Museum. Excelled at communicating with the team.
+Eyaad Mir  |     10|Developed a complicated [feature](./src/Store/Model.java) to the program which allowed the user to purchase [items](./src/Store/Store.java) which would then be saved in the [XML file](./XMLs/Users) and directly affect the app's usability. Communicated well with the team members and met all deadlines for the project.
+Sean Rollins |      10|Created a [mini game](./src/Quiz/QuizUI.java) that tested user's knowledge and gave our app variety. Took up tasks and finished them on time while communicating well with team and pair-share.
+Andrew Pu |   10|Coded many [key elements](./src/Games) to the project which gave the user a [variety](./src/Games/HighLow.java) of [options](./src/Games/Numbers.java) to choose from. Assisted in conecting to the Night at the Museum. Finished tasks on time and communicated well.
 
 MVP | Reasoning
 --- | ---------
-xxx | 
+Eyaad | Communicated well within the team, with Mr. Mortensen, and with other teams.
 
 ### Sean
 Contributor | Evaluation Score | Reasoning
