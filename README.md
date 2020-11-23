@@ -6,15 +6,38 @@ By Alex Titov, Andrew Pu, Sean Rollins, Eyaad Mir, and Neil Sahai
 This portfolio is composed of a set of minilabs, which will allow you to earn money in order to "buy" different functions of our calculator. 
 
 # Week 11
+## Usage
+Prerequisites:
 
+Java JDK
+IntelliJ
+
+All of our labs can be accessed by running the Main.java file.
+
+## Features
+
+
+Here is a diagram of our project in BlueJ.
+
+![](./BlueJ.png)
+
+### Calculator
+
+### Store
+
+### ATM
+
+### Games
+
+#### HighLow
+
+#### Quiz
 ## Communication
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
 Video guide link: https://www.youtube.com/watch?v=y1jqfy87D-w
 
-[BlueJ screenshot](./BlueJ.png)
-
-Eyaad, Neil, and Andrew's Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
+Eyaad, Neil, and Andrew's MVC Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
 https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
 
 Alex and Sean's Calculator and Journal links:
@@ -34,19 +57,19 @@ Andrew Pu |  10 | Created many "games" that provide money for the store like [Hi
 
 MVP | Reasoning
 --- | ---------
-Alex | His work with the XML file was a must have for us to intergrate our project.
+Alex | His work with the XML file was a must have for us to integrate our project.
 
 ### Neil
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Eyaad Mir  |     |
-Alex Titov  |     |
-Sean Rollins |      |
-Andrew Pu |   |
+Eyaad Mir  |  10   | Worked on succesfully [integrating the store](https://github.com/alextitov19/CSA-Portfolio/blob/1c48bdd0b445a377b51a3e057a4f05a20d3ba008/src/Store/Store.java#L181) with the calculator functions in a clean and seamless UI. Communicated well with other groups
+Alex Titov  |   10  | Worked on connecting all of our mini-labs together through a seamless and well put together [XML](./XMLs/Users). Used queues and added receipts through the [gmail](.src/Gmail/Gmail.)
+Sean Rollins |  10  | Created one of many games in our project which you can play to earn money - [quiz](./src/Quiz/QuizUI.java). 
+Andrew Pu | 10  | Worked on multiple games in our project such as [Higher Lower](./src/Games/HighLow.java), [Chimp memory game](./src/Games/Chimp.java), and [Rock Paper Scissors](./src/Games/RPS.java). Included [MVC](./src/Games/) in some of his games aswell.
 
 MVP | Reasoning
 --- | ---------
-xxx | 
+Alex | Without the XML file, our project would have just been a bunch of random, individual labs rather than one customer focused deliverable. He added new challenging things to his code and communicated well.
 
 ### Alex
 Contributor | Evaluation Score | Reasoning
