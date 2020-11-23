@@ -10,11 +10,13 @@ import java.util.Random;
 
 public class Chimp {
 
+    //creates JFrame components
     private JPanel panel;
     private JLabel titleLabel;
     private JLabel scoreLabel;
     private JLabel instructLabel;
     private JLabel highScoreLabel;
+    //25 buttons in a 5x5 grid
     private JButton b1;
     private JButton b2;
     private JButton b3;
@@ -41,13 +43,16 @@ public class Chimp {
     private JButton b24;
     private JButton b25;
 
+    //set to true after the original number sequence is revealed
     private boolean started = false;
+    //set to true for when the first number is pressed in a round
     private boolean first = false;
     private int score = 0;
     private int highScore = 0;
     //equal to the number of revealed numbers
     private int counter = 1;
 
+    //numbers in order of how they appear on the button. This array will be randomized later
     private int[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
     //text of the buttons
     private String[] strNumbers = {"","","","","","","","","","","","","","","","","","","","","","","","",""};
@@ -60,6 +65,7 @@ public class Chimp {
 
     public static void RunChimp() {
 
+        //sets JFrame parameters
         JFrame frame = new JFrame("Chimp Game");
         frame.setContentPane(new Chimp().panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -75,6 +81,7 @@ public class Chimp {
 
         GUI();
 
+        //Adds actions for the buttons
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
