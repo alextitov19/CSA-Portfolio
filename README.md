@@ -16,7 +16,7 @@ All of our labs can be accessed by running the Main.java file.
 
 ## Features
 
-./BlueJ.png
+![](./BlueJ.png)
 
 ### Calculator
 
