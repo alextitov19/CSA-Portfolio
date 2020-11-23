@@ -1,5 +1,5 @@
 package ATM;
-import ATM.ATMmodel.*;
+import ATM.ATMmodel;
 
 public class ATMcontrol {
     public int bankBalance;
