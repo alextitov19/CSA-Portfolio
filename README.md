@@ -34,7 +34,7 @@ Andrew Pu |  10 | Created many "games" that provide money for the store like [Hi
 
 MVP | Reasoning
 --- | ---------
-Alex | His work with the XML file was a must have for us to intergrate our project.
+Alex | His work with the XML file was a must have for us to integrate our project.
 
 ### Neil
 Contributor | Evaluation Score | Reasoning
