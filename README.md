@@ -140,11 +140,13 @@ MVP | Reasoning
 xxx | 
 
 ## Creativity
-One example of creativity in our project was Alex's gmail program. In the past, Mr. M had highlighted stacks and queues as something to put in our project. Mr. M had also personally suggested we use our gmail program to make a receipt for the store. So, Alex set out to use queues to make our gmail program send receipts:
+The most notable example of creativity in our project was Alex's gmail program. In the past, Mr. M had highlighted stacks and queues as something to put in our project. Mr. M had also personally suggested we use our gmail program to make a receipt for the store. So, Alex set out to use queues to make our gmail program send receipts:
 
 ![](./send_receipt.PNG)   ![](./gmail.PNG)
 
 ![](./receipt.png)
+
+He used the queues to [enqueue](https://github.com/alextitov19/CSA-Portfolio/blob/edbaf76ca6eb563e79151461f41d129279e31ce8/src/Gmail/Gmail.java#L28) and [dequeue](https://github.com/alextitov19/CSA-Portfolio/blob/edbaf76ca6eb563e79151461f41d129279e31ce8/src/Gmail/Gmail.java#L32) the user's purchases.
 
 # Week 8 Progress:
 
