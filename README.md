@@ -65,7 +65,7 @@ Contributor | Evaluation Score | Reasoning
 Eyaad Mir  |  10   | Worked on succesfully [integrating the store](https://github.com/alextitov19/CSA-Portfolio/blob/1c48bdd0b445a377b51a3e057a4f05a20d3ba008/src/Store/Store.java#L181) with the calculator functions in a clean and seamless UI. Communicated well with other groups
 Alex Titov  |   10  | Worked on connecting all of our mini-labs together through a seamless and well put together [XML](./XMLs/Users). Used queues and added receipts through the [gmail](.src/Gmail/Gmail.)
 Sean Rollins |  10  | Created one of many games in our project which you can play to earn money - [quiz](./src/Quiz/QuizUI.java). 
-Andrew Pu | 10  | Worked on multiple games in our project such as [Higher Lower](./src/Games/HighLow.java), [Chimp memory game](./src/Games/Chimp.java), and [Rock Paper Scissors]((./src/Games/RPS.java). Included [MVC]((./src/Games/) in some of his games aswell.
+Andrew Pu | 10  | Worked on multiple games in our project such as [Higher Lower](./src/Games/HighLow.java), [Chimp memory game](./src/Games/Chimp.java), and [Rock Paper Scissors]((./src/Games/RPS.java). Included [MVC](./src/Games/) in some of his games aswell.
 
 MVP | Reasoning
 --- | ---------
