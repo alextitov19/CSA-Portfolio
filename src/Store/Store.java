@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.lang.*;
 
 public class Store {
@@ -27,6 +28,7 @@ public class Store {
 
 
     public static void main(String[] args) {
+        RunStoreUI();
     }
 
     public static void RunStoreUI() {
@@ -42,7 +44,7 @@ public class Store {
         Store test = new Store();
         test.money = atts[0];
         JLabel moneyLabel = new JLabel("You currently have " + test.money + " dollars");
-        //JLabel itemsLabel = new JLabel("You have bought " + test.books + " books and " + test.cards + " cards.");
+        JLabel itemsLabel = new JLabel("You have bought " + test.books + " books and " + test.cards + " cards.");
         store.setLayout(null);
 
         // Dimensions and properties of Frame
@@ -132,9 +134,9 @@ class Items extends Store {
         JButton buyCos = new JButton("Buy Cosine: $50");
         JButton buyTan = new JButton("Buy Tangent: $100");
         JButton sendReceipt = new JButton("Send receipt");
-        JLabel sinPurchased = new JLabel();
-        JLabel cosPurchased = new JLabel();
-        JLabel tanPurchased = new JLabel();
+        JLabel sinPurchased = new JLabel("Sine function purchased");
+        JLabel cosPurchased = new JLabel("Cosine function purchased");
+        JLabel tanPurchased = new JLabel("Tangent function purchased");
 
 
         JButton goBack = new JButton("Go Back");
@@ -175,6 +177,32 @@ class Items extends Store {
         items.add(tanPurchased);
         items.add(goBack);
 
+
+        FileReader filereader1 = new FileReader();
+        int arr[] = filereader1.GetUnlocks();
+        if (arr[6] == 1) {
+            buySin.setVisible(false);
+            sinPurchased.setVisible(true);
+        } else {
+            buySin.setVisible(true);
+            sinPurchased.setVisible(false);
+        }
+        if (arr[7] == 1) {
+            buyCos.setVisible(false);
+            cosPurchased.setVisible(true);
+        } else {
+            buyCos.setVisible(true);
+            cosPurchased.setVisible(false);
+        }
+        if (arr[8] == 1) {
+            buyTan.setVisible(false);
+            tanPurchased.setVisible(true);
+        } else {
+            buyTan.setVisible(true);
+            tanPurchased.setVisible(false);
+        }
+
+
         sendReceipt.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -189,7 +217,9 @@ class Items extends Store {
                 if (money >= 50) {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    sinPurchased.setText("Sine function purchased");
+                    sinPurchased.setVisible(true);
+                    FileReader filereader = new FileReader();
+                    fileReader.SetUnlock("sin", 1);
                     gmail.Enqueue("sin");
                     buySin.setVisible(false);
                 }
@@ -217,7 +247,9 @@ class Items extends Store {
                 if (money >= 50) {
                     money-=50;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    cosPurchased.setText("Cosine function purchased");
+                    cosPurchased.setVisible(true);
+                    FileReader filereader = new FileReader();
+                    fileReader.SetUnlock("cos", 1);
                     gmail.Enqueue("cos");
                     buyCos.setVisible(false);
                 }
@@ -269,7 +301,9 @@ class Items extends Store {
                 if (money >= 100) {
                     money-=100;
                     moneyLabel.setText("You currently have " + money + " dollars.");
-                    tanPurchased.setText("Tangent function purchased");
+                    tanPurchased.setVisible(true);
+                    FileReader filereader = new FileReader();
+                    fileReader.SetUnlock("tan", 1);
                     gmail.Enqueue("tan");
                     buyTan.setVisible(false);
                 }
