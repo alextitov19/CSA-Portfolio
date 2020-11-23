@@ -25,7 +25,7 @@ Here is a diagram of our project in BlueJ.
 ![](./calcgif.gif)
 
 ### Store
-![](./store\ and\ calc.gif)
+![](./storeandcalc.gif)
 
 
 ### ATM
