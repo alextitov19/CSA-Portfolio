@@ -140,7 +140,13 @@ MVP | Reasoning
 xxx | 
 
 ## Creativity
-## Week 8 Progress:
+One example of creativity in our project was Alex's gmail program. In the past, Mr. M had highlighted stacks and queues as something to put in our project. Mr. M had also personally suggested we use our gmail program to make a receipt for the store. So, Alex set out to use queues to make our gmail program send receipts:
+
+![](./gmail.PNG)
+
+![](https://files.slack.com/files-tmb/TRDESSQ3T-F01F3MFCBLN-043831c7a1/image_720.png)
+
+# Week 8 Progress:
 
 As of now, we have created our individual mini labs that we will integrate together for our final project. Last week, we had minilabs but we did not have a clear plan on how to put these together. Now, we have a full plan on how we are going to put together all of our assignments. Do note that integration has not been finished, so as of now our labs are not connected through money and many labs such as the Store and ATM have placeholder money values and variables. However, we will be working on the connection of these labs next week. We will also be adding more calculator functions to "buy" next week.
 
