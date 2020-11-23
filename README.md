@@ -16,6 +16,9 @@ All of our labs can be accessed by running the Main.java file.
 
 ## Features
 
+
+Here is a diagram of our project in BlueJ
+
 ![](./BlueJ.png)
 
 ### Calculator
@@ -33,8 +36,6 @@ All of our labs can be accessed by running the Main.java file.
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
 Video guide link: https://www.youtube.com/watch?v=y1jqfy87D-w
-
-[BlueJ screenshot](./BlueJ.png)
 
 Eyaad, Neil, and Andrew's MVC Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
 https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
