@@ -6,9 +6,27 @@ By Alex Titov, Andrew Pu, Sean Rollins, Eyaad Mir, and Neil Sahai
 This portfolio is composed of a set of minilabs, which will allow you to earn money in order to "buy" different functions of our calculator. 
 
 # Week 11
+## Usage
+Prerequisites:
+
+Java JDK
+IntelliJ
+
+All of our labs can be accessed by running the Main.java file.
 
 ## Features
 
+### Calculator
+
+### Store
+
+### ATM
+
+### Games
+
+#### HighLow
+
+#### Quiz
 ## Communication
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
@@ -16,7 +34,7 @@ Video guide link: https://www.youtube.com/watch?v=y1jqfy87D-w
 
 [BlueJ screenshot](./BlueJ.png)
 
-Eyaad, Neil, and Andrew's Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
+Eyaad, Neil, and Andrew's MVC Calculator and Journal links: https://github.com/Neil-Sahai/TrioProjects
 https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/edit
 
 Alex and Sean's Calculator and Journal links:
