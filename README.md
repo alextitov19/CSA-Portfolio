@@ -25,7 +25,7 @@ Here is a diagram of our project in BlueJ.
 | --- | --- |
 | Calculator | Calculator with many functions like addition, subtraction, multiplication, division, powers, sine, cosine, tangent, log, and ln. 
 | Store | A store that allows the user to purchase the sine, cosine, and tangent functions for the calculator. User must spend money that was earned by playing the games in this portfolio.
-| ATM |
+| ATM | ATM allows the user to deposit the money that they earned from games and withdraw it for later use.
 | Rock Paper Scissors |
 | HighLow |
 | Chimp |
@@ -72,6 +72,8 @@ https://docs.google.com/document/d/1Abg1L0foYwqYoHOs44TMDWZlAnQGxRZljYbNfsRkGZE/
 Alex and Sean's Calculator and Journal links:
 https://docs.google.com/document/d/179YQwRy_Z3VPrH-tna0JrGzOdYIIuOfOYXNn2D1xtVA/edit?usp=sharing
 
+** Note: Alex and Sean's Calculator is the one we used in our portfolio. Unfortunately, we were unable to figure out how to have an MVC Calculator along with the XML file. Eyaad, Neil, and Andrew's seperate calculator uses MVC.
+
 Calculators: [CalculatorUI](./src/CalculatorUI/CalculatorUI.java) and [GraphingCalculator](./src/GraphingCalculator/GraphingCalculator.java)
 
 ## Collaboration
@@ -115,10 +117,10 @@ Eyaad | Communicated well within the team, with Mr. Mortensen, and with other te
 ### Sean
 Contributor | Evaluation Score | Reasoning
 ----------- | ---------------- | ----------
-Neil Sahai  |     |
-Alex Titov  |     |
-Eyaad Mir |      |
-Andrew Pu |   |
+Neil Sahai  |  10   | Neil was responsible for the ATM, which allowed the user to deposit and withdraw money. Not only that, he is chiefly responsible for N@TM integration, having been the only one to attend Mr. Mortensen's integration meeting.
+Alex Titov  |  10   | Alex mainly worked on the XML file, but also with the mail functionality. He frequently committed, and informed us well of the important changes he made to his code.
+Eyaad Mir |  10    | Eyaad worked mainly on the store, which was the unifying part of our project; it connected the games to the calculator. Due to the importance of the store, he was also very informative with the rest of the team about his process.
+Andrew Pu |  10 | Andrew worked on a number of games including highlow, and rock paper scissors. His code is very adherent to mvc guidelines. He was communicative despite the fact that he mainly worked by himself.
 
 MVP | Reasoning
 --- | ---------
