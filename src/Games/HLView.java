@@ -32,6 +32,7 @@ public class HLView {
 
     public static void RunHLView(HLView view) {
 
+        //set frame parameters
         JFrame frame = new JFrame("HighLow");
         frame.setContentPane(view.panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -69,10 +70,12 @@ public class HLView {
         panel.add(nextButton, newConstraints(1,3,100,200,1));
         panel.add(upButton, newConstraints(2,3,100,200,1));
 
+        //big font for numbers
         Font numbers = new Font("Arial", Font.BOLD, 144);
         number1.setFont(numbers);
         number2.setFont(numbers);
 
+        //font for title and option buttons
         Font big = new Font("Arial", Font.BOLD, 36);
         titleLabel.setFont(big);
         downButton.setFont(big);
@@ -112,17 +115,13 @@ public class HLView {
         return constraints;
     }
 
+    //setters and getters
     public void setNumber1(String text) {
         number1.setText(text);
     }
-    public void setNumber2(String text) {
-        number2.setText(text);
-    }
+    public void setNumber2(String text) { number2.setText(text); }
     public void setTitleLabel(String text) {
         titleLabel.setText(text);
-    }
-    public void clearTitleIcon() {
-        titleLabel.setIcon(null);
     }
     public void setScoreLabel(String text) {
         scoreLabel.setText(text);
@@ -140,14 +139,16 @@ public class HLView {
         downButton.setText(text);
     }
 
+    public void clearTitleIcon() {
+        titleLabel.setIcon(null);
+    }
+
     public String getNumber1Text() {
         return number1.getText();
     }
     public String getNumber2Text() {
         return number2.getText();
     }
-
-    public JButton getUpButton() {return upButton;}
 
     public void setUpActionListener(ActionListener actionListener) {
         upButton.addActionListener(actionListener);

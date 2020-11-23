@@ -69,7 +69,7 @@ public class RPS {
         //creates the JFrame
         JFrame frame = new JFrame("RPS");
         frame.setContentPane(new RPS().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
 

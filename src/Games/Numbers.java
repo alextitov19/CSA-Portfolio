@@ -17,8 +17,11 @@ public class Numbers {
     private JTextField entry;
     private JButton submit;
 
+    //the value of buttonPress changes the function of the button
     private int buttonPress = 0;
+    //set to the value of the answer
     private int correctNum = 0;
+    //set to the value of the input
     private int answerNum = 0;
     private int score = 0;
     private int highScore = 0;
@@ -33,7 +36,7 @@ public class Numbers {
 
         JFrame frame = new JFrame("Number Memory Game");
         frame.setContentPane(new Numbers().panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(250,150);
         frame.pack();
         frame.setVisible(true);
@@ -47,15 +50,19 @@ public class Numbers {
         GUI();
 
 
-
+        //action listener for submit button
         submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //if function switches the button function each time it's pressed
                 if(buttonPress == 0) {
+                    //start function creates the number
                     start();
                 } else if (buttonPress == 1) {
+                    //erases number and waits for user response
                     clearNum();
                 } else {
+                    //checks user response and updates score accordingly
                     checkAnswer();
                 }
             }
@@ -84,6 +91,7 @@ public class Numbers {
 
     }
 
+    //method to simplify location constraints for buttons and labels
     public GridBagConstraints newConstraints(int a, int b, int c, int d, int g) {
 
         GridBagConstraints constraints = new GridBagConstraints();
@@ -105,31 +113,40 @@ public class Numbers {
     }
 
     public void start() {
+        //creates random number with length equal to one more than the score
         double x = randomNum(score + 1);
         int y = (int) x;
         title.setText("Memorize the Number");
         number.setText(String.valueOf(y));
         entry.setText(null);
         submit.setText("Continue");
+        //changes to next button function
         buttonPress = 1;
     }
 
     public void clearNum() {
+        //sets the answer number to the randomly displayed number
         correctNum = Integer.parseInt(number.getText());
+        //hide the answer
         number.setText(null);
         title.setText("What was the number");
+        //clear entry to prevent cheating
         entry.setText(null);
         submit.setText("Submit");
+        //changes to next button function
         buttonPress = 2;
     }
 
     public void checkAnswer() {
+
+        //if the entry is not a number, the entry will always be incorrect
         try {
             answerNum = Integer.parseInt(entry.getText());
         } catch (Exception e) {
             answerNum = 0;
         }
 
+        //compares the entry and solution and decides whether the user wins
         if (answerNum == correctNum) {
             title.setText("+1 point");
             number.setText("Press 'Next' to continue");
@@ -148,12 +165,15 @@ public class Numbers {
             submit.setText("Restart");
             score = 0;
         }
+        //changes to next button function
         buttonPress = 0;
     }
 
+    //set to double to increase maximum number length
     public double randomNum(int length) {
         Random random = new Random();
         double num = random.nextInt(9) + 1;
+        //continues appends random digits until the length is equal to the desired length
         for(int i = 1; i < length; i++) {
             num = 10 * num + random.nextInt(10);
         }

@@ -13,6 +13,7 @@ public class MVCHighLowMain {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+                //create instances of model, view, and control
                 HLModel model = new HLModel();
                 HLView view = new HLView();
                 HLControl controller = new HLControl(model,view);

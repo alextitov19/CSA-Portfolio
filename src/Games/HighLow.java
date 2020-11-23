@@ -35,7 +35,6 @@ public class HighLow {
 
         downButton.addActionListener(new ActionListener() {
             @Override
-            //play(0) sets the user's choice to rock
             public void actionPerformed(ActionEvent e) {
                 if(roundStarted) {
                     roundStarted = false;
@@ -55,7 +54,6 @@ public class HighLow {
 
         upButton.addActionListener(new ActionListener() {
             @Override
-            //play(0) sets the user's choice to rock
             public void actionPerformed(ActionEvent e) {
                 if(roundStarted) {
                     roundStarted = false;
@@ -75,7 +73,6 @@ public class HighLow {
 
         nextButton.addActionListener(new ActionListener() {
             @Override
-            //play(0) sets the user's choice to rock
             public void actionPerformed(ActionEvent e) {
                 if(!roundStarted) {
                     if(score == 0){
@@ -185,6 +182,7 @@ public class HighLow {
         return constraints;
     }
 
+    //compares the numbers and determines if user is correct
     public void winLose(int x, int y) {
         
         if (y > x) {

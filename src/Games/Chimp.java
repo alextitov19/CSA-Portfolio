@@ -45,9 +45,11 @@ public class Chimp {
     private boolean first = false;
     private int score = 0;
     private int highScore = 0;
+    //equal to the number of revealed numbers
     private int counter = 1;
 
     private int[] numbers = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
+    //text of the buttons
     private String[] strNumbers = {"","","","","","","","","","","","","","","","","","","","","","","","",""};
 
     public static void main(String[] args) {
@@ -76,7 +78,9 @@ public class Chimp {
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //specifies the chosen button
                 play(1);
+                //reveals numerical value of the chosen button
                 b1.setText(strNumbers[0]);
             }
         });
@@ -273,6 +277,7 @@ public class Chimp {
 
     public void GUI() {
 
+        //create panel, buttons, and labels. Set texts and add labels/buttons to panel
         panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         panel.setBackground(new Color(-1));
@@ -313,6 +318,7 @@ public class Chimp {
         b24 = new JButton();
         b25 = new JButton();
 
+        //sets position of each label/button
         panel.add(titleLabel, newConstraints(1,0,50,100,3));
         panel.add(scoreLabel, newConstraints(0,1,25,25,1));
         panel.add(instructLabel, newConstraints(1,1,50,50,3));
@@ -368,6 +374,7 @@ public class Chimp {
 
     public void play(int choice) {
 
+        //if its the first number, the other numbers have to be cleared
         if(first) {
             clear();
             first = false;
@@ -376,15 +383,19 @@ public class Chimp {
 
         if(!started) {
 
+            //clears numbers array
             for(int i = 0; i < numbers.length; i++) {
                 numbers[i] = 0;
             }
 
+            //adds numbers consecutively until the amount of numbers is equal to the score + 1
             for(int i = 0; i < score + 1; i++) {
                 numbers[i] = i + 1;
             }
 
+            //randomizes number order
             randomize(numbers);
+            //show the numbers
             reveal();
             titleLabel.setText("CHIMP MEMORY GAME");
             instructLabel.setText("Remember the numbers and press 1");
@@ -392,8 +403,10 @@ public class Chimp {
             started = true;
             first = true;
         } else {
+            //if choice is right, continue
             if (numbers[choice - 1] == counter) {
                 counter++;
+            //if choice is wrong, reveal answers and add score to coins
             } else {
                 reveal();
                 started = false;
@@ -411,6 +424,7 @@ public class Chimp {
                 fileReader.SetValue(atts);
             }
 
+            //if all the numbers are revealed, score and high score are updated
             if(counter == score + 2) {
                 score++;
                 titleLabel.setText("Score +1");
@@ -421,11 +435,13 @@ public class Chimp {
                 highScoreLabel.setText("High Score: " + highScore);
                 instructLabel.setText("Press any button to continue");
 
+                //only 25 buttons, so 25 is max score. Unlikely for the user to achieve this
                 if(score == 25) {
                     titleLabel.setText("Maximum Score Achieve");
                     instructLabel.setText("Resetting");
                 }
 
+                //prepares for next round
                 reveal();
                 started = false;
                 counter = 1;
@@ -435,6 +451,7 @@ public class Chimp {
 
     }
 
+    //sets text of all buttons to empty
     public void clear () {
         b1.setText("");
         b2.setText("");
@@ -467,6 +484,7 @@ public class Chimp {
 
         Random random = new Random();
 
+        //iterates through array and swaps each value with another random value
         for (int i = 0; i < array.length; i++) {
             int newInt = random.nextInt(4);
             int temp = array[i];
@@ -474,6 +492,7 @@ public class Chimp {
             array[newInt] = temp;
         }
 
+        //sets strNumbers to numbers values but as strings to add them to buttons
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == 0) {
                 strNumbers[i] = null;
@@ -484,6 +503,7 @@ public class Chimp {
 
     }
 
+    //shows correlating number for each button
     public void reveal() {
 
         b1.setText(strNumbers[0]);

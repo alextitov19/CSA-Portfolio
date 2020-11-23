@@ -6,6 +6,7 @@ public class HLModel {
 
     public int highScore = 0;
 
+    //if users choice is correct, returns win = true;
     public boolean compare(int x, int y) {
         boolean win;
         if (y > x) {
@@ -17,12 +18,14 @@ public class HLModel {
         return win;
     }
 
+    //changes high score if score is higher
     public void update(int score) {
         if (score > highScore) {
             highScore = score;
         }
     }
 
+    //changes coin value in the xml file
     public void money(int score) {
         FileReader fileReader = new FileReader();
         int[] atts = fileReader.GetAttributes();
