@@ -22,16 +22,22 @@ Here is a diagram of our project in BlueJ.
 ![](./BlueJ.png)
 
 ### Calculator
+![](./calcgif.gif)
 
 ### Store
+![](./store and calc.gif)
+
 
 ### ATM
+![](./atm.gif)
 
 ### Games
 
 #### HighLow
+![](./highlow.gif)
 
 #### Quiz
+![](./quizdemo.gif)
 ## Communication
 NATM link: http://ntm.nighthawkcoders.cf/p1_asciimenu/
 
