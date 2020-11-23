@@ -21,6 +21,19 @@ Here is a diagram of our project in BlueJ.
 
 ![](./BlueJ.png)
 
+| Lab | Description |
+| --- | --- |
+| Calculator |
+| Store |
+| ATM |
+| Rock Paper Scissors |
+| HighLow |
+| Chimp |
+| Numbers |
+| Gmail |
+
+## Demos
+
 ### Calculator
 ![](./calcgif.gif)
 
